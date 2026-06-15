@@ -1,0 +1,122 @@
+.cardContainer {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.05) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.cardContainer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px -10px rgba(99, 102, 241, 0.2);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+/* Subtle animated glow */
+.cardContainer::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.cardContainer:hover::before {
+  opacity: 1;
+  animation: rotateGlow 10s linear infinite;
+}
+
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--brand-primary, #8b5cf6);
+  background: rgba(139, 92, 246, 0.15);
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.quoteContainer {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.quoteMark {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.1);
+  font-family: serif;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.quoteText {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #fff;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-style: italic;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.source {
+  font-size: 0.85rem;
+  color: var(--text-secondary, #a0a0a0);
+  font-weight: 500;
+}
+
+.source span {
+  color: #c0c0c0;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: var(--text-muted, #666);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.loading, .empty {
+  color: var(--text-secondary, #a0a0a0);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 20px;
+}

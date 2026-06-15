@@ -1,0 +1,109 @@
+.panelContainer {
+  background: var(--surface-light, rgba(255, 255, 255, 0.03));
+  border-left: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  padding: 24px;
+  width: 320px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header {
+  border-bottom: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  padding-bottom: 16px;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: var(--text-primary, #fff);
+}
+
+.progressContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progressBar {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--brand-primary, #6366f1);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.progressText {
+  font-size: 0.8rem;
+  color: var(--text-secondary, #a0a0a0);
+  font-weight: 500;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary, #a0a0a0);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.traitItem {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 12px;
+  transition: all 0.2s ease;
+}
+
+.traitItem:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.traitLabel {
+  font-size: 0.75rem;
+  color: var(--brand-primary, #8b5cf6);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.traitValue {
+  font-size: 0.95rem;
+  color: var(--text-primary, #e0e0e0);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.traitEmpty {
+  font-size: 0.9rem;
+  color: var(--text-muted, #666);
+  font-style: italic;
+  margin: 0;
+}
+
+.loading {
+  color: var(--text-secondary, #a0a0a0);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 40px 0;
+}

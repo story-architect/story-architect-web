@@ -1,0 +1,84 @@
+.insightCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-8) var(--spacing-10);
+  background: var(--color-background-ivory);
+  border: 1px solid var(--color-accent-gold-light);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02), inset 0 0 40px rgba(230, 222, 205, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glowing {
+  border-color: var(--color-accent-gold);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2), inset 0 0 30px rgba(212, 175, 55, 0.05);
+}
+
+.glowing::before, .glowing::after {
+  content: "✦";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-accent-gold);
+  font-size: 1rem;
+}
+
+.glowing::before {
+  left: -20px;
+}
+
+.glowing::after {
+  right: -20px;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-accent-gold-light);
+  color: var(--color-accent-gold-dark);
+  margin-bottom: var(--spacing-4);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-accent-gold-dark);
+  font-weight: 600;
+  margin-bottom: var(--spacing-3);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.label::before, .label::after {
+  content: "❧";
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-4);
+  font-style: italic;
+}
+
+.content {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}

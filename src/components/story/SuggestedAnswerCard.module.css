@@ -1,0 +1,30 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-6);
+  height: 100%;
+  justify-content: center;
+  border-width: 2px;
+  background-color: var(--color-background);
+}
+
+.selected {
+  border-color: var(--color-accent-gold);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.icon {
+  color: var(--color-accent-gold-dark);
+  margin-bottom: var(--spacing-3);
+}
+
+.text {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+}
