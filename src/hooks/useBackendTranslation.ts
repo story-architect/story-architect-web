@@ -15,7 +15,9 @@ export const useBackendTranslation = () => {
     else if (title === 'Discovery Answered') translatedTitle = t('events.Discovery Answered');
     else if (title.startsWith('Pattern: ')) {
       const name = title.replace('Pattern: ', '');
-      translatedTitle = t('events.Pattern: {{name}}', { name });
+      // Translate the pattern name if we know it
+      const translatedName = t(`insights.patterns.${name}`, { defaultValue: name });
+      translatedTitle = t('events.Pattern: {{name}}', { name: translatedName });
     }
     else if (title === 'Insight Unlocked: Central Conflict') translatedTitle = t('events.Insight Unlocked: Central Conflict');
 
@@ -37,6 +39,24 @@ export const useBackendTranslation = () => {
     else if (description.startsWith('Generated relationship report for ') && description.endsWith('.')) {
       const name = description.slice(34, -1);
       translatedDescription = t('events.Generated relationship report for {{name}}.', { name });
+    }
+    else {
+      // Direct exact match for insight descriptions (no variables in these strings)
+      const possibleTranslation = t(`insights.descriptions.${description}`, { defaultValue: '' });
+      if (possibleTranslation) {
+        translatedDescription = possibleTranslation;
+      } else if (description.includes(' - ')) {
+        // Handle "Discovery Answered" which is "Question - Answer"
+        // We DO NOT translate the user's answer!
+        const parts = description.split(' - ');
+        if (parts.length >= 2) {
+          const question = parts[0];
+          const answer = parts.slice(1).join(' - ');
+          // We could translate the question if we had a map, but we'll leave it for now
+          // and definitively leave the answer untouched.
+          translatedDescription = `${question} - ${answer}`;
+        }
+      }
     }
 
     return { title: translatedTitle, description: translatedDescription };

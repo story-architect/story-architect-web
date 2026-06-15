@@ -41,5 +41,28 @@
     "Discovery Answered": "Discovery Answered",
     "Pattern: {{name}}": "Pattern: {{name}}",
     "Insight Unlocked: Central Conflict": "Insight Unlocked: Central Conflict"
+  },
+  "insights": {
+    "patterns": {
+      "Protective Independence": "Protective Independence",
+      "Conditional Worth": "Conditional Worth",
+      "Protective Control": "Protective Control",
+      "Protective Invisibility": "Protective Invisibility",
+      "Fear of Abandonment": "Fear of Abandonment",
+      "Fear of Being Known": "Fear of Being Known",
+      "Emotional Defense Emerging": "Emotional Defense Emerging"
+    },
+    "descriptions": {
+      "Your answers suggest this character protects themselves by refusing to need anyone.": "Your answers suggest this character protects themselves by refusing to need anyone.",
+      "Your answers suggest this character believes they must be perfect to be safe or accepted.": "Your answers suggest this character believes they must be perfect to be safe or accepted.",
+      "Your answers suggest this character feels safest when they can control what happens.": "Your answers suggest this character feels safest when they can control what happens.",
+      "Your answers suggest this character believes staying unseen keeps them safe.": "Your answers suggest this character believes staying unseen keeps them safe.",
+      "Your answers suggest this character is shaped by the fear of being left alone.": "Your answers suggest this character is shaped by the fear of being left alone.",
+      "Your answers suggest this character fears closeness because being known feels unsafe.": "Your answers suggest this character fears closeness because being known feels unsafe.",
+      "Your answers suggest this character's wound is beginning to shape how they protect themselves.": "Your answers suggest this character's wound is beginning to shape how they protect themselves.",
+      "They must choose between safety and connection.": "They must choose between safety and connection.",
+      "They must choose between perfection and authenticity.": "They must choose between perfection and authenticity.",
+      "They must choose between control and trust.": "They must choose between control and trust."
+    }
   }
 }
