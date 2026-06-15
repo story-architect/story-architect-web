@@ -52,7 +52,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
-  color: var(--brand-primary, #8b5cf6);
+  color: var(--color-accent-gold);
   box-shadow: 0 0 40px rgba(139, 92, 246, 0.4);
   animation: pulse 2s infinite alternate;
 }
@@ -67,7 +67,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--brand-primary, #8b5cf6);
+  color: var(--color-accent-gold);
   margin-bottom: 16px;
   display: block;
 }
@@ -82,7 +82,7 @@
 
 .description {
   font-size: 1.2rem;
-  color: var(--text-primary, #e0e0e0);
+  color: var(--color-text-primary);
   line-height: 1.6;
   margin: 0 0 40px 0;
   max-width: 80%;

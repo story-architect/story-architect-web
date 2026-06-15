@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(15, 10, 20, 0.95);
+  background: rgba(253, 251, 247, 0.95);
   backdrop-filter: blur(20px);
   z-index: 1000;
   display: flex;
@@ -45,14 +45,14 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: rgba(56, 189, 248, 0.1);
-  border: 2px solid rgba(56, 189, 248, 0.3);
+  background: var(--color-accent-gold-light);
+  border: 2px solid var(--color-accent-gold);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
-  color: var(--brand-secondary, #38bdf8);
-  box-shadow: 0 0 40px rgba(56, 189, 248, 0.4);
+  color: var(--color-accent-gold);
+  box-shadow: 0 0 40px rgba(197, 168, 128, 0.4);
   animation: spinSlow 10s linear infinite;
 }
 
@@ -66,29 +66,29 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--brand-secondary, #38bdf8);
+  color: var(--color-accent-gold);
   margin-bottom: 24px;
   display: block;
   animation: pulseColor 3s infinite alternate;
 }
 
 @keyframes pulseColor {
-  from { color: #38bdf8; }
-  to { color: #7dd3fc; }
+  from { color: var(--color-accent-gold-dark); }
+  to { color: var(--color-accent-gold); }
 }
 
 .description {
   font-size: 1.5rem;
   font-weight: 500;
-  color: #fff;
+  color: var(--color-text-primary);
   line-height: 1.5;
   margin: 0 0 40px 0;
   max-width: 90%;
 }
 
 .actionButton {
-  background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
-  color: white;
+  background: linear-gradient(135deg, #0ea5e9 0%, var(--color-accent-gold-dark) 100%);
+  color: var(--color-surface);
   border: none;
   padding: 16px 40px;
   border-radius: 30px;
@@ -96,12 +96,12 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3);
+  box-shadow: 0 10px 20px rgba(197, 168, 128, 0.3);
 }
 
 .actionButton:hover {
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 15px 30px rgba(14, 165, 233, 0.5);
+  box-shadow: 0 15px 30px rgba(197, 168, 128, 0.5);
 }
 
 .actionButton:active {

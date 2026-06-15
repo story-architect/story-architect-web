@@ -1,6 +1,6 @@
 .pulseContainer {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
   display: flex;
@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--accent-color);
+  color: var(--color-accent-gold);
 }
 
 .pulseIcon {
@@ -30,11 +30,11 @@
   margin: 0;
   font-size: 1.125rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--color-text-primary);
 }
 
 .loading {
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   font-style: italic;
   text-align: center;
   padding: 2rem 0;
@@ -50,35 +50,35 @@
   display: flex;
   justify-content: space-between;
   font-size: 0.875rem;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   font-weight: 500;
 }
 
 .progressBar {
   height: 6px;
-  background: var(--bg-body);
+  background: var(--color-background);
   border-radius: 3px;
   overflow: hidden;
 }
 
 .progressFill {
   height: 100%;
-  background: var(--accent-color);
+  background: var(--color-accent-gold);
   transition: width 0.5s ease-out;
 }
 
 .latestDiscovery {
-  background: rgba(var(--accent-color-rgb), 0.1);
+  background: rgba(var(--color-accent-gold-rgb), 0.1);
   padding: 0.75rem 1rem;
   border-radius: var(--radius-md);
-  border-left: 3px solid var(--accent-color);
+  border-left: 3px solid var(--color-accent-gold);
 }
 
 .latestLabel {
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--accent-color);
+  color: var(--color-accent-gold);
   font-weight: 600;
   display: block;
   margin-bottom: 0.25rem;
@@ -87,7 +87,7 @@
 .latestText {
   margin: 0;
   font-size: 0.875rem;
-  color: var(--text-primary);
+  color: var(--color-text-primary);
   font-weight: 500;
 }
 
@@ -102,7 +102,7 @@
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   font-weight: 600;
 }
 
@@ -113,7 +113,7 @@
 }
 
 .traitIcon {
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   margin-top: 0.125rem;
 }
 
@@ -132,11 +132,11 @@
 
 .traitLabel {
   font-size: 0.75rem;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   font-weight: 500;
 }
 
 .traitValue {
   font-size: 0.875rem;
-  color: var(--text-primary);
+  color: var(--color-text-primary);
 }

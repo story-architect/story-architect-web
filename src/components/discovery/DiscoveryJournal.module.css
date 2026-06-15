@@ -1,6 +1,6 @@
 .journalContainer {
-  background: var(--surface-light, rgba(255, 255, 255, 0.03));
-  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  background: var(--color-surface);
+  border: 1px solid var(--color-border, var(--color-border));
   border-radius: 12px;
   padding: 20px;
   backdrop-filter: blur(10px);
@@ -10,7 +10,7 @@
   font-size: 1.1rem;
   font-weight: 600;
   margin: 0 0 16px 0;
-  color: var(--text-primary, #fff);
+  color: var(--color-text-primary);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -29,7 +29,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--text-secondary, #a0a0a0);
+  color: var(--color-text-secondary);
   margin-bottom: 12px;
   display: block;
 }
@@ -46,7 +46,7 @@
   gap: 12px;
   padding: 12px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--color-surface);
   transition: all 0.2s ease;
   cursor: default;
 }
@@ -57,20 +57,20 @@
 }
 
 .checkIcon {
-  color: var(--brand-primary, #6366f1);
+  color: var(--color-accent-gold);
   flex-shrink: 0;
   margin-top: 2px;
 }
 
 .entryText {
   font-size: 0.95rem;
-  color: var(--text-primary, #e0e0e0);
+  color: var(--color-text-primary);
   line-height: 1.4;
   margin: 0;
 }
 
 .loading, .empty {
-  color: var(--text-secondary, #a0a0a0);
+  color: var(--color-text-secondary);
   font-size: 0.9rem;
   text-align: center;
   padding: 20px;

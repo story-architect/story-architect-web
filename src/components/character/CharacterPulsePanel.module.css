@@ -1,6 +1,6 @@
 .panelContainer {
-  background: var(--surface-light, rgba(255, 255, 255, 0.03));
-  border-left: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  background: var(--color-surface);
+  border-left: 1px solid var(--color-border, var(--color-border));
   padding: 24px;
   width: 320px;
   min-height: 100%;
@@ -10,7 +10,7 @@
 }
 
 .header {
-  border-bottom: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  border-bottom: 1px solid var(--color-border, var(--color-border));
   padding-bottom: 16px;
 }
 
@@ -18,7 +18,7 @@
   font-size: 1.2rem;
   font-weight: 600;
   margin: 0 0 8px 0;
-  color: var(--text-primary, #fff);
+  color: var(--color-text-primary);
 }
 
 .progressContainer {
@@ -30,21 +30,21 @@
 .progressBar {
   flex: 1;
   height: 6px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-border);
   border-radius: 3px;
   overflow: hidden;
 }
 
 .progressFill {
   height: 100%;
-  background: var(--brand-primary, #6366f1);
+  background: var(--color-accent-gold);
   border-radius: 3px;
   transition: width 0.5s ease;
 }
 
 .progressText {
   font-size: 0.8rem;
-  color: var(--text-secondary, #a0a0a0);
+  color: var(--color-text-secondary);
   font-weight: 500;
 }
 
@@ -59,14 +59,14 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--text-secondary, #a0a0a0);
+  color: var(--color-text-secondary);
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
 .traitItem {
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--color-surface);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 8px;
   padding: 12px;
@@ -75,12 +75,12 @@
 
 .traitItem:hover {
   background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-border);
 }
 
 .traitLabel {
   font-size: 0.75rem;
-  color: var(--brand-primary, #8b5cf6);
+  color: var(--color-accent-gold);
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 4px;
@@ -89,20 +89,20 @@
 
 .traitValue {
   font-size: 0.95rem;
-  color: var(--text-primary, #e0e0e0);
+  color: var(--color-text-primary);
   line-height: 1.4;
   margin: 0;
 }
 
 .traitEmpty {
   font-size: 0.9rem;
-  color: var(--text-muted, #666);
+  color: var(--color-text-muted);
   font-style: italic;
   margin: 0;
 }
 
 .loading {
-  color: var(--text-secondary, #a0a0a0);
+  color: var(--color-text-secondary);
   font-size: 0.9rem;
   text-align: center;
   padding: 40px 0;
