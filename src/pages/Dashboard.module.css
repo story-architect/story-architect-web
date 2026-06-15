@@ -46,7 +46,6 @@
   line-height: 1.1;
   font-family: var(--font-serif);
   color: var(--color-text-primary);
-  
 }
 
 .subtitle {
@@ -58,22 +57,17 @@
   padding-top: 16px;
 }
 
-.dashboardGrid {
+.discoveryFeed {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
+  margin-bottom: 60px;
 }
 
-.mainColumn {
+.storiesSection {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-}
-
-.sideColumn {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
 .sectionDivider {
@@ -99,8 +93,8 @@
 }
 
 .storyList {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -113,3 +107,4 @@
   border-radius: 12px;
   border: 1px dashed var(--color-border);
 }
+

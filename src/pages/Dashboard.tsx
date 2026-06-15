@@ -45,40 +45,36 @@ const Dashboard: React.FC = () => {
         </div>
       </div>
 
-      <div className={styles.dashboardGrid}>
-        
-        <div className={styles.mainColumn}>
-          <div className={styles.sectionDivider}>
-            <span className={styles.sectionTitle}>Recently Updated Stories</span>
-            <div className={styles.line}></div>
-          </div>
+      <div className={styles.discoveryFeed}>
+        <LatestDiscoveryCard storyId={mostRecentStoryId} />
+        <DiscoveryJournal storyId={mostRecentStoryId} />
+      </div>
 
-          <div className={styles.storyList}>
-            {isLoading ? (
-              <div className={styles.loading}>Loading your stories...</div>
-            ) : sortedStories.length === 0 ? (
-              <div className={styles.emptyState}>
-                <p>You haven't started any stories yet.</p>
-              </div>
-            ) : (
-              sortedStories.map((story) => (
-                <StoryCard
-                  key={story.id}
-                  id={story.id}
-                  title={story.title}
-                  characterCount={story.character_count || 0}
-                  relationshipCount={story.relationship_count || 0}
-                />
-              ))
-            )}
-          </div>
+      <div className={styles.storiesSection}>
+        <div className={styles.sectionDivider}>
+          <span className={styles.sectionTitle}>Recently Updated Stories</span>
+          <div className={styles.line}></div>
         </div>
 
-        <div className={styles.sideColumn}>
-          <LatestDiscoveryCard storyId={mostRecentStoryId} />
-          <DiscoveryJournal storyId={mostRecentStoryId} />
+        <div className={styles.storyList}>
+          {isLoading ? (
+            <div className={styles.loading}>Loading your stories...</div>
+          ) : sortedStories.length === 0 ? (
+            <div className={styles.emptyState}>
+              <p>You haven't started any stories yet.</p>
+            </div>
+          ) : (
+            sortedStories.map((story) => (
+              <StoryCard
+                key={story.id}
+                id={story.id}
+                title={story.title}
+                characterCount={story.character_count || 0}
+                relationshipCount={story.relationship_count || 0}
+              />
+            ))
+          )}
         </div>
-
       </div>
     </div>
   );

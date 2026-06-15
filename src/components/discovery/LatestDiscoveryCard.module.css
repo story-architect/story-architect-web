@@ -1,5 +1,5 @@
 .cardContainer {
-  background: linear-gradient(135deg, rgba(197, 168, 128, 0.1) 0%, rgba(197, 168, 128, 0.05) 100%);
+  background: var(--color-surface);
   border: 1px solid rgba(197, 168, 128, 0.2);
   border-radius: 16px;
   padding: 24px;
@@ -80,7 +80,7 @@
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 1.5;
-  color: #fff;
+  color: var(--color-text-primary);
   margin: 0;
   position: relative;
   z-index: 1;
@@ -103,7 +103,7 @@
 }
 
 .source span {
-  color: #c0c0c0;
+  color: var(--color-text-secondary);
 }
 
 .timestamp {
