@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useQuery } from '@tanstack/react-query';
-import { Heart, Shield, Flame, Map, Users, Info, ArrowRight, Sparkles } from 'lucide-react';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { Heart, Shield, Flame, Map, Users, Info, ArrowRight, Sparkles, Edit, RefreshCw } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { Button } from '../components/ui/Button';
+import { Modal } from '../components/ui/Modal';
+import { TextInput, TextArea, SelectInput } from '../components/ui/Input';
 import { ArchitectureChain } from '../components/story/ArchitectureChain';
 import { DiscoverySidebar } from '../components/story/DiscoverySidebar';
 import { InsightCard } from '../components/story/InsightCard';
-import { ReportService, CharacterService } from '../api/services';
+import { ReportService, CharacterService, DiscoveryService } from '../api/services';
+import * as T from '../types';
 import styles from './CharacterReport.module.css';
 
 const CharacterReport: React.FC = () => {
   const { characterId } = useParams<{ characterId: string }>();
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
+  const { t } = useTranslation('common');
 
   const { data: character } = useQuery({
     queryKey: ['character', characterId],
@@ -24,6 +30,79 @@ const CharacterReport: React.FC = () => {
     queryFn: () => ReportService.getCharacterReport(characterId!),
     enabled: !!characterId,
   });
+
+  const { data: answers } = useQuery({
+    queryKey: ['character-answers', characterId],
+    queryFn: () => DiscoveryService.getCharacterAnswers(characterId!),
+    enabled: !!characterId,
+  });
+
+  const { data: questions } = useQuery({
+    queryKey: ['questions', 'CHARACTER_DISCOVERY'],
+    queryFn: () => DiscoveryService.getQuestions('CHARACTER_DISCOVERY'),
+  });
+
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [editForm, setEditForm] = useState({ name: '', age: 0, role: 'MAIN_CHARACTER' as T.RoleEnum, archetype: '' });
+
+  const [reviseModalState, setReviseModalState] = useState<{ isOpen: boolean; answer: T.DiscoveryAnswerResponse | null; question: T.DiscoveryQuestionResponse | null }>({
+    isOpen: false,
+    answer: null,
+    question: null,
+  });
+  const [reviseForm, setReviseForm] = useState({ custom_answer: '' });
+
+  useEffect(() => {
+    if (character) {
+      setEditForm({ name: character.name, age: character.age, role: character.role, archetype: character.archetype || '' });
+    }
+  }, [character]);
+
+  const updateCharacterMutation = useMutation({
+    mutationFn: (data: T.CharacterUpdate) => CharacterService.update(characterId!, data),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['character', characterId] });
+      setIsEditModalOpen(false);
+    },
+  });
+
+  const updateAnswerMutation = useMutation({
+    mutationFn: (data: { id: string, payload: T.DiscoveryAnswerUpdate }) => DiscoveryService.updateAnswer(data.id, data.payload),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['character-answers', characterId] });
+      queryClient.invalidateQueries({ queryKey: ['report', 'character', characterId] });
+      setReviseModalState({ isOpen: false, answer: null, question: null });
+    },
+  });
+
+  const regenerateMutation = useMutation({
+    mutationFn: () => ReportService.getCharacterReport(characterId!),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['report', 'character', characterId] });
+    },
+  });
+
+  const handleEditSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    updateCharacterMutation.mutate(editForm);
+  };
+
+  const handleReviseSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (reviseModalState.answer) {
+      updateAnswerMutation.mutate({
+        id: reviseModalState.answer.id,
+        payload: { custom_answer: reviseForm.custom_answer }
+      });
+    }
+  };
+
+  const openReviseModal = (ans: T.DiscoveryAnswerResponse, q: T.DiscoveryQuestionResponse | undefined) => {
+    if (q) {
+      setReviseForm({ custom_answer: ans.custom_answer || ans.selected_answer || '' });
+      setReviseModalState({ isOpen: true, answer: ans, question: q });
+    }
+  };
 
   if (isLoading || !report) {
     return <div><div className={styles.loading}>Generating Architecture Report...</div></div>;
@@ -68,6 +147,21 @@ const CharacterReport: React.FC = () => {
       
       <div className={styles.scrollContent}>
         <div className={styles.contentMax}>
+
+          <div style={{ display: 'flex', justifyContent: 'flex-end', paddingBottom: '1rem' }}>
+            <Button variant="outline" icon={<Edit size={18} />} onClick={() => setIsEditModalOpen(true)}>
+              {t('buttons.edit_character', 'Edit Character')}
+            </Button>
+          </div>
+
+          {report.is_stale && (
+            <div style={{ padding: '1rem', backgroundColor: 'var(--surface-hover)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', marginBottom: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <span style={{ color: 'var(--text-primary)', fontWeight: 500 }}>{t('banners.stale_architecture', 'Your recent revisions may have changed this architecture.')}</span>
+              <Button onClick={() => regenerateMutation.mutate()} isLoading={regenerateMutation.isPending} icon={<RefreshCw size={18} />}>
+                {t('buttons.refresh_architecture', 'Refresh Architecture')}
+              </Button>
+            </div>
+          )}
           
           {/* SCREEN 1: Story Engine Emerging */}
           <section className={styles.section}>
@@ -207,8 +301,106 @@ const CharacterReport: React.FC = () => {
             </div>
           </section>
 
+          {/* SCREEN 5: Discovery Answers */}
+          <section className={styles.section} style={{ marginTop: '4rem' }}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.pretitle}>REVISION</span>
+              <h1 className={styles.title}>Discovery Answers</h1>
+              <div className={styles.ornament}>❧</div>
+            </div>
+            
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              {answers?.map(ans => {
+                const question = questions?.find(q => q.id === ans.question_id);
+                return (
+                  <InsightCard key={ans.id} label={question?.question_text || 'Question'}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '1rem' }}>
+                      <div style={{ color: 'var(--text-secondary)' }}>
+                        {ans.custom_answer || ans.selected_answer || 'No answer provided'}
+                      </div>
+                      <Button variant="outline" size="sm" onClick={() => openReviseModal(ans, question)} icon={<Edit size={16} />}>
+                        {t('buttons.revise_answer', 'Revise Answer')}
+                      </Button>
+                    </div>
+                  </InsightCard>
+                );
+              })}
+            </div>
+          </section>
+
         </div>
       </div>
+
+      <Modal
+        isOpen={isEditModalOpen}
+        onClose={() => setIsEditModalOpen(false)}
+        title={t('buttons.edit_character', 'Edit Character')}
+      >
+        <form onSubmit={handleEditSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <TextInput
+            label="Name"
+            value={editForm.name}
+            onChange={(e) => setEditForm({ ...editForm, name: e.target.value })}
+            required
+          />
+          <TextInput
+            type="number"
+            label="Age"
+            value={editForm.age}
+            onChange={(e) => setEditForm({ ...editForm, age: parseInt(e.target.value) || 0 })}
+            required
+          />
+          <SelectInput
+            label="Role"
+            value={editForm.role}
+            onChange={(e) => setEditForm({ ...editForm, role: e.target.value as T.RoleEnum })}
+            options={[
+              { label: 'Protagonist', value: 'MAIN_CHARACTER' },
+              { label: 'Supporting Character', value: 'SUPPORTING_CHARACTER' }
+            ]}
+          />
+          <TextInput
+            label="Archetype (Optional)"
+            value={editForm.archetype}
+            onChange={(e) => setEditForm({ ...editForm, archetype: e.target.value })}
+          />
+          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '0.5rem', marginTop: '1rem' }}>
+            <Button type="button" variant="outline" onClick={() => setIsEditModalOpen(false)}>
+              {t('buttons.cancel', 'Cancel')}
+            </Button>
+            <Button type="submit" isLoading={updateCharacterMutation.isPending}>
+              {t('buttons.save_changes', 'Save Changes')}
+            </Button>
+          </div>
+        </form>
+      </Modal>
+
+      <Modal
+        isOpen={reviseModalState.isOpen}
+        onClose={() => setReviseModalState({ isOpen: false, answer: null, question: null })}
+        title={t('buttons.revise_answer', 'Revise Answer')}
+      >
+        <form onSubmit={handleReviseSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <div style={{ marginBottom: '1rem', fontStyle: 'italic', color: 'var(--text-secondary)' }}>
+            "{reviseModalState.question?.question_text}"
+          </div>
+          <TextArea
+            label="Your Answer"
+            value={reviseForm.custom_answer}
+            onChange={(e) => setReviseForm({ ...reviseForm, custom_answer: e.target.value })}
+            required
+            rows={4}
+          />
+          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '0.5rem', marginTop: '1rem' }}>
+            <Button type="button" variant="outline" onClick={() => setReviseModalState({ isOpen: false, answer: null, question: null })}>
+              {t('buttons.cancel', 'Cancel')}
+            </Button>
+            <Button type="submit" isLoading={updateAnswerMutation.isPending}>
+              {t('buttons.save_changes', 'Save Changes')}
+            </Button>
+          </div>
+        </form>
+      </Modal>
     </div>
   );
 };

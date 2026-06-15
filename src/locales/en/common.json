@@ -10,6 +10,16 @@
   },
   "buttons": {
     "continue_discovery": "Continue Discovery",
-    "view_report": "View Report"
+    "view_report": "View Report",
+    "edit_story": "Edit Story",
+    "edit_character": "Edit Character",
+    "edit_relationship": "Edit Relationship",
+    "revise_answer": "Revise Answer",
+    "refresh_architecture": "Refresh Architecture",
+    "save_changes": "Save Changes",
+    "cancel": "Cancel"
+  },
+  "banners": {
+    "stale_architecture": "Your recent revisions may have changed this architecture."
   }
 }

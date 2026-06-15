@@ -14,6 +14,10 @@ export const StoryService = {
     const res = await apiClient.post<T.StoryResponse>('/stories', data);
     return res.data;
   },
+  update: async (id: string, data: T.StoryUpdate) => {
+    const res = await apiClient.put<T.StoryResponse>(`/stories/${id}`, data);
+    return res.data;
+  },
   getCharacters: async (storyId: string) => {
     const res = await apiClient.get<T.CharacterResponse[]>(`/stories/${storyId}/characters`);
     return res.data;
@@ -45,6 +49,10 @@ export const CharacterService = {
     const res = await apiClient.post<T.CharacterResponse>(`/stories/${data.story_id}/characters`, data);
     return res.data;
   },
+  update: async (id: string, data: T.CharacterUpdate) => {
+    const res = await apiClient.put<T.CharacterResponse>(`/characters/${id}`, data);
+    return res.data;
+  },
   getById: async (id: string) => {
     const res = await apiClient.get<T.CharacterResponse>(`/characters/${id}`);
     return res.data;
@@ -60,6 +68,10 @@ export const RelationshipService = {
     const res = await apiClient.post<T.RelationshipResponse>(`/stories/${data.story_id}/relationships`, data);
     return res.data;
   },
+  update: async (id: string, data: T.RelationshipUpdate) => {
+    const res = await apiClient.put<T.RelationshipResponse>(`/relationships/${id}`, data);
+    return res.data;
+  },
   getById: async (id: string) => {
     const res = await apiClient.get<T.RelationshipResponse>(`/relationships/${id}`);
     return res.data;
@@ -73,6 +85,10 @@ export const DiscoveryService = {
   },
   submitAnswer: async (data: T.DiscoveryAnswerCreate) => {
     const res = await apiClient.post<T.DiscoveryAnswerResponse>('/discovery/answers', data);
+    return res.data;
+  },
+  updateAnswer: async (id: string, data: T.DiscoveryAnswerUpdate) => {
+    const res = await apiClient.put<T.DiscoveryAnswerResponse>(`/discovery/answers/${id}`, data);
     return res.data;
   },
   getCharacterAnswers: async (characterId: string) => {

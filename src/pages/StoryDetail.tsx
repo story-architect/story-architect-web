@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useQuery } from '@tanstack/react-query';
-import { Plus, Compass, Activity, Users, Link2 } from 'lucide-react';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { Plus, Compass, Activity, Users, Link2, Edit } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { Button } from '../components/ui/Button';
+import { Modal } from '../components/ui/Modal';
+import { TextInput, TextArea } from '../components/ui/Input';
 import { StoryService } from '../api/services';
 import { LatestDiscoveryCard } from '../components/discovery/LatestDiscoveryCard';
 import { DiscoveryJournal } from '../components/discovery/DiscoveryJournal';
@@ -12,6 +15,11 @@ import styles from './StoryDetail.module.css';
 const StoryDetail: React.FC = () => {
   const { storyId } = useParams<{ storyId: string }>();
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
+  const { t } = useTranslation('common');
+
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [editForm, setEditForm] = useState({ title: '', genre: '', one_sentence_premise: '' });
 
   const { data: story, isLoading: isLoadingStory } = useQuery({
     queryKey: ['story', storyId],
@@ -26,6 +34,29 @@ const StoryDetail: React.FC = () => {
 
   const progress = nextDiscovery?.progress || 0;
 
+  useEffect(() => {
+    if (story) {
+      setEditForm({
+        title: story.title,
+        genre: story.genre,
+        one_sentence_premise: story.one_sentence_premise,
+      });
+    }
+  }, [story]);
+
+  const updateStoryMutation = useMutation({
+    mutationFn: (data: any) => StoryService.update(storyId!, data),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['story', storyId] });
+      setIsEditModalOpen(false);
+    },
+  });
+
+  const handleEditSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    updateStoryMutation.mutate(editForm);
+  };
+
   if (isLoadingStory) return <div className={styles.loading}>Loading story command center...</div>;
   if (!story) return <div className={styles.error}>Story not found</div>;
 
@@ -37,6 +68,13 @@ const StoryDetail: React.FC = () => {
           <h1 className={styles.storyTitle}>{story.title}</h1>
         </div>
         <div className={styles.quickActions}>
+          <Button 
+            variant="outline"
+            onClick={() => setIsEditModalOpen(true)} 
+            icon={<Edit size={18} />}
+          >
+            {t('buttons.edit_story', 'Edit Story')}
+          </Button>
           <Button 
             onClick={() => {
               if (nextDiscovery?.next_discovery === 'Create your first Character') {
@@ -116,6 +154,42 @@ const StoryDetail: React.FC = () => {
         </div>
 
       </div>
+
+      <Modal
+        isOpen={isEditModalOpen}
+        onClose={() => setIsEditModalOpen(false)}
+        title={t('buttons.edit_story', 'Edit Story')}
+      >
+        <form onSubmit={handleEditSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <TextInput
+            label="Title"
+            value={editForm.title}
+            onChange={(e) => setEditForm({ ...editForm, title: e.target.value })}
+            required
+          />
+          <TextInput
+            label="Genre"
+            value={editForm.genre}
+            onChange={(e) => setEditForm({ ...editForm, genre: e.target.value })}
+            required
+          />
+          <TextArea
+            label="One Sentence Premise"
+            value={editForm.one_sentence_premise}
+            onChange={(e) => setEditForm({ ...editForm, one_sentence_premise: e.target.value })}
+            required
+            rows={3}
+          />
+          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '0.5rem', marginTop: '1rem' }}>
+            <Button type="button" variant="outline" onClick={() => setIsEditModalOpen(false)}>
+              {t('buttons.cancel', 'Cancel')}
+            </Button>
+            <Button type="submit" isLoading={updateStoryMutation.isPending}>
+              {t('buttons.save_changes', 'Save Changes')}
+            </Button>
+          </div>
+        </form>
+      </Modal>
     </div>
   );
 };

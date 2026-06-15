@@ -10,6 +10,16 @@
   },
   "buttons": {
     "continue_discovery": "Continuer la découverte",
-    "view_report": "Voir le rapport"
+    "view_report": "Voir le rapport",
+    "edit_story": "Modifier l'histoire",
+    "edit_character": "Modifier le personnage",
+    "edit_relationship": "Modifier la relation",
+    "revise_answer": "Réviser la réponse",
+    "refresh_architecture": "Rafraîchir l'architecture",
+    "save_changes": "Enregistrer les modifications",
+    "cancel": "Annuler"
+  },
+  "banners": {
+    "stale_architecture": "Vos récentes révisions ont pu modifier cette architecture."
   }
 }

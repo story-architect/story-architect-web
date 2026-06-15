@@ -27,6 +27,12 @@ export interface StoryCreate {
   one_sentence_premise: string;
 }
 
+export interface StoryUpdate {
+  title?: string;
+  genre?: string;
+  one_sentence_premise?: string;
+}
+
 export interface StoryResponse extends StoryCreate {
   id: string;
   created_at: string;
@@ -66,6 +72,13 @@ export interface CharacterCreate {
   archetype?: string | null;
 }
 
+export interface CharacterUpdate {
+  name?: string;
+  age?: number;
+  role?: RoleEnum;
+  archetype?: string | null;
+}
+
 export interface CharacterResponse extends CharacterCreate {
   id: string;
   created_at: string;
@@ -88,6 +101,10 @@ export interface RelationshipCreate {
   character_a_id: string;
   character_b_id: string;
   relationship_type: RelationshipTypeEnum;
+}
+
+export interface RelationshipUpdate {
+  relationship_type?: RelationshipTypeEnum;
 }
 
 export interface RelationshipResponse extends RelationshipCreate {
@@ -113,6 +130,11 @@ export interface DiscoveryAnswerCreate {
   character_id?: string | null;
   relationship_id?: string | null;
   question_id: string;
+  selected_answer?: string | null;
+  custom_answer?: string | null;
+}
+
+export interface DiscoveryAnswerUpdate {
   selected_answer?: string | null;
   custom_answer?: string | null;
 }
@@ -148,6 +170,8 @@ export interface CharacterArchitectureReportResponse {
   conflict_created: string;
   transformation: string;
   updated_at: string;
+  is_stale?: boolean;
+  stale_reason?: string | null;
 }
 
 export interface RelationshipArchitectureReportResponse {
@@ -160,4 +184,6 @@ export interface RelationshipArchitectureReportResponse {
   turning_point: string;
   relationship_law: string;
   updated_at: string;
+  is_stale?: boolean;
+  stale_reason?: string | null;
 }

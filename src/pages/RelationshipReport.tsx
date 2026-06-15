@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useQuery } from '@tanstack/react-query';
-import { ArrowRight, Scale, HeartCrack } from 'lucide-react';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { ArrowRight, Scale, HeartCrack, Edit, RefreshCw } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { Button } from '../components/ui/Button';
+import { Modal } from '../components/ui/Modal';
+import { TextArea, SelectInput } from '../components/ui/Input';
 import { ArchitectureChain } from '../components/story/ArchitectureChain';
 import { InsightCard } from '../components/story/InsightCard';
-import { ReportService, RelationshipService } from '../api/services';
+import { ReportService, RelationshipService, DiscoveryService } from '../api/services';
+import * as T from '../types';
 import styles from './RelationshipReport.module.css';
 
 const RelationshipReport: React.FC = () => {
   const { relationshipId } = useParams<{ relationshipId: string }>();
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
+  const { t } = useTranslation('common');
 
   const { data: relationship } = useQuery({
     queryKey: ['relationship', relationshipId],
@@ -23,6 +29,79 @@ const RelationshipReport: React.FC = () => {
     queryFn: () => ReportService.getRelationshipReport(relationshipId!),
     enabled: !!relationshipId,
   });
+
+  const { data: answers } = useQuery({
+    queryKey: ['relationship-answers', relationshipId],
+    queryFn: () => DiscoveryService.getRelationshipAnswers(relationshipId!),
+    enabled: !!relationshipId,
+  });
+
+  const { data: questions } = useQuery({
+    queryKey: ['questions', 'RELATIONSHIP_DISCOVERY'],
+    queryFn: () => DiscoveryService.getQuestions('RELATIONSHIP_DISCOVERY'),
+  });
+
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [editForm, setEditForm] = useState({ relationship_type: 'FRIENDSHIP' as T.RelationshipTypeEnum });
+
+  const [reviseModalState, setReviseModalState] = useState<{ isOpen: boolean; answer: T.DiscoveryAnswerResponse | null; question: T.DiscoveryQuestionResponse | null }>({
+    isOpen: false,
+    answer: null,
+    question: null,
+  });
+  const [reviseForm, setReviseForm] = useState({ custom_answer: '' });
+
+  useEffect(() => {
+    if (relationship) {
+      setEditForm({ relationship_type: relationship.relationship_type });
+    }
+  }, [relationship]);
+
+  const updateRelationshipMutation = useMutation({
+    mutationFn: (data: T.RelationshipUpdate) => RelationshipService.update(relationshipId!, data),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['relationship', relationshipId] });
+      setIsEditModalOpen(false);
+    },
+  });
+
+  const updateAnswerMutation = useMutation({
+    mutationFn: (data: { id: string, payload: T.DiscoveryAnswerUpdate }) => DiscoveryService.updateAnswer(data.id, data.payload),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['relationship-answers', relationshipId] });
+      queryClient.invalidateQueries({ queryKey: ['report', 'relationship', relationshipId] });
+      setReviseModalState({ isOpen: false, answer: null, question: null });
+    },
+  });
+
+  const regenerateMutation = useMutation({
+    mutationFn: () => ReportService.getRelationshipReport(relationshipId!),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['report', 'relationship', relationshipId] });
+    },
+  });
+
+  const handleEditSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    updateRelationshipMutation.mutate(editForm);
+  };
+
+  const handleReviseSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (reviseModalState.answer) {
+      updateAnswerMutation.mutate({
+        id: reviseModalState.answer.id,
+        payload: { custom_answer: reviseForm.custom_answer }
+      });
+    }
+  };
+
+  const openReviseModal = (ans: T.DiscoveryAnswerResponse, q: T.DiscoveryQuestionResponse | undefined) => {
+    if (q) {
+      setReviseForm({ custom_answer: ans.custom_answer || ans.selected_answer || '' });
+      setReviseModalState({ isOpen: true, answer: ans, question: q });
+    }
+  };
 
   if (isLoading || !report) {
     return <div className={styles.loading}>Generating Consequence Report...</div>;
@@ -40,6 +119,21 @@ const RelationshipReport: React.FC = () => {
     <div className={styles.pageLayout}>
       <div className={styles.scrollContent}>
         
+        <div style={{ display: 'flex', justifyContent: 'flex-end', paddingBottom: '1rem' }}>
+          <Button variant="outline" icon={<Edit size={18} />} onClick={() => setIsEditModalOpen(true)}>
+            {t('buttons.edit_relationship', 'Edit Relationship')}
+          </Button>
+        </div>
+
+        {report.is_stale && (
+          <div style={{ padding: '1rem', backgroundColor: 'var(--surface-hover)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', marginBottom: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <span style={{ color: 'var(--text-primary)', fontWeight: 500 }}>{t('banners.stale_architecture', 'Your recent revisions may have changed this architecture.')}</span>
+            <Button onClick={() => regenerateMutation.mutate()} isLoading={regenerateMutation.isPending} icon={<RefreshCw size={18} />}>
+              {t('buttons.refresh_architecture', 'Refresh Architecture')}
+            </Button>
+          </div>
+        )}
+
         <div className={styles.header}>
           <span className={styles.pretitle}>DISCOVERY COMPLETE</span>
           <h1 className={styles.title}>Relationship Consequence</h1>
@@ -89,7 +183,7 @@ const RelationshipReport: React.FC = () => {
               <div className={styles.ornamentSmall}>✦</div>
             </div>
             
-            <div className={styles.nextStep}>
+            <div className={styles.nextStep} style={{ marginBottom: '4rem' }}>
               <Button 
                 size="lg" 
                 onClick={() => navigate(`/stories/${relationship?.story_id}`)}
@@ -98,6 +192,32 @@ const RelationshipReport: React.FC = () => {
                 Return to Story Overview
               </Button>
             </div>
+            
+            <section className={styles.answersSection}>
+              <div className={styles.header}>
+                <span className={styles.pretitle}>REVISION</span>
+                <h2 className={styles.title} style={{ fontSize: '1.5rem' }}>Discovery Answers</h2>
+                <div className={styles.ornamentSmall}>❧</div>
+              </div>
+              
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '2rem', width: '100%', textAlign: 'left' }}>
+                {answers?.map(ans => {
+                  const question = questions?.find(q => q.id === ans.question_id);
+                  return (
+                    <InsightCard key={ans.id} label={question?.question_text || 'Question'}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '1rem' }}>
+                        <div style={{ color: 'var(--text-secondary)' }}>
+                          {ans.custom_answer || ans.selected_answer || 'No answer provided'}
+                        </div>
+                        <Button variant="outline" size="sm" onClick={() => openReviseModal(ans, question)} icon={<Edit size={16} />}>
+                          {t('buttons.revise_answer', 'Revise Answer')}
+                        </Button>
+                      </div>
+                    </InsightCard>
+                  );
+                })}
+              </div>
+            </section>
           </div>
 
           {/* Character B Side */}
@@ -124,6 +244,63 @@ const RelationshipReport: React.FC = () => {
         </div>
 
       </div>
+
+      <Modal
+        isOpen={isEditModalOpen}
+        onClose={() => setIsEditModalOpen(false)}
+        title={t('buttons.edit_relationship', 'Edit Relationship')}
+      >
+        <form onSubmit={handleEditSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <SelectInput
+            label="Relationship Type"
+            value={editForm.relationship_type}
+            onChange={(e) => setEditForm({ ...editForm, relationship_type: e.target.value as T.RelationshipTypeEnum })}
+            options={[
+              { label: 'Romance', value: 'ROMANCE' },
+              { label: 'Friendship', value: 'FRIENDSHIP' },
+              { label: 'Family', value: 'FAMILY' },
+              { label: 'Rivalry', value: 'RIVALRY' },
+              { label: 'Mentor', value: 'MENTOR' },
+              { label: 'Other', value: 'OTHER' }
+            ]}
+          />
+          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '0.5rem', marginTop: '1rem' }}>
+            <Button type="button" variant="outline" onClick={() => setIsEditModalOpen(false)}>
+              {t('buttons.cancel', 'Cancel')}
+            </Button>
+            <Button type="submit" isLoading={updateRelationshipMutation.isPending}>
+              {t('buttons.save_changes', 'Save Changes')}
+            </Button>
+          </div>
+        </form>
+      </Modal>
+
+      <Modal
+        isOpen={reviseModalState.isOpen}
+        onClose={() => setReviseModalState({ isOpen: false, answer: null, question: null })}
+        title={t('buttons.revise_answer', 'Revise Answer')}
+      >
+        <form onSubmit={handleReviseSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <div style={{ marginBottom: '1rem', fontStyle: 'italic', color: 'var(--text-secondary)' }}>
+            "{reviseModalState.question?.question_text}"
+          </div>
+          <TextArea
+            label="Your Answer"
+            value={reviseForm.custom_answer}
+            onChange={(e) => setReviseForm({ ...reviseForm, custom_answer: e.target.value })}
+            required
+            rows={4}
+          />
+          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '0.5rem', marginTop: '1rem' }}>
+            <Button type="button" variant="outline" onClick={() => setReviseModalState({ isOpen: false, answer: null, question: null })}>
+              {t('buttons.cancel', 'Cancel')}
+            </Button>
+            <Button type="submit" isLoading={updateAnswerMutation.isPending}>
+              {t('buttons.save_changes', 'Save Changes')}
+            </Button>
+          </div>
+        </form>
+      </Modal>
     </div>
   );
 };
