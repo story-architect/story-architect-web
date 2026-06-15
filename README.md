@@ -1,73 +1,66 @@
-# React + TypeScript + Vite
+# Story Architect Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Story Architect is a web application that helps writers discover character architecture, relationship architecture, and dramatic structure through guided discovery.
 
-Currently, two official plugins are available:
+Instead of feeling like a questionnaire, the application provides a **Living Discovery Experience**. As you answer guided questions, deterministic rules unlock deep insights into your characters' emotional wounds, deepest fears, protective lies, and relationship patterns, surfacing them dynamically.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **Dynamic Command Center:** The Dashboard and Story Overview act as living workspaces, highlighting recent activity, your discovery journal, and what you should discover next.
+- **Guided Character Discovery:** Answer intuitive questions to build your character.
+- **Real-time Insights:** The "Character Pulse" tracks the character's emerging personality as you answer questions.
+- **Transition Overlays:** As you answer questions, the system proactively detects patterns and unlocks insights, notifying you immediately with beautiful transition overlays.
+- **Comprehensive Reports:** Generate in-depth Story Engine, Narrative Consequence, and Relationship Architecture reports entirely generated from deterministic analysis of your inputs.
+- **Persistent Navigation:** Easily navigate between characters, relationships, and reports using the dynamic sidebar.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **Framework:** React 18
+- **Build Tool:** Vite
+- **Language:** TypeScript
+- **Routing:** React Router v6
+- **Data Fetching & State:** React Query (@tanstack/react-query)
+- **Styling:** CSS Modules with Vanilla CSS (Dark-mode, glassmorphism, responsive)
+- **Icons:** Lucide React
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/story-architect/story-architect-web.git
+   cd story-architect-web
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+*Note: You will need the Story Architect Backend running on `http://localhost:8000` for the application to fetch and save data.*
+
+## Project Structure
+
+- `src/api/` - API client and service definitions
+- `src/components/`
+  - `character/` - Character-specific components (e.g., CharacterPulse)
+  - `discovery/` - Reusable discovery components (Journal, Overlays)
+  - `layout/` - Shell, Sidebar, and TopNav
+  - `story/` - Story-specific components (Activity Feed, Cards, Status)
+  - `ui/` - Generic UI components (Button, Input, Card)
+- `src/pages/` - Main route components
+- `src/styles/` - Global CSS variables and base styles
+- `src/types/` - TypeScript interface definitions for API responses
+
