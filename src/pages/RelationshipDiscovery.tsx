@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Feather, Shield, Heart, Lock, Sparkles } from 'lucide-react';
@@ -58,11 +58,11 @@ const RelationshipDiscovery: React.FC = () => {
     },
   });
 
-  const currentQuestionIndex = useMemo(() => {
-    if (!questions || !answers) return 0;
+  let currentQuestionIndex = 0;
+  if (questions && answers) {
     const index = questions.findIndex(q => !answers.some(a => a.question_id === q.id));
-    return index === -1 ? questions.length : index;
-  }, [questions, answers]);
+    currentQuestionIndex = index === -1 ? questions.length : index;
+  }
 
   useEffect(() => {
     if (questions && answers && currentQuestionIndex === questions.length && questions.length > 0 && !showInsight && !showPattern) {

@@ -13,7 +13,7 @@ export const PatternEmergingScreen: React.FC<PatternEmergingScreenProps> = ({ ti
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    requestAnimationFrame(() => setMounted(true));
   }, []);
 
   return (

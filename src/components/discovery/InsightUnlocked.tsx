@@ -13,7 +13,7 @@ export const InsightUnlocked: React.FC<InsightUnlockedProps> = ({ title, descrip
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    requestAnimationFrame(() => setMounted(true));
   }, []);
 
   return (

@@ -104,7 +104,7 @@ export interface DiscoveryQuestionResponse {
   question_key: string;
   question_text: string;
   order_index: number;
-  suggested_answers: any[];
+  suggested_answers: string[];
 }
 
 export interface DiscoveryAnswerCreate {

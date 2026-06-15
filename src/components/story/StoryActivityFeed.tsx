@@ -30,6 +30,7 @@ export const StoryActivityFeed: React.FC<StoryActivityFeedProps> = ({ storyId, c
   };
 
   const getRelativeTime = (isoString: string) => {
+    // eslint-disable-next-line react-hooks/purity
     const diff = Date.now() - new Date(isoString).getTime();
     const minutes = Math.floor(diff / 60000);
     if (minutes < 60) return minutes === 0 ? 'Just now' : `${minutes}m ago`;

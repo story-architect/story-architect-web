@@ -10,6 +10,7 @@ import { CharacterService, DiscoveryService } from '../api/services';
 import { CharacterPulse } from '../components/character/CharacterPulse';
 import { InsightUnlocked } from '../components/discovery/InsightUnlocked';
 import { PatternEmergingScreen } from '../components/discovery/PatternEmergingScreen';
+import type { DiscoveryEventResponse } from '../types';
 import styles from './CharacterDiscovery.module.css';
 
 const ICONS = [Heart, Shield, Lock, Sparkles];
@@ -43,7 +44,7 @@ const CharacterDiscovery: React.FC = () => {
   const [showInsight, setShowInsight] = useState(false);
   const [showPattern, setShowPattern] = useState(false);
 
-  const [unlockedEvent, setUnlockedEvent] = useState<any>(null);
+  const [unlockedEvent, setUnlockedEvent] = useState<DiscoveryEventResponse | null>(null);
 
   const submitMutation = useMutation({
     mutationFn: DiscoveryService.submitAnswer,

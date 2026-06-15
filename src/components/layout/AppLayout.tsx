@@ -11,9 +11,9 @@ export const AppLayout: React.FC = () => {
 
   // Extract IDs from URL manually since useParams in a wrapper might not reliably catch deep nested params without nested routes
   const path = location.pathname;
-  const storyMatch = path.match(/\/stories\/([^\/]+)/);
-  const charMatch = path.match(/\/characters\/([^\/]+)/);
-  const relMatch = path.match(/\/relationships\/([^\/]+)/);
+  const storyMatch = path.match(/\/stories\/([^/]+)/);
+  const charMatch = path.match(/\/characters\/([^/]+)/);
+  const relMatch = path.match(/\/relationships\/([^/]+)/);
 
   const urlStoryId = storyMatch && storyMatch[1] !== 'new' ? storyMatch[1] : null;
   const urlCharId = charMatch ? charMatch[1] : null;
@@ -22,6 +22,7 @@ export const AppLayout: React.FC = () => {
   // We need to resolve the story ID if we are on a character or relationship page
   useEffect(() => {
     if (urlStoryId) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setResolvedStoryId(urlStoryId);
     } else if (urlCharId) {
       CharacterService.getById(urlCharId).then(c => setResolvedStoryId(c.story_id)).catch(() => {});

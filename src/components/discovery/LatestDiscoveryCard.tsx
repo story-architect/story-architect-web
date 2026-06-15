@@ -30,6 +30,7 @@ export const LatestDiscoveryCard: React.FC<LatestDiscoveryCardProps> = ({ storyI
 
   // Format relative time (e.g., "15 mins ago")
   const getRelativeTime = (isoString: string) => {
+    // eslint-disable-next-line react-hooks/purity
     const diff = Date.now() - new Date(isoString).getTime();
     const minutes = Math.floor(diff / 60000);
     if (minutes < 60) return `${minutes} mins ago`;
