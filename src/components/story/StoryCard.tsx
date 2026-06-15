@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Users, Link2, ArrowRight } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
+import { useTranslation } from 'react-i18next';
 import { Card } from '../ui/Card';
 import { Button } from '../ui/Button';
 import { StoryService } from '../../api/services';
@@ -21,6 +22,7 @@ export const StoryCard: React.FC<StoryCardProps> = ({
   relationshipCount,
 }) => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const { data: nextDiscovery } = useQuery({
     queryKey: ['next-discovery', id],
@@ -35,7 +37,7 @@ export const StoryCard: React.FC<StoryCardProps> = ({
       <div className={styles.progressSection}>
         <div className={styles.progressCircle}>
           <span className={styles.progressText}>{progress}%</span>
-          <span className={styles.progressLabel}>DISCOVERED</span>
+          <span className={styles.progressLabel}>{t('story_card.discovered')}</span>
         </div>
       </div>
       
@@ -45,12 +47,12 @@ export const StoryCard: React.FC<StoryCardProps> = ({
           <div className={styles.stat}>
             <Users size={16} className={styles.statIcon} />
             <span className={styles.statNumber}>{characterCount}</span>
-            <span className={styles.statLabel}>CHARACTERS DISCOVERED</span>
+            <span className={styles.statLabel}>{t('story_card.characters')}</span>
           </div>
           <div className={styles.stat}>
             <Link2 size={16} className={styles.statIcon} />
             <span className={styles.statNumber}>{relationshipCount}</span>
-            <span className={styles.statLabel}>RELATIONSHIPS EXPLORED</span>
+            <span className={styles.statLabel}>{t('story_card.relationships')}</span>
           </div>
         </div>
       </div>
@@ -72,7 +74,7 @@ export const StoryCard: React.FC<StoryCardProps> = ({
           onClick={() => navigate(`/stories/${id}`)}
           className={styles.actionButton}
         >
-          Continue Discovery <ArrowRight size={16} style={{marginLeft: '8px'}} />
+          {t('story_card.continue')} <ArrowRight size={16} style={{marginLeft: '8px'}} />
         </Button>
       </div>
     </Card>

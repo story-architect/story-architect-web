@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { Plus } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { Button } from '../components/ui/Button';
 import { StoryCard } from '../components/story/StoryCard';
 import { StoryService } from '../api/services';
@@ -11,6 +12,7 @@ import styles from './Dashboard.module.css';
 
 const Dashboard: React.FC = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   
   const { data: stories, isLoading } = useQuery({
     queryKey: ['stories'],
@@ -29,9 +31,9 @@ const Dashboard: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.header}>
         <div className={styles.titleSection}>
-          <h1 className={styles.title}>Where will you<br/>discover next?</h1>
+          <h1 className={styles.title}>{t('dashboard.title_part1')}<br/>{t('dashboard.title_part2')}</h1>
           <p className={styles.subtitle}>
-            Continue exploring the stories you've already begun uncovering.
+            {t('dashboard.subtitle')}
           </p>
         </div>
         <div className={styles.actionSection}>
@@ -40,7 +42,7 @@ const Dashboard: React.FC = () => {
             onClick={() => navigate('/stories/new')}
             icon={<Plus size={20} />}
           >
-            Create Story
+            {t('dashboard.create_story')}
           </Button>
         </div>
       </div>
@@ -52,16 +54,16 @@ const Dashboard: React.FC = () => {
 
       <div className={styles.storiesSection}>
         <div className={styles.sectionDivider}>
-          <span className={styles.sectionTitle}>Recently Updated Stories</span>
+          <span className={styles.sectionTitle}>{t('dashboard.recently_updated')}</span>
           <div className={styles.line}></div>
         </div>
 
         <div className={styles.storyList}>
           {isLoading ? (
-            <div className={styles.loading}>Loading your stories...</div>
+            <div className={styles.loading}>{t('dashboard.loading_stories')}</div>
           ) : sortedStories.length === 0 ? (
             <div className={styles.emptyState}>
-              <p>You haven't started any stories yet.</p>
+              <p>{t('dashboard.no_stories')}</p>
             </div>
           ) : (
             sortedStories.map((story) => (

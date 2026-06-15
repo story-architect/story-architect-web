@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "search": "Recherche...",
+    "writer": "Écrivain"
+  },
+  "dashboard": {
+    "title_part1": "Où allez-vous",
+    "title_part2": "découvrir ensuite ?",
+    "subtitle": "Continuez à explorer les histoires que vous avez déjà commencé à découvrir.",
+    "create_story": "Créer une histoire",
+    "recently_updated": "Histoires récemment mises à jour",
+    "loading_stories": "Chargement de vos histoires...",
+    "no_stories": "Vous n'avez pas encore commencé d'histoires.",
+    "latest_discovery": "Dernière découverte",
+    "source": "Source",
+    "mins_ago": "Il y a {{count}} minutes",
+    "hours_ago": "Il y a {{count}} heures",
+    "days_ago": "Il y a {{count}} jours",
+    "discovery_journal": "Journal de découverte",
+    "loading_journal": "Chargement du journal...",
+    "empty_journal": "Votre voyage de découverte vous attend.",
+    "today": "Aujourd'hui",
+    "yesterday": "Hier"
+  },
+  "story_card": {
+    "characters": "Personnages découverts",
+    "relationships": "Relations explorées",
+    "discovered": "Découvert",
+    "continue": "Continuer la découverte"
+  },
+  "events": {
+    "Character Discovered": "Personnage découvert",
+    "You added {{name}} to the story.": "Vous avez ajouté {{name}} à l'histoire.",
+    "Relationship Formed": "Relation établie",
+    "A connection between {{charA}} and {{charB}} was established.": "Une connexion entre {{charA}} et {{charB}} a été établie.",
+    "Character Report Generated": "Rapport de personnage généré",
+    "Generated architecture report for {{name}}.": "Rapport d'architecture généré pour {{name}}.",
+    "Relationship Report Generated": "Rapport de relation généré",
+    "Generated relationship report for {{name}}.": "Rapport de relation généré pour {{name}}.",
+    "Discovery Answered": "Découverte répondue",
+    "Pattern: {{name}}": "Modèle : {{name}}",
+    "Insight Unlocked: Central Conflict": "Aperçu débloqué : Conflit central"
+  }
+}

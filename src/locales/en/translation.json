@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "search": "Search...",
+    "writer": "Writer"
+  },
+  "dashboard": {
+    "title_part1": "Where will you",
+    "title_part2": "discover next?",
+    "subtitle": "Continue exploring the stories you've already begun uncovering.",
+    "create_story": "Create Story",
+    "recently_updated": "Recently Updated Stories",
+    "loading_stories": "Loading your stories...",
+    "no_stories": "You haven't started any stories yet.",
+    "latest_discovery": "Latest Discovery",
+    "source": "Source",
+    "mins_ago": "{{count}} mins ago",
+    "hours_ago": "{{count}} hours ago",
+    "days_ago": "{{count}} days ago",
+    "discovery_journal": "Discovery Journal",
+    "loading_journal": "Loading journal...",
+    "empty_journal": "Your discovery journey awaits.",
+    "today": "Today",
+    "yesterday": "Yesterday"
+  },
+  "story_card": {
+    "characters": "Characters Discovered",
+    "relationships": "Relationships Explored",
+    "discovered": "Discovered",
+    "continue": "Continue Discovery"
+  },
+  "events": {
+    "Character Discovered": "Character Discovered",
+    "You added {{name}} to the story.": "You added {{name}} to the story.",
+    "Relationship Formed": "Relationship Formed",
+    "A connection between {{charA}} and {{charB}} was established.": "A connection between {{charA}} and {{charB}} was established.",
+    "Character Report Generated": "Character Report Generated",
+    "Generated architecture report for {{name}}.": "Generated architecture report for {{name}}.",
+    "Relationship Report Generated": "Relationship Report Generated",
+    "Generated relationship report for {{name}}.": "Generated relationship report for {{name}}.",
+    "Discovery Answered": "Discovery Answered",
+    "Pattern: {{name}}": "Pattern: {{name}}",
+    "Insight Unlocked: Central Conflict": "Insight Unlocked: Central Conflict"
+  }
+}
