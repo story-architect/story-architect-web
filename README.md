@@ -23,6 +23,21 @@ Instead of feeling like a questionnaire, the application provides a **Living Dis
 - **Styling:** CSS Modules with Vanilla CSS (Dark-mode, glassmorphism, responsive)
 - **Icons:** Lucide React
 
+## Architecture
+
+```mermaid
+graph TD
+    Client[Web Browser] -->|Interacts| UI[React UI Components]
+    
+    subgraph Frontend Application
+        UI -->|Reads/Writes State| RQ[React Query]
+        RQ -->|Caching & Sync| APIClient[API Client]
+        UI -->|Routing| Router[React Router]
+    end
+    
+    APIClient -->|REST/HTTP| Backend[(Story Architect Backend)]
+```
+
 ## Getting Started
 
 ### Prerequisites
