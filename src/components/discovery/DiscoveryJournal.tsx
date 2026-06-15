@@ -4,7 +4,6 @@ import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 import { StoryService } from '../../api/services';
 import type { DiscoveryEventResponse } from '../../types';
-import { useBackendTranslation } from '../../hooks/useBackendTranslation';
 import styles from './DiscoveryJournal.module.css';
 
 interface DiscoveryJournalProps {
@@ -13,8 +12,7 @@ interface DiscoveryJournalProps {
 }
 
 export const DiscoveryJournal: React.FC<DiscoveryJournalProps> = ({ storyId, className }) => {
-  const { t } = useTranslation();
-  const { translateEvent } = useBackendTranslation();
+  const { t } = useTranslation(['dashboard', 'events', 'insights', 'common']);
 
   const { data: events, isLoading } = useQuery({
     queryKey: ['discovery-journal', storyId],
@@ -34,8 +32,8 @@ export const DiscoveryJournal: React.FC<DiscoveryJournalProps> = ({ storyId, cla
     events.forEach(event => {
       const eventDate = new Date(event.created_at);
       let label = eventDate.toLocaleDateString();
-      if (eventDate.toDateString() === todayStr) label = t('dashboard.today');
-      else if (eventDate.toDateString() === yesterdayStr) label = t('dashboard.yesterday');
+      if (eventDate.toDateString() === todayStr) label = t('dashboard:labels.today');
+      else if (eventDate.toDateString() === yesterdayStr) label = t('dashboard:labels.yesterday');
 
       if (!grouped[label]) grouped[label] = [];
       grouped[label].push(event);
@@ -51,13 +49,13 @@ export const DiscoveryJournal: React.FC<DiscoveryJournalProps> = ({ storyId, cla
     <div className={`${styles.journalContainer} ${className || ''}`}>
       <h3 className={styles.title}>
         <Book size={18} />
-        {t('dashboard.discovery_journal')}
+        {t('dashboard:titles.discovery_journal')}
       </h3>
       
       {isLoading ? (
-        <div className={styles.loading}>{t('dashboard.loading_journal')}</div>
+        <div className={styles.loading}>{t('dashboard:labels.loading_journal')}</div>
       ) : journalDays.length === 0 ? (
-        <div className={styles.empty}>{t('dashboard.empty_journal')}</div>
+        <div className={styles.empty}>{t('dashboard:labels.empty_journal')}</div>
       ) : (
         <div className={styles.journalContent}>
           {journalDays.map((day) => (
@@ -65,11 +63,24 @@ export const DiscoveryJournal: React.FC<DiscoveryJournalProps> = ({ storyId, cla
               <span className={styles.dayLabel}>{day.label}</span>
               <div className={styles.entriesList}>
                 {day.entries.map((entry) => {
-                  const { title: translatedTitle, description: translatedDesc } = translateEvent(entry.title, entry.description);
+                  const metadata = { ...entry.event_metadata };
+                  
+                  if (metadata.pattern_key) {
+                    metadata.pattern_key = t(metadata.pattern_key as string, { ns: 'insights' });
+                  }
+                
+                  if (metadata.report_type) {
+                    const key = metadata.report_type.toLowerCase();
+                    metadata.report_type = t(`common:nav.${key}s`) || metadata.report_type;
+                  }
+                
+                  const translatedTitle = t(`events:${entry.event_type}`, metadata);
+                  const translatedDesc = t(`events:descriptions.${entry.event_type}`, metadata);
+
                   return (
                     <div key={entry.id} className={styles.entryItem}>
                       <Check size={16} className={styles.checkIcon} />
-                      <p className={styles.entryText}>{translatedTitle}: {translatedDesc}</p>
+                      <p className={styles.entryText}>{translatedTitle as string}: {translatedDesc as string}</p>
                     </div>
                   );
                 })}

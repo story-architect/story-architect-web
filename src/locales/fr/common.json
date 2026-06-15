@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "characters": "Personnages",
+    "relationships": "Relations",
+    "reports": "Rapports",
+    "language": "Langue",
+    "search": "Rechercher...",
+    "writer": "Écrivain"
+  },
+  "buttons": {
+    "continue_discovery": "Continuer la découverte",
+    "view_report": "Voir le rapport"
+  }
+}

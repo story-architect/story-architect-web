@@ -1,42 +1,20 @@
 .cardContainer {
-  background: var(--color-surface);
-  border: 1px solid rgba(197, 168, 128, 0.2);
-  border-radius: 16px;
-  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid rgba(197, 168, 128, 0.4);
+  border-radius: 20px;
+  padding: 32px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: flex;
+  flex-direction: column;
 }
 
 .cardContainer:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 35px -10px rgba(197, 168, 128, 0.2);
-  border-color: rgba(197, 168, 128, 0.4);
-}
-
-/* Subtle animated glow */
-.cardContainer::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at center, rgba(197, 168, 128, 0.1) 0%, transparent 50%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  pointer-events: none;
-}
-
-.cardContainer:hover::before {
-  opacity: 1;
-  animation: rotateGlow 10s linear infinite;
-}
-
-@keyframes rotateGlow {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent-gold);
 }
 
 .header {

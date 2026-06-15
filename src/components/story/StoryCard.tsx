@@ -22,7 +22,7 @@ export const StoryCard: React.FC<StoryCardProps> = ({
   relationshipCount,
 }) => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t } = useTranslation(['dashboard', 'common']);
 
   const { data: nextDiscovery } = useQuery({
     queryKey: ['next-discovery', id],
@@ -34,29 +34,28 @@ export const StoryCard: React.FC<StoryCardProps> = ({
 
   return (
     <Card className={styles.card}>
-      <div className={styles.progressSection}>
-        <div className={styles.progressCircle}>
-          <span className={styles.progressText}>{progress}%</span>
-          <span className={styles.progressLabel}>{t('story_card.discovered')}</span>
-        </div>
-      </div>
-      
-      <div className={styles.infoSection}>
-        <h3 className={styles.title}>{title}</h3>
-        <div className={styles.stats}>
-          <div className={styles.stat}>
-            <Users size={16} className={styles.statIcon} />
-            <span className={styles.statNumber}>{characterCount}</span>
-            <span className={styles.statLabel}>{t('story_card.characters')}</span>
-          </div>
-          <div className={styles.stat}>
-            <Link2 size={16} className={styles.statIcon} />
-            <span className={styles.statNumber}>{relationshipCount}</span>
-            <span className={styles.statLabel}>{t('story_card.relationships')}</span>
+      <div className={styles.header}>
+        <div className={styles.infoSection}>
+          <h3 className={styles.title}>{title}</h3>
+          <div className={styles.stats}>
+            <div className={styles.stat}>
+              <Users size={16} className={styles.statIcon} />
+              <span className={styles.statNumber}>{characterCount}</span>
+              <span className={styles.statLabel}>{t('labels.characters')}</span>
+            </div>
+            <div className={styles.stat}>
+              <Link2 size={16} className={styles.statIcon} />
+              <span className={styles.statNumber}>{relationshipCount}</span>
+              <span className={styles.statLabel}>{t('labels.relationships')}</span>
+            </div>
           </div>
         </div>
+        <div className={styles.progressSection}>
+          <div className={styles.progressCircle}>
+            <span className={styles.progressText}>{progress}%</span>
+          </div>
+        </div>
       </div>
-
       <div className={styles.insightSection}>
         {nextInsight && (
           <div className={styles.insight}>
@@ -74,7 +73,7 @@ export const StoryCard: React.FC<StoryCardProps> = ({
           onClick={() => navigate(`/stories/${id}`)}
           className={styles.actionButton}
         >
-          {t('story_card.continue')} <ArrowRight size={16} style={{marginLeft: '8px'}} />
+          {t('labels.continue')} <ArrowRight size={16} style={{marginLeft: '8px'}} />
         </Button>
       </div>
     </Card>

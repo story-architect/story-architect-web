@@ -1,0 +1,15 @@
+{
+  "CHARACTER_CREATED": "Personnage Découvert",
+  "RELATIONSHIP_CREATED": "Relation Formée",
+  "QUESTION_ANSWERED": "Découverte Répondue",
+  "PATTERN_EMERGING": "Modèle: {{pattern_key}}",
+  "INSIGHT_UNLOCKED": "Aperçu Déverrouillé: Conflit Central",
+  "REPORT_GENERATED": "Rapport {{report_type}} généré",
+  
+  "descriptions": {
+    "CHARACTER_CREATED": "Vous avez ajouté {{name}} à l'histoire.",
+    "RELATIONSHIP_CREATED": "Une connexion entre {{charA}} et {{charB}} a été établie.",
+    "QUESTION_ANSWERED": "{{question}} - {{answer}}",
+    "REPORT_GENERATED": "Rapport d'architecture généré pour {{name}}."
+  }
+}

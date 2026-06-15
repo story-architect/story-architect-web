@@ -1,6 +1,7 @@
 import React from 'react';
 import { Clock, UserPlus, Link2, Sparkles, BrainCircuit, FileText, CheckCircle } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
+import { useTranslation } from 'react-i18next';
 import { StoryService } from '../../api/services';
 import type { EventTypeEnum } from '../../types';
 import styles from './StoryActivityFeed.module.css';
@@ -11,6 +12,8 @@ interface StoryActivityFeedProps {
 }
 
 export const StoryActivityFeed: React.FC<StoryActivityFeedProps> = ({ storyId, className }) => {
+  const { t } = useTranslation(['events', 'dashboard', 'common', 'insights']);
+
   const { data: activities, isLoading } = useQuery({
     queryKey: ['activity-feed', storyId],
     queryFn: () => StoryService.getActivityFeed(storyId!),
@@ -33,10 +36,10 @@ export const StoryActivityFeed: React.FC<StoryActivityFeedProps> = ({ storyId, c
     // eslint-disable-next-line react-hooks/purity
     const diff = Date.now() - new Date(isoString).getTime();
     const minutes = Math.floor(diff / 60000);
-    if (minutes < 60) return minutes === 0 ? 'Just now' : `${minutes}m ago`;
+    if (minutes < 60) return minutes === 0 ? t('dashboard:labels.mins_ago', { count: 0 }) : t('dashboard:labels.mins_ago', { count: minutes });
     const hours = Math.floor(minutes / 60);
-    if (hours < 24) return `${hours}h ago`;
-    return `${Math.floor(hours / 24)}d ago`;
+    if (hours < 24) return t('dashboard:labels.hours_ago', { count: hours });
+    return t('dashboard:labels.days_ago', { count: Math.floor(hours / 24) });
   };
 
   return (
@@ -52,20 +55,33 @@ export const StoryActivityFeed: React.FC<StoryActivityFeedProps> = ({ storyId, c
         <div className={styles.empty}>No activity yet. Start discovering!</div>
       ) : (
         <div className={styles.feedList}>
-          {activities.map((activity, idx) => (
-            <div key={idx} className={styles.feedItem}>
-              <div className={styles.iconContainer}>
-                {getIcon(activity.event_type)}
-              </div>
-              <div className={styles.content}>
-                <div className={styles.itemHeader}>
-                  <h4 className={styles.itemTitle}>{activity.title}</h4>
-                  <span className={styles.itemTime}>{getRelativeTime(activity.timestamp)}</span>
+          {activities.map((activity, idx) => {
+            const metadata = { ...activity.event_metadata };
+            if (metadata.pattern_key) {
+              metadata.pattern_key = t(metadata.pattern_key as string, { ns: 'insights' });
+            }
+            if (metadata.report_type) {
+              const key = metadata.report_type.toLowerCase();
+              metadata.report_type = t(`common:nav.${key}s`) || metadata.report_type;
+            }
+            const translatedTitle = t(`events:${activity.event_type}`, metadata);
+            const translatedDesc = t(`events:descriptions.${activity.event_type}`, metadata);
+
+            return (
+              <div key={idx} className={styles.feedItem}>
+                <div className={styles.iconContainer}>
+                  {getIcon(activity.event_type)}
                 </div>
-                <p className={styles.itemDesc}>{activity.description}</p>
+                <div className={styles.content}>
+                  <div className={styles.itemHeader}>
+                    <h4 className={styles.itemTitle}>{translatedTitle as string}</h4>
+                    <span className={styles.itemTime}>{getRelativeTime(activity.timestamp)}</span>
+                  </div>
+                  <p className={styles.itemDesc}>{translatedDesc as string}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       )}
     </div>

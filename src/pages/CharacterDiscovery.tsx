@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { useTranslation } from 'react-i18next';
 import { Feather, Shield, Heart, Lock, Sparkles } from 'lucide-react';
 import { DiscoveryStatus, type StatusItem, type StatusState } from '../components/story/DiscoveryStatus';
 import { SuggestedAnswerCard } from '../components/story/SuggestedAnswerCard';
@@ -19,6 +20,7 @@ const CharacterDiscovery: React.FC = () => {
   const { characterId } = useParams<{ characterId: string }>();
   const navigate = useNavigate();
   const queryClient = useQueryClient();
+  const { t } = useTranslation(['events', 'insights', 'common']);
 
   const { data: character } = useQuery({
     queryKey: ['character', characterId],
@@ -121,16 +123,16 @@ const CharacterDiscovery: React.FC = () => {
       
       {showInsight && unlockedEvent && (
         <InsightUnlocked 
-          title={unlockedEvent.title}
-          description={unlockedEvent.description}
+          title={t(`events:${unlockedEvent.event_type}`, { ...unlockedEvent.event_metadata }) as string}
+          description={t(`events:descriptions.${unlockedEvent.event_type}`, { ...unlockedEvent.event_metadata }) as string}
           onContinue={() => setShowInsight(false)}
         />
       )}
 
       {showPattern && unlockedEvent && (
         <PatternEmergingScreen 
-          title={unlockedEvent.title}
-          description={unlockedEvent.description}
+          title={t(`events:${unlockedEvent.event_type}`, { ...unlockedEvent.event_metadata, pattern_key: t((unlockedEvent.event_metadata.pattern_key as string) || '', { ns: 'insights' }) }) as string}
+          description={t(`events:descriptions.${unlockedEvent.event_type}`, { ...unlockedEvent.event_metadata, pattern_key: t((unlockedEvent.event_metadata.pattern_key as string) || '', { ns: 'insights' }) }) as string}
           onContinue={() => setShowPattern(false)}
         />
       )}

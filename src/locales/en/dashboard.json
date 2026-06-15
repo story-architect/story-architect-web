@@ -1,0 +1,33 @@
+{
+  "title_part1": "Where will you",
+  "title_part2": "discover next?",
+  "subtitle": "Continue exploring the stories you've already begun uncovering.",
+  "create_story": "Create Story",
+  "recently_updated": "Recently Updated Stories",
+  "loading_stories": "Loading your stories...",
+  "no_stories": "You haven't started any stories yet.",
+  "titles": {
+    "dashboard": "Dashboard",
+    "latest_discovery": "Latest Discovery",
+    "discovery_journal": "Discovery Journal",
+    "story_pulse": "Story Pulse"
+  },
+  "labels": {
+    "no_discoveries": "No discoveries yet.",
+    "character_count": "{{count}} Characters",
+    "relationship_count": "{{count}} Relationships",
+    "discovery_progress": "{{progress}}% Progress",
+    "source": "Source",
+    "mins_ago": "{{count}} mins ago",
+    "hours_ago": "{{count}} hours ago",
+    "days_ago": "{{count}} days ago",
+    "loading_journal": "Loading journal...",
+    "empty_journal": "Your discovery journey awaits.",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "characters": "Characters Discovered",
+    "relationships": "Relationships Explored",
+    "discovered": "Discovered",
+    "continue": "Continue Discovery"
+  }
+}

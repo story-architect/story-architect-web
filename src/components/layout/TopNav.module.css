@@ -1,6 +1,6 @@
 .topnav {
   height: 60px;
-  background-color: var(--color-surface);
+  background-color: #ffffff; /* explicitly not transparent */
   border-bottom: 1px solid var(--color-border);
   display: flex;
   align-items: center;
@@ -8,7 +8,7 @@
   padding: 0 var(--spacing-6);
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
 }
 
 .breadcrumbs {

@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "characters": "Characters",
+    "relationships": "Relationships",
+    "reports": "Reports",
+    "language": "Language",
+    "search": "Search...",
+    "writer": "Writer"
+  },
+  "buttons": {
+    "continue_discovery": "Continue Discovery",
+    "view_report": "View Report"
+  }
+}

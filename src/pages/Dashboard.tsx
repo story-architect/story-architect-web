@@ -12,7 +12,7 @@ import styles from './Dashboard.module.css';
 
 const Dashboard: React.FC = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t } = useTranslation(['dashboard', 'common']);
   
   const { data: stories, isLoading } = useQuery({
     queryKey: ['stories'],
@@ -31,9 +31,9 @@ const Dashboard: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.header}>
         <div className={styles.titleSection}>
-          <h1 className={styles.title}>{t('dashboard.title_part1')}<br/>{t('dashboard.title_part2')}</h1>
+          <h1 className={styles.title}>{t('title_part1')}<br/>{t('title_part2')}</h1>
           <p className={styles.subtitle}>
-            {t('dashboard.subtitle')}
+            {t('subtitle')}
           </p>
         </div>
         <div className={styles.actionSection}>
@@ -42,7 +42,7 @@ const Dashboard: React.FC = () => {
             onClick={() => navigate('/stories/new')}
             icon={<Plus size={20} />}
           >
-            {t('dashboard.create_story')}
+            {t('create_story')}
           </Button>
         </div>
       </div>
@@ -54,16 +54,16 @@ const Dashboard: React.FC = () => {
 
       <div className={styles.storiesSection}>
         <div className={styles.sectionDivider}>
-          <span className={styles.sectionTitle}>{t('dashboard.recently_updated')}</span>
+          <span className={styles.sectionTitle}>{t('recently_updated')}</span>
           <div className={styles.line}></div>
         </div>
 
         <div className={styles.storyList}>
           {isLoading ? (
-            <div className={styles.loading}>{t('dashboard.loading_stories')}</div>
+            <div className={styles.loading}>{t('loading_stories')}</div>
           ) : sortedStories.length === 0 ? (
             <div className={styles.emptyState}>
-              <p>{t('dashboard.no_stories')}</p>
+              <p>{t('no_stories')}</p>
             </div>
           ) : (
             sortedStories.map((story) => (

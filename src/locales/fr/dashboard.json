@@ -1,0 +1,33 @@
+{
+  "title_part1": "Où allez-vous",
+  "title_part2": "découvrir ensuite ?",
+  "subtitle": "Continuez à explorer les histoires que vous avez déjà commencé à découvrir.",
+  "create_story": "Créer une histoire",
+  "recently_updated": "Histoires récemment mises à jour",
+  "loading_stories": "Chargement de vos histoires...",
+  "no_stories": "Vous n'avez pas encore commencé d'histoires.",
+  "titles": {
+    "dashboard": "Tableau de bord",
+    "latest_discovery": "Dernière découverte",
+    "discovery_journal": "Journal des découvertes",
+    "story_pulse": "Pouls de l'histoire"
+  },
+  "labels": {
+    "no_discoveries": "Pas encore de découvertes.",
+    "character_count": "{{count}} Personnages",
+    "relationship_count": "{{count}} Relations",
+    "discovery_progress": "{{progress}}% de progression",
+    "source": "Source",
+    "mins_ago": "Il y a {{count}} min",
+    "hours_ago": "Il y a {{count}} heures",
+    "days_ago": "Il y a {{count}} jours",
+    "loading_journal": "Chargement du journal...",
+    "empty_journal": "Votre voyage de découverte vous attend.",
+    "today": "Aujourd'hui",
+    "yesterday": "Hier",
+    "characters": "Personnages découverts",
+    "relationships": "Relations explorées",
+    "discovered": "Découvert",
+    "continue": "Continuer la découverte"
+  }
+}

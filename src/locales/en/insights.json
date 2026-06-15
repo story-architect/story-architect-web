@@ -1,0 +1,102 @@
+{
+  "character": {
+    "default": {
+      "consequence": "Every attempt to protect themselves creates the loneliness they fear.",
+      "relationship_pattern": "Keeps people at a distance.",
+      "inciting_relationship": "Someone enters their life who refuses to leave.",
+      "central_conflict": "They must choose between safety and connection.",
+      "dramatic_potential": "Because this character fears their wound, they protect themselves. The more someone cares about them, the more likely they are to push them away. This creates the central emotional conflict of the story."
+    },
+    "independence": {
+      "consequence": "Every attempt to protect themselves creates the loneliness they fear.",
+      "relationship_pattern": "Pushes away those who try to help.",
+      "inciting_relationship": "Someone enters their life who refuses to leave.",
+      "central_conflict": "They must choose between safety and connection.",
+      "dramatic_potential": "Because this character fears abandonment, they protect themselves through independence. The more someone cares about them, the more likely they are to push them away. This creates the central emotional conflict of the story."
+    },
+    "perfection": {
+      "consequence": "Every attempt to be flawless creates pressure they cannot survive.",
+      "relationship_pattern": "Hides their true self to maintain an image.",
+      "inciting_relationship": "Someone sees through their perfect facade and accepts their flaws.",
+      "central_conflict": "They must choose between perfection and authenticity.",
+      "dramatic_potential": "Because this character fears judgment, they protect themselves through perfectionism. The closer someone gets, the harder they work to maintain the facade. This creates the central emotional conflict of the story."
+    },
+    "control": {
+      "consequence": "Every attempt to stay in control pushes them further from real connection.",
+      "relationship_pattern": "Dictates terms of engagement to avoid vulnerability.",
+      "inciting_relationship": "An unpredictable element forces them to surrender control.",
+      "central_conflict": "They must choose between control and trust.",
+      "dramatic_potential": "Because this character fears chaos, they protect themselves through control. The more they try to control their environment, the more chaotic their relationships become. This creates the central emotional conflict of the story."
+    },
+    "summary": {
+      "story_engine": "This is not a character trait. This is a story waiting to happen.",
+      "story_beginning": "Because this character fears their deepest wound, they protect themselves through their lie."
+    }
+  },
+  "relationship": {
+    "default": {
+      "consequence": "The more they try to protect each other, the less they truly know each other.",
+      "risk": "If neither speaks honestly, they may lose the relationship they are both trying to save.",
+      "pattern": "Honesty is sacrificed for comfort."
+    },
+    "hiding": {
+      "consequence": "The more they try to protect each other, the less they truly know each other.",
+      "risk": "If neither speaks honestly, they may lose the relationship they are both trying to save.",
+      "pattern": "Honesty is sacrificed for comfort."
+    },
+    "distance": {
+      "consequence": "Their attempts to give each other space has created an unbridgeable gulf.",
+      "risk": "They may drift so far apart that the connection is completely severed.",
+      "pattern": "Intimacy is replaced by polite distance."
+    },
+    "fixing": {
+      "consequence": "Their need to fix each other prevents them from accepting each other.",
+      "risk": "They may destroy the relationship by trying to perfect it.",
+      "pattern": "Support has become a form of control."
+    }
+  },
+  "patterns": {
+    "protective_independence": {
+      "name": "Protective Independence",
+      "insight": "Your answers suggest this character protects themselves by refusing to need anyone.",
+      "supporting_text": "Their independence may look like strength, but it also keeps others at a distance.",
+      "next_discovery_hint": "Next, discover what this protection costs them."
+    },
+    "conditional_worth": {
+      "name": "Conditional Worth",
+      "insight": "Your answers suggest this character believes they must be perfect to be safe or accepted.",
+      "supporting_text": "Their need to perform strength may hide a deeper fear of rejection.",
+      "next_discovery_hint": "Next, discover what pressure this creates."
+    },
+    "protective_control": {
+      "name": "Protective Control",
+      "insight": "Your answers suggest this character feels safest when they can control what happens.",
+      "supporting_text": "Control may protect them from chaos, but it can also prevent trust.",
+      "next_discovery_hint": "Next, discover what this control damages."
+    },
+    "protective_invisibility": {
+      "name": "Protective Invisibility",
+      "insight": "Your answers suggest this character believes staying unseen keeps them safe.",
+      "supporting_text": "They may avoid attention, intimacy, or risk because being noticed feels dangerous.",
+      "next_discovery_hint": "Next, discover what they lose by hiding."
+    },
+    "fear_abandonment": {
+      "name": "Fear of Abandonment",
+      "insight": "Your answers suggest this character is shaped by the fear of being left alone.",
+      "supporting_text": "They may push people away before anyone has the chance to leave.",
+      "next_discovery_hint": "Next, discover how this fear creates conflict."
+    },
+    "fear_being_known": {
+      "name": "Fear of Being Known",
+      "insight": "Your answers suggest this character fears closeness because being known feels unsafe.",
+      "supporting_text": "They may want connection while resisting the vulnerability connection requires.",
+      "next_discovery_hint": "Next, discover what kind of relationship challenges this creates."
+    },
+    "emotional_defense": {
+      "name": "Emotional Defense Emerging",
+      "insight": "Your answers suggest this character's wound is beginning to shape how they protect themselves.",
+      "supporting_text": "Look at the connection between their fear and the way they choose to survive.",
+      "next_discovery_hint": "Next, discover what this protection costs them."
+    }
+  }
+}

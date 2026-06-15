@@ -1,0 +1,15 @@
+{
+  "CHARACTER_CREATED": "Character Discovered",
+  "RELATIONSHIP_CREATED": "Relationship Formed",
+  "QUESTION_ANSWERED": "Discovery Answered",
+  "PATTERN_EMERGING": "Pattern: {{pattern_key}}",
+  "INSIGHT_UNLOCKED": "Insight Unlocked: Central Conflict",
+  "REPORT_GENERATED": "{{report_type}} Report Generated",
+  
+  "descriptions": {
+    "CHARACTER_CREATED": "You added {{name}} to the story.",
+    "RELATIONSHIP_CREATED": "A connection between {{charA}} and {{charB}} was established.",
+    "QUESTION_ANSWERED": "{{question}} - {{answer}}",
+    "REPORT_GENERATED": "Generated architecture report for {{name}}."
+  }
+}

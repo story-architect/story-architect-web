@@ -1,0 +1,102 @@
+{
+  "character": {
+    "default": {
+      "consequence": "Chaque tentative de se protéger crée la solitude qu'ils craignent.",
+      "relationship_pattern": "Garde les gens à distance.",
+      "inciting_relationship": "Quelqu'un entre dans leur vie qui refuse de partir.",
+      "central_conflict": "Ils doivent choisir entre la sécurité et la connexion.",
+      "dramatic_potential": "Parce que ce personnage craint sa blessure, il se protège. Plus quelqu'un se soucie d'eux, plus ils sont susceptibles de le repousser. Cela crée le conflit émotionnel central de l'histoire."
+    },
+    "independence": {
+      "consequence": "Chaque tentative de se protéger crée la solitude qu'ils craignent.",
+      "relationship_pattern": "Repousse ceux qui essaient d'aider.",
+      "inciting_relationship": "Quelqu'un entre dans leur vie qui refuse de partir.",
+      "central_conflict": "Ils doivent choisir entre la sécurité et la connexion.",
+      "dramatic_potential": "Parce que ce personnage craint l'abandon, il se protège par l'indépendance. Plus quelqu'un se soucie d'eux, plus ils sont susceptibles de le repousser. Cela crée le conflit émotionnel central de l'histoire."
+    },
+    "perfection": {
+      "consequence": "Chaque tentative d'être sans défaut crée une pression à laquelle ils ne peuvent survivre.",
+      "relationship_pattern": "Cache son vrai soi pour maintenir une image.",
+      "inciting_relationship": "Quelqu'un voit à travers leur façade parfaite et accepte leurs défauts.",
+      "central_conflict": "Ils doivent choisir entre la perfection et l'authenticité.",
+      "dramatic_potential": "Parce que ce personnage craint le jugement, il se protège par le perfectionnisme. Plus quelqu'un se rapproche, plus ils travaillent dur pour maintenir la façade. Cela crée le conflit émotionnel central de l'histoire."
+    },
+    "control": {
+      "consequence": "Chaque tentative de garder le contrôle les éloigne encore plus de la vraie connexion.",
+      "relationship_pattern": "Dicte les conditions d'engagement pour éviter la vulnérabilité.",
+      "inciting_relationship": "Un élément imprévisible les oblige à abandonner le contrôle.",
+      "central_conflict": "Ils doivent choisir entre le contrôle et la confiance.",
+      "dramatic_potential": "Parce que ce personnage craint le chaos, il se protège par le contrôle. Plus ils essaient de contrôler leur environnement, plus leurs relations deviennent chaotiques. Cela crée le conflit émotionnel central de l'histoire."
+    },
+    "summary": {
+      "story_engine": "Ce n'est pas un trait de caractère. C'est une histoire qui attend de se produire.",
+      "story_beginning": "Parce que ce personnage craint sa blessure la plus profonde, il se protège par son mensonge."
+    }
+  },
+  "relationship": {
+    "default": {
+      "consequence": "Plus ils essaient de se protéger l'un l'autre, moins ils se connaissent vraiment.",
+      "risk": "Si aucun des deux ne parle honnêtement, ils pourraient perdre la relation qu'ils essaient tous deux de sauver.",
+      "pattern": "L'honnêteté est sacrifiée au profit du confort."
+    },
+    "hiding": {
+      "consequence": "Plus ils essaient de se protéger l'un l'autre, moins ils se connaissent vraiment.",
+      "risk": "Si aucun des deux ne parle honnêtement, ils pourraient perdre la relation qu'ils essaient tous deux de sauver.",
+      "pattern": "L'honnêteté est sacrifiée au profit du confort."
+    },
+    "distance": {
+      "consequence": "Leurs tentatives de se donner de l'espace ont créé un gouffre infranchissable.",
+      "risk": "Ils peuvent s'éloigner au point que la connexion soit complètement rompue.",
+      "pattern": "L'intimité est remplacée par une distance polie."
+    },
+    "fixing": {
+      "consequence": "Leur besoin de se réparer l'un l'autre les empêche de s'accepter mutuellement.",
+      "risk": "Ils peuvent détruire la relation en essayant de la rendre parfaite.",
+      "pattern": "Le soutien est devenu une forme de contrôle."
+    }
+  },
+  "patterns": {
+    "protective_independence": {
+      "name": "Indépendance Protectrice",
+      "insight": "Vos réponses suggèrent que ce personnage se protège en refusant d'avoir besoin de qui que ce soit.",
+      "supporting_text": "Leur indépendance peut ressembler à de la force, mais elle maintient également les autres à distance.",
+      "next_discovery_hint": "Ensuite, découvrez ce que cette protection leur coûte."
+    },
+    "conditional_worth": {
+      "name": "Valeur Conditionnelle",
+      "insight": "Vos réponses suggèrent que ce personnage croit devoir être parfait pour être en sécurité ou accepté.",
+      "supporting_text": "Leur besoin d'afficher de la force peut cacher une peur plus profonde du rejet.",
+      "next_discovery_hint": "Ensuite, découvrez la pression que cela crée."
+    },
+    "protective_control": {
+      "name": "Contrôle Protecteur",
+      "insight": "Vos réponses suggèrent que ce personnage se sent le plus en sécurité lorsqu'il peut contrôler ce qui se passe.",
+      "supporting_text": "Le contrôle peut les protéger du chaos, mais il peut aussi empêcher la confiance.",
+      "next_discovery_hint": "Ensuite, découvrez ce que ce contrôle endommage."
+    },
+    "protective_invisibility": {
+      "name": "Invisibilité Protectrice",
+      "insight": "Vos réponses suggèrent que ce personnage croit que rester invisible le garde en sécurité.",
+      "supporting_text": "Ils peuvent éviter l'attention, l'intimité ou les risques car être remarqué semble dangereux.",
+      "next_discovery_hint": "Ensuite, découvrez ce qu'ils perdent en se cachant."
+    },
+    "fear_abandonment": {
+      "name": "Peur de l'Abandon",
+      "insight": "Vos réponses suggèrent que ce personnage est façonné par la peur d'être laissé seul.",
+      "supporting_text": "Ils peuvent repousser les gens avant que quiconque ait la chance de partir.",
+      "next_discovery_hint": "Ensuite, découvrez comment cette peur crée des conflits."
+    },
+    "fear_being_known": {
+      "name": "Peur d'Être Connu",
+      "insight": "Vos réponses suggèrent que ce personnage craint la proximité car être connu ne semble pas sûr.",
+      "supporting_text": "Ils peuvent vouloir une connexion tout en résistant à la vulnérabilité que la connexion exige.",
+      "next_discovery_hint": "Ensuite, découvrez quels types de défis relationnels cela crée."
+    },
+    "emotional_defense": {
+      "name": "Défense Émotionnelle Émergente",
+      "insight": "Vos réponses suggèrent que la blessure de ce personnage commence à façonner la façon dont il se protège.",
+      "supporting_text": "Examinez le lien entre leur peur et la façon dont ils choisissent de survivre.",
+      "next_discovery_hint": "Ensuite, découvrez ce que cette protection leur coûte."
+    }
+  }
+}
