@@ -102,12 +102,20 @@ const RelationshipReport: React.FC = () => {
     return <div className={styles.loading}>Generating Consequence Report...</div>;
   }
 
+  const translateInsight = (val?: string | null) => {
+    if (!val) return null;
+    if (val.startsWith('insights.')) {
+      return t(val.replace('insights.', ''), { ns: 'insights' });
+    }
+    return val;
+  };
+
   const chainNodes = [
-    { label: 'CURRENT RESULT', value: report.current_result },
-    { label: 'EMOTIONAL EFFECT', value: report.emotional_effect },
-    { label: 'STORY CONSEQUENCE', value: report.story_consequence },
-    { label: 'CURRENT RELATIONSHIP RISK', value: report.current_relationship_risk, isGlowing: true },
-    { label: 'TURNING POINT', value: report.turning_point }
+    { label: 'CURRENT RESULT', value: translateInsight(report.current_result) },
+    { label: 'EMOTIONAL EFFECT', value: translateInsight(report.emotional_effect) },
+    { label: 'STORY CONSEQUENCE', value: translateInsight(report.story_consequence) },
+    { label: 'CURRENT RELATIONSHIP RISK', value: translateInsight(report.current_relationship_risk), isGlowing: true },
+    { label: 'TURNING POINT', value: translateInsight(report.turning_point) }
   ];
 
   return (

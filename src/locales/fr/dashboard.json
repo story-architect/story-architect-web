@@ -29,5 +29,69 @@
     "relationships": "Relations explorées",
     "discovered": "Découvert",
     "continue": "Continuer la découverte"
+  },
+  "create_story_page": {
+    "title": "Une nouvelle histoire vous attend.",
+    "subtitle": "Où votre imagination vous mènera-t-elle ?",
+    "story_title": "Titre de l'histoire",
+    "story_title_placeholder": "ex. Le dernier été",
+    "genre": "Genre",
+    "genre_select": "Sélectionnez un genre...",
+    "one_sentence_premise": "Prémisse en une phrase",
+    "one_sentence_premise_placeholder": "De quoi parle votre histoire en une phrase ?",
+    "footer_text_1": "Vous n'avez pas besoin de tout savoir pour le moment.",
+    "footer_text_2": "L'étincelle suffit. 🤎",
+    "creating": "Création en cours...",
+    "begin_discovery": "Commencer la découverte",
+    "genres": {
+      "literary_fiction": "Fiction Littéraire",
+      "science_fiction": "Science-Fiction",
+      "fantasy": "Fantasy",
+      "mystery_thriller": "Mystère / Thriller",
+      "romance": "Romance",
+      "historical_fiction": "Fiction Historique",
+      "young_adult": "Jeunes Adultes",
+      "other": "Autre"
+    }
+  },
+  "create_character_page": {
+    "title": "Rencontrons quelqu'un de nouveau.",
+    "subtitle": "Chaque histoire inoubliable commence par un personnage.",
+    "character_name": "Nom du personnage",
+    "character_name_placeholder": "ex. Elara Vance",
+    "age": "Âge",
+    "age_placeholder": "ex. 28",
+    "role": "Rôle",
+    "archetype": "Archétype (Optionnel)",
+    "archetype_placeholder": "ex. Le leader malgré lui",
+    "footer_text_1": "Vous n'avez pas besoin de tout savoir pour le moment.",
+    "footer_text_2": "La découverte révélera le reste.",
+    "starting": "Démarrage...",
+    "start_discovery": "Commencer la découverte du personnage",
+    "roles": {
+      "main": "Personnage Principal",
+      "supporting": "Personnage Secondaire"
+    }
+  },
+  "create_relationship_page": {
+    "title": "Définir une connexion.",
+    "subtitle": "Le conflit et la connexion animent chaque grande histoire.",
+    "dynamic_select": "Sélectionnez une dynamique...",
+    "first_character": "Premier personnage",
+    "second_character": "Deuxième personnage",
+    "character_select": "Sélectionnez un personnage...",
+    "relationship_dynamic": "Dynamique de la relation",
+    "footer_text_1": "Explorez ce qui les rapproche,",
+    "footer_text_2": "et ce qui les déchire.",
+    "starting": "Démarrage...",
+    "start_discovery": "Commencer la découverte de la relation",
+    "types": {
+      "romance": "Romance",
+      "friendship": "Amitié",
+      "family": "Famille",
+      "rivalry": "Rivalité",
+      "mentor": "Mentor",
+      "other": "Autre"
+    }
   }
 }

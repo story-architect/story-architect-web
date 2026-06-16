@@ -66,7 +66,10 @@ export const DiscoveryJournal: React.FC<DiscoveryJournalProps> = ({ storyId, cla
                   const metadata = { ...entry.event_metadata };
                   
                   if (metadata.pattern_key) {
-                    metadata.pattern_key = t(metadata.pattern_key as string, { ns: 'insights' });
+                    metadata.pattern_key = t((metadata.pattern_key as string).replace('insights.', ''), { ns: 'insights' });
+                  }
+                  if (metadata.insight_key) {
+                    metadata.insight_key = t((metadata.insight_key as string).replace('insights.', ''), { ns: 'insights' });
                   }
                 
                   if (metadata.report_type) {

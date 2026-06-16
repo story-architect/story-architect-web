@@ -7,22 +7,24 @@ import { TextInput, TextArea, SelectInput } from '../components/ui/Input';
 import { Button } from '../components/ui/Button';
 import { StoryService } from '../api/services';
 import type { StoryCreate } from '../types';
+import { useTranslation } from 'react-i18next';
 import styles from './CreateStory.module.css';
 
-const GENRE_OPTIONS = [
-  { label: 'Select a genre...', value: '' },
-  { label: 'Literary Fiction', value: 'literary_fiction' },
-  { label: 'Science Fiction', value: 'science_fiction' },
-  { label: 'Fantasy', value: 'fantasy' },
-  { label: 'Mystery / Thriller', value: 'mystery_thriller' },
-  { label: 'Romance', value: 'romance' },
-  { label: 'Historical Fiction', value: 'historical_fiction' },
-  { label: 'Young Adult', value: 'young_adult' },
-  { label: 'Other', value: 'other' },
+const getGenreOptions = (t: any) => [
+  { label: t('dashboard:create_story_page.genre_select', 'Select a genre...'), value: '' },
+  { label: t('dashboard:create_story_page.genres.literary_fiction', 'Literary Fiction'), value: 'literary_fiction' },
+  { label: t('dashboard:create_story_page.genres.science_fiction', 'Science Fiction'), value: 'science_fiction' },
+  { label: t('dashboard:create_story_page.genres.fantasy', 'Fantasy'), value: 'fantasy' },
+  { label: t('dashboard:create_story_page.genres.mystery_thriller', 'Mystery / Thriller'), value: 'mystery_thriller' },
+  { label: t('dashboard:create_story_page.genres.romance', 'Romance'), value: 'romance' },
+  { label: t('dashboard:create_story_page.genres.historical_fiction', 'Historical Fiction'), value: 'historical_fiction' },
+  { label: t('dashboard:create_story_page.genres.young_adult', 'Young Adult'), value: 'young_adult' },
+  { label: t('dashboard:create_story_page.genres.other', 'Other'), value: 'other' },
 ];
 
 const CreateStory: React.FC = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation(['dashboard']);
   const [formData, setFormData] = useState<StoryCreate>({
     title: '',
     genre: '',
@@ -46,8 +48,8 @@ const CreateStory: React.FC = () => {
     <div>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h1 className={styles.title}>A new story is waiting.</h1>
-          <p className={styles.subtitle}>Where will your imagination take you?</p>
+          <h1 className={styles.title}>{t('dashboard:create_story_page.title', 'A new story is waiting.')}</h1>
+          <p className={styles.subtitle}>{t('dashboard:create_story_page.subtitle', 'Where will your imagination take you?')}</p>
           <div className={styles.ornament}>
             <Feather size={24} className={styles.ornamentIcon} />
           </div>
@@ -61,16 +63,16 @@ const CreateStory: React.FC = () => {
             
             <form onSubmit={handleSubmit} className={styles.form}>
               <TextInput
-                label="Story Title"
-                placeholder="e.g. The Last Summer"
+                label={t('dashboard:create_story_page.story_title', 'Story Title')}
+                placeholder={t('dashboard:create_story_page.story_title_placeholder', 'e.g. The Last Summer')}
                 value={formData.title}
                 onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                 required
               />
 
               <SelectInput
-                label="Genre"
-                options={GENRE_OPTIONS}
+                label={t('dashboard:create_story_page.genre', 'Genre')}
+                options={getGenreOptions(t)}
                 value={formData.genre}
                 onChange={(e) => setFormData({ ...formData, genre: e.target.value })}
                 required
@@ -79,8 +81,8 @@ const CreateStory: React.FC = () => {
               <div className={styles.divider}></div>
 
               <TextArea
-                label="One Sentence Premise"
-                placeholder="What is your story about in one sentence?"
+                label={t('dashboard:create_story_page.one_sentence_premise', 'One Sentence Premise')}
+                placeholder={t('dashboard:create_story_page.one_sentence_premise_placeholder', 'What is your story about in one sentence?')}
                 value={formData.one_sentence_premise}
                 onChange={(e) => setFormData({ ...formData, one_sentence_premise: e.target.value })}
                 required
@@ -89,8 +91,8 @@ const CreateStory: React.FC = () => {
               <div className={styles.footerSection}>
                 <div className={styles.footerOrnament}></div>
                 <p className={styles.footerText}>
-                  You don't need to know everything yet.<br/>
-                  Just the spark is enough. 🤎
+                  {t('dashboard:create_story_page.footer_text_1', "You don't need to know everything yet.")}<br/>
+                  {t('dashboard:create_story_page.footer_text_2', "Just the spark is enough. 🤎")}
                 </p>
                 <Button 
                   type="submit" 
@@ -99,7 +101,9 @@ const CreateStory: React.FC = () => {
                   icon={<Feather size={18} />}
                   className={styles.submitButton}
                 >
-                  {mutation.isPending ? 'Creating...' : 'Begin Discovery'}
+                  {mutation.isPending 
+                    ? t('dashboard:create_story_page.creating', 'Creating...') 
+                    : t('dashboard:create_story_page.begin_discovery', 'Begin Discovery')}
                 </Button>
               </div>
             </form>

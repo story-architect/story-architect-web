@@ -7,21 +7,23 @@ import { SelectInput } from '../components/ui/Input';
 import { Button } from '../components/ui/Button';
 import { RelationshipService, StoryService } from '../api/services';
 import type { RelationshipCreate, RelationshipTypeEnum } from '../types';
+import { useTranslation } from 'react-i18next';
 import styles from './CreateCharacter.module.css'; // Reusing character styles for layout
 
-const RELATIONSHIP_TYPES = [
-  { label: 'Select a dynamic...', value: '' },
-  { label: 'Romance', value: 'ROMANCE' },
-  { label: 'Friendship', value: 'FRIENDSHIP' },
-  { label: 'Family', value: 'FAMILY' },
-  { label: 'Rivalry', value: 'RIVALRY' },
-  { label: 'Mentor', value: 'MENTOR' },
-  { label: 'Other', value: 'OTHER' },
+const getRelationshipTypes = (t: any) => [
+  { label: t('dashboard:create_relationship_page.dynamic_select', 'Select a dynamic...'), value: '' },
+  { label: t('dashboard:create_relationship_page.types.romance', 'Romance'), value: 'ROMANCE' },
+  { label: t('dashboard:create_relationship_page.types.friendship', 'Friendship'), value: 'FRIENDSHIP' },
+  { label: t('dashboard:create_relationship_page.types.family', 'Family'), value: 'FAMILY' },
+  { label: t('dashboard:create_relationship_page.types.rivalry', 'Rivalry'), value: 'RIVALRY' },
+  { label: t('dashboard:create_relationship_page.types.mentor', 'Mentor'), value: 'MENTOR' },
+  { label: t('dashboard:create_relationship_page.types.other', 'Other'), value: 'OTHER' },
 ];
 
 const CreateRelationship: React.FC = () => {
   const { storyId } = useParams<{ storyId: string }>();
   const navigate = useNavigate();
+  const { t } = useTranslation(['dashboard']);
 
   
   const { data: characters } = useQuery({
@@ -50,7 +52,7 @@ const CreateRelationship: React.FC = () => {
   };
 
   const charOptions = [
-    { label: 'Select a character...', value: '' },
+    { label: t('dashboard:create_relationship_page.character_select', 'Select a character...'), value: '' },
     ...(characters?.map(c => ({ label: c.name, value: c.id })) || [])
   ];
 
@@ -58,8 +60,8 @@ const CreateRelationship: React.FC = () => {
     <div>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h1 className={styles.title}>Define a Connection.</h1>
-          <p className={styles.subtitle}>Conflict and connection drive every great story.</p>
+          <h1 className={styles.title}>{t('dashboard:create_relationship_page.title', 'Define a Connection.')}</h1>
+          <p className={styles.subtitle}>{t('dashboard:create_relationship_page.subtitle', 'Conflict and connection drive every great story.')}</p>
         </div>
 
         <div className={styles.formContainer}>
@@ -70,7 +72,7 @@ const CreateRelationship: React.FC = () => {
             
             <form onSubmit={handleSubmit} className={styles.form}>
               <SelectInput
-                label="First Character"
+                label={t('dashboard:create_relationship_page.first_character', 'First Character')}
                 options={charOptions}
                 value={formData.character_a_id}
                 onChange={(e) => setFormData({ ...formData, character_a_id: e.target.value })}
@@ -78,7 +80,7 @@ const CreateRelationship: React.FC = () => {
               />
 
               <SelectInput
-                label="Second Character"
+                label={t('dashboard:create_relationship_page.second_character', 'Second Character')}
                 options={charOptions}
                 value={formData.character_b_id}
                 onChange={(e) => setFormData({ ...formData, character_b_id: e.target.value })}
@@ -86,8 +88,8 @@ const CreateRelationship: React.FC = () => {
               />
 
               <SelectInput
-                label="Relationship Dynamic"
-                options={RELATIONSHIP_TYPES}
+                label={t('dashboard:create_relationship_page.relationship_dynamic', 'Relationship Dynamic')}
+                options={getRelationshipTypes(t)}
                 value={formData.relationship_type}
                 onChange={(e) => setFormData({ ...formData, relationship_type: e.target.value as RelationshipTypeEnum })}
                 required
@@ -95,8 +97,8 @@ const CreateRelationship: React.FC = () => {
 
               <div className={styles.footerSection}>
                 <p className={styles.footerText}>
-                  Explore what draws them together,<br/>
-                  and what tears them apart.
+                  {t('dashboard:create_relationship_page.footer_text_1', 'Explore what draws them together,')}<br/>
+                  {t('dashboard:create_relationship_page.footer_text_2', 'and what tears them apart.')}
                 </p>
                 <div className={styles.footerOrnament}></div>
                 <Button 
@@ -106,7 +108,9 @@ const CreateRelationship: React.FC = () => {
                   icon={<Feather size={18} />}
                   className={styles.submitButton}
                 >
-                  {mutation.isPending ? 'Starting...' : 'Start Relationship Discovery'}
+                  {mutation.isPending 
+                    ? t('dashboard:create_relationship_page.starting', 'Starting...') 
+                    : t('dashboard:create_relationship_page.start_discovery', 'Start Relationship Discovery')}
                 </Button>
               </div>
             </form>

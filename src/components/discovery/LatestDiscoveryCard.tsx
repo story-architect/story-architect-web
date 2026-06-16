@@ -34,7 +34,11 @@ export const LatestDiscoveryCard: React.FC<LatestDiscoveryCardProps> = ({ storyI
   const metadata = { ...discovery.event_metadata };
   
   if (metadata.pattern_key) {
-    metadata.pattern_key = t(metadata.pattern_key as string, { ns: 'insights' });
+    metadata.pattern_key = t((metadata.pattern_key as string).replace('insights.', ''), { ns: 'insights' });
+  }
+
+  if (metadata.insight_key) {
+    metadata.insight_key = t((metadata.insight_key as string).replace('insights.', ''), { ns: 'insights' });
   }
 
   if (metadata.report_type) {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { Activity } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { CharacterService, ReportService } from '../../api/services';
 import styles from './CharacterPulsePanel.module.css';
 
@@ -10,6 +11,7 @@ interface CharacterPulsePanelProps {
 }
 
 export const CharacterPulsePanel: React.FC<CharacterPulsePanelProps> = ({ characterId, className }) => {
+  const { t } = useTranslation(['common', 'insights', 'reports']);
   const { data: character } = useQuery({
     queryKey: ['character', characterId],
     queryFn: () => CharacterService.getById(characterId),
@@ -50,46 +52,50 @@ export const CharacterPulsePanel: React.FC<CharacterPulsePanelProps> = ({ charac
       <div className={styles.section}>
         <span className={styles.sectionTitle}>
           <Activity size={16} />
-          Current Understanding
+          {t('common:labels.current_understanding', 'Current Understanding')}
         </span>
 
         {isLoading ? (
-          <div className={styles.loading}>Sensing character pulse...</div>
+          <div className={styles.loading}>{t('common:labels.loading', 'Sensing character pulse...')}</div>
         ) : (
           <>
             <div className={styles.traitItem}>
-              <span className={styles.traitLabel}>Wound</span>
+              <span className={styles.traitLabel}>{t('reports.emotional_wound', 'Wound')}</span>
               {report?.emotional_wound ? (
                 <p className={styles.traitValue}>{report.emotional_wound}</p>
               ) : (
-                <p className={styles.traitEmpty}>Undiscovered</p>
+                <p className={styles.traitEmpty}>{t('common:labels.undiscovered', 'Undiscovered')}</p>
               )}
             </div>
 
             <div className={styles.traitItem}>
-              <span className={styles.traitLabel}>Fear</span>
+              <span className={styles.traitLabel}>{t('reports.fear', 'Fear')}</span>
               {report?.deepest_fear ? (
                 <p className={styles.traitValue}>{report.deepest_fear}</p>
               ) : (
-                <p className={styles.traitEmpty}>Undiscovered</p>
+                <p className={styles.traitEmpty}>{t('common:labels.undiscovered', 'Undiscovered')}</p>
               )}
             </div>
 
             <div className={styles.traitItem}>
-              <span className={styles.traitLabel}>Lie</span>
+              <span className={styles.traitLabel}>{t('reports.protective_lie', 'Lie')}</span>
               {report?.protective_lie ? (
                 <p className={styles.traitValue}>"{report.protective_lie}"</p>
               ) : (
-                <p className={styles.traitEmpty}>Undiscovered</p>
+                <p className={styles.traitEmpty}>{t('common:labels.undiscovered', 'Undiscovered')}</p>
               )}
             </div>
 
             <div className={styles.traitItem}>
-              <span className={styles.traitLabel}>Most Likely Conflict</span>
+              <span className={styles.traitLabel}>{t('common:labels.most_likely_conflict', 'Most Likely Conflict')}</span>
               {report?.conflict_created ? (
-                <p className={styles.traitValue}>{report.conflict_created}</p>
+                <p className={styles.traitValue}>
+                  {report.conflict_created?.startsWith('insights.') 
+                    ? t(report.conflict_created.replace('insights.', ''), { ns: 'insights' }) 
+                    : report.conflict_created}
+                </p>
               ) : (
-                <p className={styles.traitEmpty}>Undiscovered</p>
+                <p className={styles.traitEmpty}>{t('common:labels.undiscovered', 'Undiscovered')}</p>
               )}
             </div>
           </>

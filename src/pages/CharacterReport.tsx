@@ -17,7 +17,7 @@ const CharacterReport: React.FC = () => {
   const { characterId } = useParams<{ characterId: string }>();
   const navigate = useNavigate();
   const queryClient = useQueryClient();
-  const { t } = useTranslation('common');
+  const { t } = useTranslation(['common', 'insights']);
 
   const { data: character } = useQuery({
     queryKey: ['character', characterId],
@@ -104,27 +104,35 @@ const CharacterReport: React.FC = () => {
   }
 
   const sidebarSteps = [
-    { label: 'Emotional Wound', isComplete: true },
-    { label: 'Deepest Fear', isComplete: true },
-    { label: 'Protective Lie', isComplete: true },
-    { label: 'Relationship Pattern', isComplete: true },
-    { label: 'Narrative Consequence', isComplete: true, isGlowing: true },
+    { label: t('reports.emotional_wound', 'Emotional Wound'), isComplete: true },
+    { label: t('reports.fear', 'Deepest Fear'), isComplete: true },
+    { label: t('reports.protective_lie', 'Protective Lie'), isComplete: true },
+    { label: t('reports.relationship_pattern', 'Relationship Pattern'), isComplete: true },
+    { label: t('reports.narrative_consequence', 'Narrative Consequence'), isComplete: true, isGlowing: true },
   ];
 
+  const translateInsight = (val?: string | null) => {
+    if (!val) return null;
+    if (val.startsWith('insights.')) {
+      return t(val.replace('insights.', ''), { ns: 'insights' });
+    }
+    return val;
+  };
+
   const engineNodes = [
-    { label: 'EMOTIONAL WOUND', value: report.emotional_wound, icon: <Heart size={20} /> },
-    { label: 'FEAR', value: report.deepest_fear, icon: <Info size={20} /> },
-    { label: 'PROTECTIVE LIE', value: report.protective_lie, icon: <Shield size={20} /> },
-    { label: 'RELATIONSHIP PATTERN', value: report.behavior, icon: <Users size={20} /> },
-    { label: 'STORY CONFLICT', value: report.conflict_created, icon: <Flame size={20} /> },
-    { label: 'TRANSFORMATION', value: report.transformation, icon: <Sparkles size={20} /> }
+    { label: t('reports.labels.EMOTIONAL WOUND', 'EMOTIONAL WOUND'), value: report.emotional_wound, icon: <Heart size={20} /> },
+    { label: t('reports.labels.FEAR', 'FEAR'), value: report.deepest_fear, icon: <Info size={20} /> },
+    { label: t('reports.labels.PROTECTIVE LIE', 'PROTECTIVE LIE'), value: report.protective_lie, icon: <Shield size={20} /> },
+    { label: t('reports.labels.RELATIONSHIP PATTERN', 'RELATIONSHIP PATTERN'), value: translateInsight(report.behavior), icon: <Users size={20} /> },
+    { label: t('reports.labels.STORY CONFLICT', 'STORY CONFLICT'), value: translateInsight(report.conflict_created), icon: <Flame size={20} /> },
+    { label: t('reports.labels.TRANSFORMATION', 'TRANSFORMATION'), value: translateInsight(report.transformation), icon: <Sparkles size={20} /> }
   ];
 
   const consequenceNodes = [
-    { label: 'PROTECTIVE LIE', value: report.protective_lie },
-    { label: 'BEHAVIOR', value: report.behavior },
-    { label: 'STORY CONSEQUENCE', value: report.narrative_consequence, isGlowing: true },
-    { label: 'CONFLICT CREATED', value: report.conflict_created }
+    { label: t('reports.labels.PROTECTIVE LIE', 'PROTECTIVE LIE'), value: report.protective_lie },
+    { label: t('reports.labels.BEHAVIOR', 'BEHAVIOR'), value: translateInsight(report.behavior) },
+    { label: t('reports.labels.STORY CONSEQUENCE', 'STORY CONSEQUENCE'), value: translateInsight(report.narrative_consequence), isGlowing: true },
+    { label: t('reports.labels.CONFLICT CREATED', 'CONFLICT CREATED'), value: translateInsight(report.conflict_created) }
   ];
 
   // Dynamic sentence generation
@@ -135,7 +143,7 @@ const CharacterReport: React.FC = () => {
     <div className={styles.pageLayout}>
       <DiscoverySidebar 
         name={name}
-        role={character?.archetype || (character?.role === 'MAIN_CHARACTER' ? 'The Protagonist' : 'Supporting Character')}
+        role={character?.archetype || (character?.role === 'MAIN_CHARACTER' ? t('reports.protagonist', 'The Protagonist') : t('reports.supporting_character', 'Supporting Character'))}
         quote={report.character_core}
         steps={sidebarSteps}
       />
@@ -164,8 +172,8 @@ const CharacterReport: React.FC = () => {
           {/* SCREEN 1: Story Engine Emerging */}
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
-              <span className={styles.pretitle}>DISCOVERY COMPLETE</span>
-              <h1 className={styles.title}>Your Story Engine Is <em>Emerging</em></h1>
+              <span className={styles.pretitle}>{t('reports.discovery_complete', 'DISCOVERY COMPLETE')}</span>
+              <h1 className={styles.title}>{t('reports.engine_emerging', 'Your Story Engine Is')} <em>{t('reports.engine_emerging_em', 'Emerging')}</em></h1>
               <div className={styles.ornament}>❧</div>
             </div>
             
@@ -173,7 +181,7 @@ const CharacterReport: React.FC = () => {
             
             <div className={styles.quoteBlock}>
               <div className={styles.quoteMark}>"</div>
-              <p>This is not a character trait.<br/><em>This is a story waiting to happen.</em></p>
+              <p>{t('reports.not_character_trait', 'This is not a character trait.')}<br/><em>{t('reports.story_waiting', 'This is a story waiting to happen.')}</em></p>
               <div className={styles.ornamentSmall}>✦</div>
             </div>
           </section>
@@ -182,32 +190,35 @@ const CharacterReport: React.FC = () => {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <div className={styles.ornamentSmall}>✦</div>
-              <h1 className={styles.title}>Why This Matters</h1>
+              <h1 className={styles.title}>{t('reports.why_matters', 'Why This Matters')}</h1>
               <div className={styles.ornament}>❧</div>
             </div>
 
             <InsightCard 
               className={styles.wideCard}
               title={
-                <span>This belief doesn't just shape who your character is.<br/><em>It shapes what happens to them.</em></span>
+                <span>{t('reports.belief_shape_who', "This belief doesn't just shape who your character is.")}<br/><em>{t('reports.shapes_what_happens', 'It shapes what happens to them.')}</em></span>
               }
             >
+              <div className={styles.statementText}>
+                {translateInsight(report.dramatic_potential) || t('common:discovery.labels.sensing', 'Sensing...')}
+              </div>
               <div className={styles.threeColumn}>
                 <div className={styles.column}>
                   <div className={styles.columnIcon}><Users size={24} /></div>
-                  <h4 className={styles.columnTitle}>RELATIONSHIPS</h4>
+                  <h4 className={styles.columnTitle}>{t('reports.labels.RELATIONSHIP PATTERN', 'RELATIONSHIPS').replace(' PATTERN', 'S')}</h4>
                   <div className={styles.ornamentMicro}>❧</div>
                   <p className={styles.columnText}>People struggle to get close to them.</p>
                 </div>
                 <div className={styles.column}>
                   <div className={styles.columnIcon}><Map size={24} /></div>
-                  <h4 className={styles.columnTitle}>CHOICES</h4>
+                  <h4 className={styles.columnTitle}>{t('reports.choices', 'CHOICES')}</h4>
                   <div className={styles.ornamentMicro}>❧</div>
                   <p className={styles.columnText}>Important opportunities are rejected.</p>
                 </div>
                 <div className={styles.column}>
                   <div className={styles.columnIcon}><Flame size={24} /></div>
-                  <h4 className={styles.columnTitle}>CONFLICT</h4>
+                  <h4 className={styles.columnTitle}>{t('reports.conflict', 'CONFLICT')}</h4>
                   <div className={styles.ornamentMicro}>❧</div>
                   <p className={styles.columnText}>They create the very outcome they fear.</p>
                 </div>
@@ -215,7 +226,7 @@ const CharacterReport: React.FC = () => {
 
               <div className={styles.dramaticPotential}>
                 <div className={styles.dpHeader}>
-                  <span>✦</span> DRAMATIC POTENTIAL <span>✦</span>
+                  <span>✦</span> {t('reports.dramatic_potential', 'DRAMATIC POTENTIAL')} <span>✦</span>
                 </div>
                 <p className={styles.dpText}>
                   Because {firstName} fears their wound, they protect themselves. <br/>
@@ -230,7 +241,7 @@ const CharacterReport: React.FC = () => {
           {/* SCREEN 3: Narrative Consequence Revealed */}
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
-              <span className={styles.pretitle}>NARRATIVE CONSEQUENCE REVEALED</span>
+              <span className={styles.pretitle}>{t('reports.narrative_consequence_revealed', 'NARRATIVE CONSEQUENCE REVEALED')}</span>
               <h1 className={styles.dynamicSentence}>
                 Because {firstName} believes "{report.protective_lie.replace('.', '')}",<br/>
                 <em>they push away the people most capable of helping them.</em>
@@ -243,16 +254,26 @@ const CharacterReport: React.FC = () => {
           {/* SCREEN 4: Where The Story Begins */}
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
-              <span className={styles.pretitle}>DISCOVERY COMPLETE</span>
-              <h1 className={styles.title}>Where The Story Begins</h1>
+              <span className={styles.pretitle}>{t('reports.discovery_complete', 'DISCOVERY COMPLETE')}</span>
+              <h1 className={styles.title}>{t('reports.where_story_begins', 'Where The Story Begins')}</h1>
               <div className={styles.ornament}>❧</div>
-              <p className={styles.subtitle}>Your character's foundation has been revealed.</p>
+              <p className={styles.subtitle}>{t('reports.foundation_revealed', "Your character's foundation has been revealed.")}</p>
+            </div>
+
+            <div className={styles.sectionHeader}>
+              <span className={styles.itemTitle}>{t('reports.the_central_conflict', 'THE CENTRAL CONFLICT')}</span>
+              <p className={styles.itemText}>{translateInsight(report.conflict_created)}</p>
+            </div>
+            
+            <div className={styles.foundationItem}>
+              <span className={styles.itemTitle}>{t('reports.the_transformation', 'THE TRANSFORMATION')}</span>
+              <p className={styles.itemText}>{translateInsight(report.transformation)}</p>
             </div>
 
             <InsightCard 
               isGlowing 
               className={styles.keyInsightCard}
-              label="KEY INSIGHT"
+              label={t('reports.key_insight', 'KEY INSIGHT')}
               icon={<Sparkles size={24} />}
             >
               <p className={styles.kiText}>
@@ -267,14 +288,14 @@ const CharacterReport: React.FC = () => {
             </InsightCard>
 
             <div className={styles.threeColumnGrid}>
-              <InsightCard label="THE INCITING RELATIONSHIP" icon={<Users size={20} />}>
-                Someone enters their life who refuses to leave.
+              <InsightCard label={t('reports.the_inciting_relationship', 'THE INCITING RELATIONSHIP')} icon={<Users size={20} />}>
+                {t('insights:character.default.inciting_relationship', 'Someone enters their life who refuses to leave.')}
               </InsightCard>
-              <InsightCard label="THE CENTRAL CONFLICT" icon={<Flame size={20} />}>
-                They must choose between safety and connection.
+              <InsightCard label={t('reports.the_central_conflict', 'THE CENTRAL CONFLICT')} icon={<Flame size={20} />}>
+                {t('insights:character.default.central_conflict', 'They must choose between safety and connection.')}
               </InsightCard>
-              <InsightCard label="THE TRANSFORMATION" icon={<Sparkles size={20} />}>
-                They must learn that vulnerability is not weakness.
+              <InsightCard label={t('reports.the_transformation', 'THE TRANSFORMATION')} icon={<Sparkles size={20} />}>
+                {report.transformation}
               </InsightCard>
             </div>
 
@@ -282,8 +303,8 @@ const CharacterReport: React.FC = () => {
               <div className={styles.finaleContent}>
                 <div className={styles.finaleIcon}><Sparkles size={32} /></div>
                 <div className={styles.finaleText}>
-                  We now understand not only who this character is.<br/>
-                  <em>We understand why their story exists.</em>
+                  {t('reports.understand_who', 'We now understand not only who this character is.')}<br/>
+                  <em>{t('reports.understand_why', 'We understand why their story exists.')}</em>
                 </div>
               </div>
             </InsightCard>
@@ -294,7 +315,7 @@ const CharacterReport: React.FC = () => {
                 onClick={() => navigate(`/stories/${character?.story_id}`)}
                 icon={<ArrowRight size={20} />}
               >
-                Return to Story Overview
+                {t('reports.return_to_overview', 'Return to Story Overview')}
               </Button>
             </div>
           </section>
@@ -302,8 +323,8 @@ const CharacterReport: React.FC = () => {
           {/* SCREEN 5: Discovery Answers */}
           <section className={styles.section} style={{ marginTop: '4rem' }}>
             <div className={styles.sectionHeader}>
-              <span className={styles.pretitle}>REVISION</span>
-              <h1 className={styles.title}>Discovery Answers</h1>
+              <span className={styles.pretitle}>{t('reports.revision', 'REVISION')}</span>
+              <h1 className={styles.title}>{t('reports.discovery_answers', 'Discovery Answers')}</h1>
               <div className={styles.ornament}>❧</div>
             </div>
             
@@ -314,7 +335,7 @@ const CharacterReport: React.FC = () => {
                   <InsightCard key={ans.id} label={question?.question_text || 'Question'}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '1rem' }}>
                       <div style={{ color: 'var(--text-secondary)' }}>
-                        {ans.custom_answer || ans.selected_answer || 'No answer provided'}
+                        {ans.custom_answer || ans.selected_answer || t('common:labels.no_answer_provided', 'No answer provided')}
                       </div>
                       <Button variant="outline" size="sm" onClick={() => openReviseModal(ans, question)} icon={<Edit size={16} />}>
                         {t('buttons.revise_answer', 'Revise Answer')}

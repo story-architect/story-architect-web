@@ -10,6 +10,8 @@
     "CHARACTER_CREATED": "Vous avez ajouté {{name}} à l'histoire.",
     "RELATIONSHIP_CREATED": "Une connexion entre {{charA}} et {{charB}} a été établie.",
     "QUESTION_ANSWERED": "{{question}} - {{answer}}",
+    "PATTERN_EMERGING": "{{insight_key}}",
+    "INSIGHT_UNLOCKED": "{{insight_key}}",
     "REPORT_GENERATED": "Rapport d'architecture généré pour {{name}}."
   }
 }

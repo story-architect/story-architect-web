@@ -17,7 +17,7 @@ const StoryDetail: React.FC = () => {
   const { storyId } = useParams<{ storyId: string }>();
   const navigate = useNavigate();
   const queryClient = useQueryClient();
-  const { t } = useTranslation('common');
+  const { t } = useTranslation(['common', 'dashboard']);
 
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [editForm, setEditForm] = useState({ title: '', genre: '', one_sentence_premise: '' });
@@ -81,21 +81,21 @@ const StoryDetail: React.FC = () => {
             }} 
             icon={<Compass size={18} />}
           >
-            Continue Discovery
+            {t('buttons.continue_discovery', 'Continue Discovery')}
           </Button>
           <Button 
             variant="outline"
             onClick={() => navigate(`/stories/${story.id}/characters/new`)} 
             icon={<Plus size={18} />}
           >
-            Add Character
+            {t('buttons.add_character', 'Add Character')}
           </Button>
           <Button 
             variant="outline"
             onClick={() => navigate(`/stories/${story.id}/relationships/new`)} 
             icon={<Plus size={18} />}
           >
-            Add Relationship
+            {t('buttons.add_relationship', 'Add Relationship')}
           </Button>
         </div>
       </header>
@@ -115,7 +115,7 @@ const StoryDetail: React.FC = () => {
               </div>
               <div className={styles.statInfo}>
                 <span className={styles.statValue}>{progress}%</span>
-                <span className={styles.statLabel}>DISCOVERED</span>
+                <span className={styles.statLabel}>{t('dashboard:labels.discovered', 'DISCOVERED')}</span>
               </div>
             </div>
             <div className={styles.statCard}>
@@ -124,7 +124,7 @@ const StoryDetail: React.FC = () => {
               </div>
               <div className={styles.statInfo}>
                 <span className={styles.statValue}>{story.character_count || 0}</span>
-                <span className={styles.statLabel}>CHARACTERS</span>
+                <span className={styles.statLabel}>{t('dashboard:labels.characters', 'CHARACTERS')}</span>
               </div>
             </div>
             <div className={styles.statCard}>
@@ -133,7 +133,7 @@ const StoryDetail: React.FC = () => {
               </div>
               <div className={styles.statInfo}>
                 <span className={styles.statValue}>{story.relationship_count || 0}</span>
-                <span className={styles.statLabel}>RELATIONSHIPS</span>
+                <span className={styles.statLabel}>{t('dashboard:labels.relationships', 'RELATIONSHIPS')}</span>
               </div>
             </div>
           </div>

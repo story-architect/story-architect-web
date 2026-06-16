@@ -46,7 +46,7 @@
 }
 
 .premiseBox {
-  background: linear-gradient(90deg, rgba(255,255,255,0.05) 0%, transparent 100%);
+  background: linear-gradient(90deg, rgba(197, 168, 128, 0.1) 0%, transparent 100%);
   border-left: 4px solid var(--color-accent-gold);
   padding: 24px;
   border-radius: 0 12px 12px 0;
@@ -93,14 +93,14 @@
 .statCard:hover {
   transform: translateY(-2px);
   background: var(--color-surface);
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: var(--color-accent-gold);
 }
 
 .statIconWrapper {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: rgba(99, 102, 241, 0.1);
+  background-color: rgba(197, 168, 128, 0.15);
   color: var(--color-accent-gold);
   display: flex;
   align-items: center;
@@ -115,7 +115,7 @@
 .statValue {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-text-primary);
   line-height: 1;
   margin-bottom: 6px;
 }

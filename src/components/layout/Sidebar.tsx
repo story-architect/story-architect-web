@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
+import { useTranslation } from 'react-i18next';
 import { Feather, Home, Users, Link2, Plus, ChevronLeft, ChevronRight, Compass, FileText } from 'lucide-react';
 import { StoryService } from '../../api/services';
 import styles from './Sidebar.module.css';
@@ -12,6 +13,7 @@ interface SidebarProps {
 export const Sidebar: React.FC<SidebarProps> = ({ storyId }) => {
   const [collapsed, setCollapsed] = useState(false);
   const navigate = useNavigate();
+  const { t } = useTranslation('common');
 
 
 
@@ -50,7 +52,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ storyId }) => {
         <div className={styles.section}>
           <NavLink to="/" className={getNavClass} end>
             <Home size={18} />
-            {!collapsed && <span>Dashboard</span>}
+            {!collapsed && <span>{t('nav.dashboard', 'Dashboard')}</span>}
           </NavLink>
         </div>
 
@@ -59,16 +61,16 @@ export const Sidebar: React.FC<SidebarProps> = ({ storyId }) => {
             <div className={styles.divider} />
             
             <div className={styles.section}>
-              {!collapsed && <span className={styles.sectionTitle}>CURRENT STORY</span>}
+              {!collapsed && <span className={styles.sectionTitle}>{t('nav.current_story', 'CURRENT STORY')}</span>}
               <NavLink to={`/stories/${storyId}`} className={getNavClass} end>
                 <Compass size={18} />
-                {!collapsed && <span className={styles.truncate}>Overview</span>}
+                {!collapsed && <span className={styles.truncate}>{t('nav.overview', 'Overview')}</span>}
               </NavLink>
             </div>
 
             <div className={styles.section}>
               <div className={styles.sectionHeader}>
-                {!collapsed && <span className={styles.sectionTitle}>CHARACTERS</span>}
+                {!collapsed && <span className={styles.sectionTitle}>{t('nav.characters', 'CHARACTERS').toUpperCase()}</span>}
                 {!collapsed && (
                   <button className={styles.addBtn} onClick={() => navigate(`/stories/${storyId}/characters/new`)}>
                     <Plus size={14} />
@@ -83,14 +85,14 @@ export const Sidebar: React.FC<SidebarProps> = ({ storyId }) => {
                   </NavLink>
                 ))}
                 {(!characters || characters.length === 0) && !collapsed && (
-                  <div className={styles.emptyState}>No characters yet</div>
+                  <div className={styles.emptyState}>{t('nav.no_characters', 'No characters yet')}</div>
                 )}
               </div>
             </div>
 
             <div className={styles.section}>
               <div className={styles.sectionHeader}>
-                {!collapsed && <span className={styles.sectionTitle}>RELATIONSHIPS</span>}
+                {!collapsed && <span className={styles.sectionTitle}>{t('nav.relationships', 'RELATIONSHIPS').toUpperCase()}</span>}
                 {!collapsed && (
                   <button className={styles.addBtn} onClick={() => navigate(`/stories/${storyId}/relationships/new`)}>
                     <Plus size={14} />
@@ -109,7 +111,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ storyId }) => {
                   </NavLink>
                 ))}
                 {(!relationships || relationships.length === 0) && !collapsed && (
-                  <div className={styles.emptyState}>No relationships yet</div>
+                  <div className={styles.emptyState}>{t('nav.no_relationships', 'No relationships yet')}</div>
                 )}
               </div>
             </div>
@@ -117,12 +119,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ storyId }) => {
             <div className={styles.divider} />
             
             <div className={styles.section}>
-              {!collapsed && <span className={styles.sectionTitle}>REPORTS</span>}
+              {!collapsed && <span className={styles.sectionTitle}>{t('nav.reports', 'REPORTS').toUpperCase()}</span>}
               <div className={styles.list}>
                 {characters?.map(char => (
                   <NavLink key={`report-${char.id}`} to={`/characters/${char.id}/report`} className={getNavClass}>
                     <FileText size={18} className={styles.listIcon} />
-                    {!collapsed && <span className={styles.truncate}>{char.name} Report</span>}
+                    {!collapsed && <span className={styles.truncate}>{char.name} {t('nav.report', 'Report')}</span>}
                   </NavLink>
                 ))}
               </div>

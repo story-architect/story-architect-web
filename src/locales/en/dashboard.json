@@ -29,5 +29,69 @@
     "relationships": "Relationships Explored",
     "discovered": "Discovered",
     "continue": "Continue Discovery"
+  },
+  "create_story_page": {
+    "title": "A new story is waiting.",
+    "subtitle": "Where will your imagination take you?",
+    "story_title": "Story Title",
+    "story_title_placeholder": "e.g. The Last Summer",
+    "genre": "Genre",
+    "genre_select": "Select a genre...",
+    "one_sentence_premise": "One Sentence Premise",
+    "one_sentence_premise_placeholder": "What is your story about in one sentence?",
+    "footer_text_1": "You don't need to know everything yet.",
+    "footer_text_2": "Just the spark is enough. 🤎",
+    "creating": "Creating...",
+    "begin_discovery": "Begin Discovery",
+    "genres": {
+      "literary_fiction": "Literary Fiction",
+      "science_fiction": "Science Fiction",
+      "fantasy": "Fantasy",
+      "mystery_thriller": "Mystery / Thriller",
+      "romance": "Romance",
+      "historical_fiction": "Historical Fiction",
+      "young_adult": "Young Adult",
+      "other": "Other"
+    }
+  },
+  "create_character_page": {
+    "title": "Let's meet someone new.",
+    "subtitle": "Every unforgettable story begins with a character.",
+    "character_name": "Character Name",
+    "character_name_placeholder": "e.g. Elara Vance",
+    "age": "Age",
+    "age_placeholder": "e.g. 28",
+    "role": "Role",
+    "archetype": "Archetype (Optional)",
+    "archetype_placeholder": "e.g. The Reluctant Leader",
+    "footer_text_1": "You don't need to know everything yet.",
+    "footer_text_2": "Discovery will reveal the rest.",
+    "starting": "Starting...",
+    "start_discovery": "Start Character Discovery",
+    "roles": {
+      "main": "Main Character",
+      "supporting": "Supporting Character"
+    }
+  },
+  "create_relationship_page": {
+    "title": "Define a Connection.",
+    "subtitle": "Conflict and connection drive every great story.",
+    "dynamic_select": "Select a dynamic...",
+    "first_character": "First Character",
+    "second_character": "Second Character",
+    "character_select": "Select a character...",
+    "relationship_dynamic": "Relationship Dynamic",
+    "footer_text_1": "Explore what draws them together,",
+    "footer_text_2": "and what tears them apart.",
+    "starting": "Starting...",
+    "start_discovery": "Start Relationship Discovery",
+    "types": {
+      "romance": "Romance",
+      "friendship": "Friendship",
+      "family": "Family",
+      "rivalry": "Rivalry",
+      "mentor": "Mentor",
+      "other": "Other"
+    }
   }
 }

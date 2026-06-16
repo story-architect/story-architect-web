@@ -82,7 +82,12 @@ const RelationshipDiscovery: React.FC = () => {
     else if (idx === currentQuestionIndex) state = 'emerging';
     else if (idx === currentQuestionIndex + 1) state = 'forming';
 
-    const labels = ['Connection Established', 'Emotional Tension', 'Hidden Truth', 'Relationship Risk', 'Turning Point'];
+    const labels = [
+      t('common:discovery.labels.connection', 'Connection'),
+      t('common:discovery.labels.hidden_truth', 'Hidden Truth'),
+      t('common:discovery.labels.protective_shield', 'Protective Shield'),
+      t('common:discovery.labels.tension_emerging', 'Tension Emerging')
+    ];
     return {
       id: q.id,
       label: labels[idx] || q.question_key,
@@ -128,7 +133,9 @@ const RelationshipDiscovery: React.FC = () => {
             <div className={styles.ornament}>
               <Feather size={16} />
             </div>
-            <h1 className={styles.questionText}>{currentQuestion.question_text}</h1>
+            <h1 className={styles.questionText}>
+              {t(`common:discovery.questions.${currentQuestion.question_key}`, currentQuestion.question_text)}
+            </h1>
             <div className={styles.ornament}>
               <Feather size={16} />
             </div>
@@ -140,7 +147,7 @@ const RelationshipDiscovery: React.FC = () => {
               return (
                 <SuggestedAnswerCard
                   key={idx}
-                  text={ans}
+                  text={t(`common:discovery.answers.${ans}`, ans)}
                   icon={<Icon size={24} />}
                   selected={selectedAnswer === ans && !customAnswer}
                   onClick={() => {
@@ -153,12 +160,12 @@ const RelationshipDiscovery: React.FC = () => {
           </div>
 
           <div className={styles.divider}>
-            <span>or</span>
+            <span>{t('common:discovery.labels.or', 'or')}</span>
           </div>
 
           <div className={styles.customAnswerSection}>
             <TextArea
-              placeholder="Write your own answer..."
+              placeholder={t('common:discovery.labels.write_your_own', 'Write your own answer...')}
               value={customAnswer}
               onChange={(e) => {
                 setCustomAnswer(e.target.value);
@@ -177,10 +184,12 @@ const RelationshipDiscovery: React.FC = () => {
               icon={<Feather size={18} />}
               className={styles.submitButton}
             >
-              {submitMutation.isPending ? 'Saving...' : 'Continue Discovery'}
+              {submitMutation.isPending 
+                ? t('common:discovery.labels.sensing', 'Sensing...') 
+                : t('common:discovery.labels.continue_discovery', 'Continue Discovery')}
             </Button>
             <p className={styles.footerHelp}>
-              <Feather size={14} /> There are no wrong answers here.
+              <Feather size={14} /> {t('common:discovery.labels.no_wrong_answers', 'There are no wrong answers here.')}
             </p>
           </div>
         </div>

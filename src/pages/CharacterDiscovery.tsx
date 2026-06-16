@@ -98,7 +98,12 @@ const CharacterDiscovery: React.FC = () => {
     else if (idx === currentQuestionIndex) state = 'emerging';
     else if (idx === currentQuestionIndex + 1) state = 'forming';
 
-    const labels = ['Wound Emerging', 'Fear Emerging', 'Lie Forming', 'Transformation Unknown'];
+    const labels = [
+      t('common:discovery.labels.wound_emerging', 'Wound Emerging'),
+      t('common:discovery.labels.fear_emerging', 'Fear Emerging'),
+      t('common:discovery.labels.lie_forming', 'Lie Forming'),
+      t('common:discovery.labels.transformation_unknown', 'Transformation Unknown')
+    ];
     return {
       id: q.id,
       label: labels[idx] || q.question_key,
@@ -145,13 +150,15 @@ const CharacterDiscovery: React.FC = () => {
             <div className={styles.ornament}>
               <Feather size={16} />
             </div>
-            <h1 className={styles.questionText}>{currentQuestion.question_text}</h1>
+            <h1 className={styles.questionText}>
+              {t(`common:discovery.questions.${currentQuestion.question_key}`, currentQuestion.question_text)}
+            </h1>
             <div className={styles.ornament}>
               <Feather size={16} />
             </div>
             
             <p className={styles.reflectionText}>
-              The answers we seek are often hidden in the choices we avoid.
+              {t('common:discovery.labels.reflection_text', 'The answers we seek are often hidden in the choices we avoid.')}
             </p>
           </div>
 
@@ -161,7 +168,7 @@ const CharacterDiscovery: React.FC = () => {
               return (
                 <SuggestedAnswerCard
                   key={idx}
-                  text={ans}
+                  text={t(`common:discovery.answers.${ans}`, ans)}
                   icon={<Icon size={24} />}
                   selected={selectedAnswer === ans && !customAnswer}
                   onClick={() => {
@@ -174,12 +181,12 @@ const CharacterDiscovery: React.FC = () => {
           </div>
 
           <div className={styles.divider}>
-            <span>or</span>
+            <span>{t('common:discovery.labels.or', 'or')}</span>
           </div>
 
           <div className={styles.customAnswerSection}>
             <TextArea
-              placeholder="Write your own answer..."
+              placeholder={t('common:discovery.labels.write_your_own', 'Write your own answer...')}
               value={customAnswer}
               onChange={(e) => {
                 setCustomAnswer(e.target.value);
@@ -198,10 +205,12 @@ const CharacterDiscovery: React.FC = () => {
               icon={<Feather size={18} />}
               className={styles.submitButton}
             >
-              {submitMutation.isPending ? 'Saving...' : 'Continue Discovery'}
+              {submitMutation.isPending 
+                ? t('common:discovery.labels.sensing', 'Sensing...') 
+                : t('common:discovery.labels.continue_discovery', 'Continue Discovery')}
             </Button>
             <p className={styles.footerHelp}>
-              <Feather size={14} /> There are no wrong answers here.
+              <Feather size={14} /> {t('common:discovery.labels.no_wrong_answers', 'There are no wrong answers here.')}
             </p>
           </div>
         </div>
