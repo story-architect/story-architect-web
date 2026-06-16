@@ -128,16 +128,16 @@ const CharacterDiscovery: React.FC = () => {
       
       {showInsight && unlockedEvent && (
         <InsightUnlocked 
-          title={t(`events:${unlockedEvent.event_type}`, { ...unlockedEvent.event_metadata }) as string}
-          description={t(`events:descriptions.${unlockedEvent.event_type}`, { ...unlockedEvent.event_metadata }) as string}
+          title={t(`events:${unlockedEvent.event_type}`, { ...unlockedEvent.event_metadata, insight_key: t((unlockedEvent.event_metadata.insight_key as string)?.replace('insights.', '') || '', { ns: 'insights' }) }) as string}
+          description={t(`events:descriptions.${unlockedEvent.event_type}`, { ...unlockedEvent.event_metadata, insight_key: t((unlockedEvent.event_metadata.insight_key as string)?.replace('insights.', '') || '', { ns: 'insights' }) }) as string}
           onContinue={() => setShowInsight(false)}
         />
       )}
 
       {showPattern && unlockedEvent && (
         <PatternEmergingScreen 
-          title={t(`events:${unlockedEvent.event_type}`, { ...unlockedEvent.event_metadata, pattern_key: t((unlockedEvent.event_metadata.pattern_key as string) || '', { ns: 'insights' }) }) as string}
-          description={t(`events:descriptions.${unlockedEvent.event_type}`, { ...unlockedEvent.event_metadata, pattern_key: t((unlockedEvent.event_metadata.pattern_key as string) || '', { ns: 'insights' }) }) as string}
+          title={t(`events:${unlockedEvent.event_type}`, { ...unlockedEvent.event_metadata, pattern_key: t((unlockedEvent.event_metadata.pattern_key as string)?.replace('insights.', '') || '', { ns: 'insights' }) }) as string}
+          description={t(`events:descriptions.${unlockedEvent.event_type}`, { ...unlockedEvent.event_metadata, insight_key: t((unlockedEvent.event_metadata.insight_key as string)?.replace('insights.', '') || '', { ns: 'insights' }) }) as string}
           onContinue={() => setShowPattern(false)}
         />
       )}

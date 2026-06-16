@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrainCircuit } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { Button } from '../ui/Button';
 import styles from './TransitionScreen.module.css';
 
@@ -11,6 +12,7 @@ interface PatternEmergingScreenProps {
 
 export const PatternEmergingScreen: React.FC<PatternEmergingScreenProps> = ({ title, description, onContinue }) => {
   const [mounted, setMounted] = useState(false);
+  const { t } = useTranslation(['common']);
 
   useEffect(() => {
     requestAnimationFrame(() => setMounted(true));
@@ -23,14 +25,14 @@ export const PatternEmergingScreen: React.FC<PatternEmergingScreenProps> = ({ ti
           <BrainCircuit className={styles.icon} size={48} />
         </div>
         
-        <div className={styles.headerPattern}>Pattern Emerging</div>
+        <div className={styles.headerPattern}>{t('common:discovery.labels.pattern_emerging', 'Pattern Emerging')}</div>
         
-        <h2 className={styles.title}>{title.replace('Pattern: ', '')}</h2>
+        <h2 className={styles.title}>{title.replace('Pattern: ', '').replace('Modèle: ', '')}</h2>
         <p className={styles.description}>{description}</p>
         
         <div className={styles.actionWrapper}>
           <Button size="lg" onClick={onContinue}>
-            Continue Discovery
+            {t('common:discovery.labels.continue_discovery', 'Continue Discovery')}
           </Button>
         </div>
       </div>
