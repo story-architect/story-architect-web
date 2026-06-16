@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Plus, Compass, Activity, Users, Link2, Edit } from 'lucide-react';
@@ -10,6 +10,7 @@ import { StoryService } from '../api/services';
 import { LatestDiscoveryCard } from '../components/discovery/LatestDiscoveryCard';
 import { DiscoveryJournal } from '../components/discovery/DiscoveryJournal';
 import { StoryActivityFeed } from '../components/story/StoryActivityFeed';
+import * as T from '../types';
 import styles from './StoryDetail.module.css';
 
 const StoryDetail: React.FC = () => {
@@ -34,18 +35,10 @@ const StoryDetail: React.FC = () => {
 
   const progress = nextDiscovery?.progress || 0;
 
-  useEffect(() => {
-    if (story) {
-      setEditForm({
-        title: story.title,
-        genre: story.genre,
-        one_sentence_premise: story.one_sentence_premise,
-      });
-    }
-  }, [story]);
+
 
   const updateStoryMutation = useMutation({
-    mutationFn: (data: any) => StoryService.update(storyId!, data),
+    mutationFn: (data: T.StoryUpdate) => StoryService.update(storyId!, data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['story', storyId] });
       setIsEditModalOpen(false);
@@ -70,7 +63,10 @@ const StoryDetail: React.FC = () => {
         <div className={styles.quickActions}>
           <Button 
             variant="outline"
-            onClick={() => setIsEditModalOpen(true)} 
+            onClick={() => {
+              if (story) setEditForm({ title: story.title, genre: story.genre, one_sentence_premise: story.one_sentence_premise });
+              setIsEditModalOpen(true);
+            }} 
             icon={<Edit size={18} />}
           >
             {t('buttons.edit_story', 'Edit Story')}

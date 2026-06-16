@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { ArrowRight, Scale, HeartCrack, Edit, RefreshCw } from 'lucide-react';
@@ -51,11 +51,6 @@ const RelationshipReport: React.FC = () => {
   });
   const [reviseForm, setReviseForm] = useState({ custom_answer: '' });
 
-  useEffect(() => {
-    if (relationship) {
-      setEditForm({ relationship_type: relationship.relationship_type });
-    }
-  }, [relationship]);
 
   const updateRelationshipMutation = useMutation({
     mutationFn: (data: T.RelationshipUpdate) => RelationshipService.update(relationshipId!, data),
@@ -120,7 +115,10 @@ const RelationshipReport: React.FC = () => {
       <div className={styles.scrollContent}>
         
         <div style={{ display: 'flex', justifyContent: 'flex-end', paddingBottom: '1rem' }}>
-          <Button variant="outline" icon={<Edit size={18} />} onClick={() => setIsEditModalOpen(true)}>
+          <Button variant="outline" icon={<Edit size={18} />} onClick={() => {
+            if (relationship) setEditForm({ relationship_type: relationship.relationship_type });
+            setIsEditModalOpen(true);
+          }}>
             {t('buttons.edit_relationship', 'Edit Relationship')}
           </Button>
         </div>

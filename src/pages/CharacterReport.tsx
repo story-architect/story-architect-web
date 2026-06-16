@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Heart, Shield, Flame, Map, Users, Info, ArrowRight, Sparkles, Edit, RefreshCw } from 'lucide-react';
@@ -52,11 +52,6 @@ const CharacterReport: React.FC = () => {
   });
   const [reviseForm, setReviseForm] = useState({ custom_answer: '' });
 
-  useEffect(() => {
-    if (character) {
-      setEditForm({ name: character.name, age: character.age, role: character.role, archetype: character.archetype || '' });
-    }
-  }, [character]);
 
   const updateCharacterMutation = useMutation({
     mutationFn: (data: T.CharacterUpdate) => CharacterService.update(characterId!, data),
@@ -149,7 +144,10 @@ const CharacterReport: React.FC = () => {
         <div className={styles.contentMax}>
 
           <div style={{ display: 'flex', justifyContent: 'flex-end', paddingBottom: '1rem' }}>
-            <Button variant="outline" icon={<Edit size={18} />} onClick={() => setIsEditModalOpen(true)}>
+            <Button variant="outline" icon={<Edit size={18} />} onClick={() => {
+              if (character) setEditForm({ name: character.name, age: character.age, role: character.role, archetype: character.archetype || '' });
+              setIsEditModalOpen(true);
+            }}>
               {t('buttons.edit_character', 'Edit Character')}
             </Button>
           </div>

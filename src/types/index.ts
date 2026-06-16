@@ -46,14 +46,14 @@ export interface StoryResponse extends StoryCreate {
 export interface LatestDiscoveryResponse {
   id: string;
   event_type: EventTypeEnum;
-  event_metadata: Record<string, any>;
+  event_metadata: Record<string, unknown>;
   created_at: string;
 }
 
 export interface ActivityFeedItemResponse {
   id: string;
   event_type: EventTypeEnum;
-  event_metadata: Record<string, any>;
+  event_metadata: Record<string, unknown>;
   timestamp: string;
 }
 
@@ -152,7 +152,7 @@ export interface DiscoveryEventResponse {
   character_id?: string | null;
   relationship_id?: string | null;
   event_type: EventTypeEnum;
-  event_metadata: Record<string, any>;
+  event_metadata: Record<string, unknown>;
   created_at: string;
 }
 
