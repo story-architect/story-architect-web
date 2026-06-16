@@ -6,7 +6,7 @@ import { DiscoveryStatus, type StatusItem, type StatusState } from '../component
 import { SuggestedAnswerCard } from '../components/story/SuggestedAnswerCard';
 import { TextArea } from '../components/ui/Input';
 import { Button } from '../components/ui/Button';
-import { RelationshipService, DiscoveryService } from '../api/services';
+import { RelationshipService, DiscoveryService, CharacterService } from '../api/services';
 import { InsightUnlocked } from '../components/discovery/InsightUnlocked';
 import { PatternEmergingOverlay } from '../components/discovery/PatternEmergingOverlay';
 import { useTranslation } from 'react-i18next';
@@ -35,6 +35,18 @@ const RelationshipDiscovery: React.FC = () => {
     queryKey: ['answers', 'relationship', relationshipId],
     queryFn: () => DiscoveryService.getRelationshipAnswers(relationshipId!),
     enabled: !!relationshipId,
+  });
+
+  const { data: characterA } = useQuery({
+    queryKey: ['character', relationship?.character_a_id],
+    queryFn: () => CharacterService.getById(relationship!.character_a_id),
+    enabled: !!relationship?.character_a_id,
+  });
+
+  const { data: characterB } = useQuery({
+    queryKey: ['character', relationship?.character_b_id],
+    queryFn: () => CharacterService.getById(relationship!.character_b_id),
+    enabled: !!relationship?.character_b_id,
   });
 
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
@@ -137,7 +149,7 @@ const RelationshipDiscovery: React.FC = () => {
               <Feather size={16} />
             </div>
             <h1 className={styles.questionText}>
-              {t(`common:discovery.questions.${currentQuestion.question_key}`, currentQuestion.question_text.replace('Character A', relationship?.character_a_name || 'Character A').replace('Character B', relationship?.character_b_name || 'Character B'), { charA: relationship?.character_a_name || 'Character A', charB: relationship?.character_b_name || 'Character B' })}
+              {t(`common:discovery.questions.${currentQuestion.question_key}`, currentQuestion.question_text.replace('Character A', characterA?.name || 'Character A').replace('Character B', characterB?.name || 'Character B'), { charA: characterA?.name || 'Character A', charB: characterB?.name || 'Character B' })}
             </h1>
             <div className={styles.ornament}>
               <Feather size={16} />
