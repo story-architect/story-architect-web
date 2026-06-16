@@ -50,14 +50,14 @@ const StoryDetail: React.FC = () => {
     updateStoryMutation.mutate(editForm);
   };
 
-  if (isLoadingStory) return <div className={styles.loading}>Loading story command center...</div>;
-  if (!story) return <div className={styles.error}>Story not found</div>;
+  if (isLoadingStory) return <div className={styles.loading}>{t('dashboard:labels.loading_story', 'Loading story command center...')}</div>;
+  if (!story) return <div className={styles.error}>{t('dashboard:labels.story_not_found', 'Story not found')}</div>;
 
   return (
     <div className={styles.overviewContainer}>
       <header className={styles.overviewHeader}>
         <div className={styles.headerTitleArea}>
-          <span className={styles.genreBadge}>{story.genre.replace('_', ' ')}</span>
+          <span className={styles.genreBadge}>{t(`dashboard:create_story_page.genres.${story.genre}`, story.genre.replace('_', ' '))}</span>
           <h1 className={styles.storyTitle}>{story.title}</h1>
         </div>
         <div className={styles.quickActions}>
@@ -158,19 +158,19 @@ const StoryDetail: React.FC = () => {
       >
         <form onSubmit={handleEditSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <TextInput
-            label="Title"
+            label={t('dashboard:create_story_page.story_title', 'Title')}
             value={editForm.title}
             onChange={(e) => setEditForm({ ...editForm, title: e.target.value })}
             required
           />
           <TextInput
-            label="Genre"
+            label={t('dashboard:create_story_page.genre', 'Genre')}
             value={editForm.genre}
             onChange={(e) => setEditForm({ ...editForm, genre: e.target.value })}
             required
           />
           <TextArea
-            label="One Sentence Premise"
+            label={t('dashboard:create_story_page.one_sentence_premise', 'One Sentence Premise')}
             value={editForm.one_sentence_premise}
             onChange={(e) => setEditForm({ ...editForm, one_sentence_premise: e.target.value })}
             required

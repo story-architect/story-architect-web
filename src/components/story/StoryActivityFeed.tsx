@@ -46,13 +46,13 @@ export const StoryActivityFeed: React.FC<StoryActivityFeedProps> = ({ storyId, c
     <div className={`${styles.feedContainer} ${className || ''}`}>
       <h3 className={styles.feedTitle}>
         <Clock size={18} />
-        Recent Activity
+        {t('dashboard:titles.recent_activity', 'Recent Activity')}
       </h3>
 
       {isLoading ? (
-        <div className={styles.loading}>Loading activity...</div>
+        <div className={styles.loading}>{t('dashboard:labels.loading_activity', 'Loading activity...')}</div>
       ) : !activities || activities.length === 0 ? (
-        <div className={styles.empty}>No activity yet. Start discovering!</div>
+        <div className={styles.empty}>{t('dashboard:labels.empty_activity', 'No activity yet. Start discovering!')}</div>
       ) : (
         <div className={styles.feedList}>
           {activities.map((activity, idx) => {

@@ -10,7 +10,8 @@
     "dashboard": "Tableau de bord",
     "latest_discovery": "Dernière découverte",
     "discovery_journal": "Journal des découvertes",
-    "story_pulse": "Pouls de l'histoire"
+    "story_pulse": "Pouls de l'histoire",
+    "recent_activity": "Activité Récente"
   },
   "labels": {
     "no_discoveries": "Pas encore de découvertes.",
@@ -23,6 +24,10 @@
     "days_ago": "Il y a {{count}} jours",
     "loading_journal": "Chargement du journal...",
     "empty_journal": "Votre voyage de découverte vous attend.",
+    "loading_activity": "Chargement de l'activité...",
+    "empty_activity": "Aucune activité pour le moment. Commencez à découvrir !",
+    "loading_story": "Chargement du centre de commande de l'histoire...",
+    "story_not_found": "Histoire introuvable",
     "today": "Aujourd'hui",
     "yesterday": "Hier",
     "characters": "Personnages découverts",

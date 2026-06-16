@@ -10,7 +10,8 @@
     "dashboard": "Dashboard",
     "latest_discovery": "Latest Discovery",
     "discovery_journal": "Discovery Journal",
-    "story_pulse": "Story Pulse"
+    "story_pulse": "Story Pulse",
+    "recent_activity": "Recent Activity"
   },
   "labels": {
     "no_discoveries": "No discoveries yet.",
@@ -23,6 +24,11 @@
     "days_ago": "{{count}} days ago",
     "loading_journal": "Loading journal...",
     "empty_journal": "Your discovery journey awaits.",
+    "loading_activity": "Loading activity...",
+    "empty_activity": "No activity yet. Start discovering!",
+    "loading_story": "Loading story command center...",
+    "story_not_found": "Story not found",
+    "recent_activity": "Recent Activity",
     "today": "Today",
     "yesterday": "Yesterday",
     "characters": "Characters Discovered",
