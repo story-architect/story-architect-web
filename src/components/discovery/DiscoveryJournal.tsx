@@ -70,7 +70,7 @@ export const DiscoveryJournal: React.FC<DiscoveryJournalProps> = ({ storyId, cla
                   }
                 
                   if (metadata.report_type) {
-                    const key = metadata.report_type.toLowerCase();
+                    const key = (metadata.report_type as string).toLowerCase();
                     metadata.report_type = t(`common:nav.${key}s`) || metadata.report_type;
                   }
                 

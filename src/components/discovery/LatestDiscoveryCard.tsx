@@ -39,7 +39,7 @@ export const LatestDiscoveryCard: React.FC<LatestDiscoveryCardProps> = ({ storyI
 
   if (metadata.report_type) {
     // Basic translation for 'Character' or 'Relationship'
-    const key = metadata.report_type.toLowerCase();
+    const key = (metadata.report_type as string).toLowerCase();
     metadata.report_type = t(`common:nav.${key}s`) || metadata.report_type;
   }
 

@@ -61,7 +61,7 @@ export const StoryActivityFeed: React.FC<StoryActivityFeedProps> = ({ storyId, c
               metadata.pattern_key = t(metadata.pattern_key as string, { ns: 'insights' });
             }
             if (metadata.report_type) {
-              const key = metadata.report_type.toLowerCase();
+              const key = (metadata.report_type as string).toLowerCase();
               metadata.report_type = t(`common:nav.${key}s`) || metadata.report_type;
             }
             const translatedTitle = t(`events:${activity.event_type}`, metadata);
