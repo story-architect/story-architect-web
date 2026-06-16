@@ -210,7 +210,7 @@ const RelationshipReport: React.FC = () => {
                 {answers?.map(ans => {
                   const question = questions?.find(q => q.id === ans.question_id);
                   return (
-                    <InsightCard key={ans.id} label={question ? t(`common:discovery.questions.${question.question_key}`, question.question_text) : t('reports.question', 'Question')}>
+                    <InsightCard key={ans.id} label={question ? t(`common:discovery.questions.${question.question_key}`, question.question_text.replace('Character A', relationship?.character_a_name || 'Character A').replace('Character B', relationship?.character_b_name || 'Character B'), { charA: relationship?.character_a_name || 'Character A', charB: relationship?.character_b_name || 'Character B' }) : t('reports.question', 'Question')}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '1rem' }}>
                         <div style={{ color: 'var(--text-secondary)' }}>
                           {ans.custom_answer || ans.selected_answer || t('reports.no_answer_provided', 'No answer provided')}
@@ -289,7 +289,7 @@ const RelationshipReport: React.FC = () => {
         <form onSubmit={handleReviseSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <div>
             <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '0.25rem' }}>{t('reports.question', 'Question')}</div>
-            <div style={{ fontWeight: 500, color: 'var(--text-primary)' }}>{reviseModalState.question && t(`common:discovery.questions.${reviseModalState.question.question_key}`, reviseModalState.question.question_text)}</div>
+            <div style={{ fontWeight: 500, color: 'var(--text-primary)' }}>{reviseModalState.question && t(`common:discovery.questions.${reviseModalState.question.question_key}`, reviseModalState.question.question_text.replace('Character A', relationship?.character_a_name || 'Character A').replace('Character B', relationship?.character_b_name || 'Character B'), { charA: relationship?.character_a_name || 'Character A', charB: relationship?.character_b_name || 'Character B' })}</div>
           </div>
           <TextArea
             label={t('reports.your_custom_answer', 'Your Custom Answer')}

@@ -137,7 +137,7 @@ const RelationshipDiscovery: React.FC = () => {
               <Feather size={16} />
             </div>
             <h1 className={styles.questionText}>
-              {t(`common:discovery.questions.${currentQuestion.question_key}`, currentQuestion.question_text)}
+              {t(`common:discovery.questions.${currentQuestion.question_key}`, currentQuestion.question_text.replace('Character A', relationship?.character_a_name || 'Character A').replace('Character B', relationship?.character_b_name || 'Character B'), { charA: relationship?.character_a_name || 'Character A', charB: relationship?.character_b_name || 'Character B' })}
             </h1>
             <div className={styles.ornament}>
               <Feather size={16} />
