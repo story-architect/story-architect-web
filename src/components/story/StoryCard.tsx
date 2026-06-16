@@ -32,7 +32,17 @@ export const StoryCard: React.FC<StoryCardProps> = ({
   });
 
   const progress = nextDiscovery?.progress || 0;
-  const nextInsight = nextDiscovery?.next_discovery;
+  
+  const translateInsight = (val?: string) => {
+    if (!val) return '';
+    if (val === 'Continue Discovery Questions') return t('dashboard:labels.continue_discovery_questions', 'Continue Discovery Questions');
+    if (val.startsWith('insights.')) {
+      return t(val.replace('insights.', ''), { ns: 'insights' });
+    }
+    return val;
+  };
+
+  const nextInsight = translateInsight(nextDiscovery?.next_discovery);
 
   if (viewMode === 'compact') {
     return (
@@ -86,7 +96,7 @@ export const StoryCard: React.FC<StoryCardProps> = ({
           
           {nextInsight && (
             <div className={styles.listInsightSection}>
-              <span className={styles.insightLabel}>NEXT DISCOVERY</span>
+              <span className={styles.insightLabel}>{t('dashboard:labels.next_discovery', 'NEXT DISCOVERY')}</span>
               <p className={styles.insightText}>{nextInsight}</p>
             </div>
           )}
@@ -137,7 +147,7 @@ export const StoryCard: React.FC<StoryCardProps> = ({
       <div className={styles.insightSection}>
         {nextInsight && (
           <div className={styles.insight}>
-            <span className={styles.insightLabel}>NEXT DISCOVERY</span>
+            <span className={styles.insightLabel}>{t('dashboard:labels.next_discovery', 'NEXT DISCOVERY')}</span>
             <p className={styles.insightText} style={{ fontStyle: 'normal' }}>
               {nextInsight}
             </p>

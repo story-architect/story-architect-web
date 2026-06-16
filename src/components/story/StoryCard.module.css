@@ -4,7 +4,7 @@
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 20px;
-  padding: 28px;
+  padding: 24px;
   box-shadow: var(--shadow-sm);
   transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
   position: relative;
@@ -45,8 +45,8 @@
 }
 
 .progressCircle {
-  width: 60px;
-  height: 60px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   border: 3px solid var(--color-accent-gold);
   border-left-color: var(--color-border);
@@ -58,7 +58,7 @@
 
 .progressText {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--color-text-primary);
 }
@@ -69,8 +69,8 @@
 
 .title {
   font-family: var(--font-serif);
-  font-size: 1.6rem;
-  margin-bottom: 16px;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
   color: var(--color-text-primary);
 }
 

@@ -34,7 +34,9 @@
     "characters": "Characters Discovered",
     "relationships": "Relationships Explored",
     "discovered": "Discovered",
-    "continue": "Continue Discovery"
+    "continue": "Continue Discovery",
+    "next_discovery": "NEXT DISCOVERY",
+    "continue_discovery_questions": "Continue Discovery Questions"
   },
   "create_story_page": {
     "title": "A new story is waiting.",

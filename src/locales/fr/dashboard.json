@@ -33,7 +33,9 @@
     "characters": "Personnages découverts",
     "relationships": "Relations explorées",
     "discovered": "Découvert",
-    "continue": "Continuer la découverte"
+    "continue": "Continuer la découverte",
+    "next_discovery": "PROCHAINE DÉCOUVERTE",
+    "continue_discovery_questions": "Continuer les questions de découverte"
   },
   "create_story_page": {
     "title": "Une nouvelle histoire vous attend.",
