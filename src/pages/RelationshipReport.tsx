@@ -99,7 +99,7 @@ const RelationshipReport: React.FC = () => {
   };
 
   if (isLoading || !report) {
-    return <div className={styles.loading}>Generating Consequence Report...</div>;
+    return <div className={styles.loading}>{t('reports.generating_report', 'Generating Consequence Report...')}</div>;
   }
 
   const translateInsight = (val?: string | null): string => {
@@ -111,11 +111,11 @@ const RelationshipReport: React.FC = () => {
   };
 
   const chainNodes = [
-    { label: 'CURRENT RESULT', value: translateInsight(report.current_result) },
-    { label: 'EMOTIONAL EFFECT', value: translateInsight(report.emotional_effect) },
-    { label: 'STORY CONSEQUENCE', value: translateInsight(report.story_consequence) },
-    { label: 'CURRENT RELATIONSHIP RISK', value: translateInsight(report.current_relationship_risk), isGlowing: true },
-    { label: 'TURNING POINT', value: translateInsight(report.turning_point) }
+    { label: t('reports.labels.CURRENT RESULT', 'CURRENT RESULT'), value: translateInsight(report.current_result) },
+    { label: t('reports.labels.EMOTIONAL EFFECT', 'EMOTIONAL EFFECT'), value: translateInsight(report.emotional_effect) },
+    { label: t('reports.labels.STORY CONSEQUENCE', 'STORY CONSEQUENCE'), value: translateInsight(report.story_consequence) },
+    { label: t('reports.labels.CURRENT RELATIONSHIP RISK', 'CURRENT RELATIONSHIP RISK'), value: translateInsight(report.current_relationship_risk), isGlowing: true },
+    { label: t('reports.labels.TURNING POINT', 'TURNING POINT'), value: translateInsight(report.turning_point) }
   ];
 
   return (
@@ -141,8 +141,8 @@ const RelationshipReport: React.FC = () => {
         )}
 
         <div className={styles.header}>
-          <span className={styles.pretitle}>DISCOVERY COMPLETE</span>
-          <h1 className={styles.title}>Relationship Consequence</h1>
+          <span className={styles.pretitle}>{t('reports.discovery_complete', 'DISCOVERY COMPLETE')}</span>
+          <h1 className={styles.title}>{t('reports.relationship_consequence', 'Relationship Consequence')}</h1>
           <div className={styles.ornament}>❧</div>
         </div>
 
@@ -156,11 +156,11 @@ const RelationshipReport: React.FC = () => {
               </div>
             </div>
             <h2 className={styles.characterName}>{relationship?.character_a_name || 'Character A'}</h2>
-            <p className={styles.characterRole}>The Catalyst</p>
+            <p className={styles.characterRole}>{t('reports.the_catalyst', 'The Catalyst')}</p>
             
             <div className={styles.sideCardContainer}>
               <InsightCard 
-                label="RELATIONSHIP LAW" 
+                label={t('reports.labels.RELATIONSHIP LAW', 'RELATIONSHIP LAW')} 
                 icon={<Scale size={20} />}
                 className={styles.lawCard}
               >
@@ -185,7 +185,7 @@ const RelationshipReport: React.FC = () => {
             
             <div className={styles.quoteBlock}>
               <div className={styles.quoteMark}>"</div>
-              <p>Every relationship has a hidden architecture.<br/><em>Understanding it changes everything.</em></p>
+              <p>{t('reports.every_relationship', 'Every relationship has a hidden architecture.')}<br/><em>{t('reports.understanding_it', 'Understanding it changes everything.')}</em></p>
               <div className={styles.ornamentSmall}>✦</div>
             </div>
             
@@ -195,14 +195,14 @@ const RelationshipReport: React.FC = () => {
                 onClick={() => navigate(`/stories/${relationship?.story_id}`)}
                 icon={<ArrowRight size={20} />}
               >
-                Return to Story Overview
+                {t('reports.return_to_overview', 'Return to Story Overview')}
               </Button>
             </div>
             
             <section className={styles.answersSection}>
               <div className={styles.header}>
-                <span className={styles.pretitle}>REVISION</span>
-                <h2 className={styles.title} style={{ fontSize: '1.5rem' }}>Discovery Answers</h2>
+                <span className={styles.pretitle}>{t('reports.revision', 'REVISION')}</span>
+                <h2 className={styles.title} style={{ fontSize: '1.5rem' }}>{t('reports.discovery_answers', 'Discovery Answers')}</h2>
                 <div className={styles.ornamentSmall}>❧</div>
               </div>
               
@@ -213,7 +213,7 @@ const RelationshipReport: React.FC = () => {
                     <InsightCard key={ans.id} label={question?.question_text || 'Question'}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '1rem' }}>
                         <div style={{ color: 'var(--text-secondary)' }}>
-                          {ans.custom_answer || ans.selected_answer || 'No answer provided'}
+                          {ans.custom_answer || ans.selected_answer || t('reports.no_answer_provided', 'No answer provided')}
                         </div>
                         <Button variant="outline" size="sm" onClick={() => openReviseModal(ans, question)} icon={<Edit size={16} />}>
                           {t('buttons.revise_answer', 'Revise Answer')}
@@ -234,11 +234,11 @@ const RelationshipReport: React.FC = () => {
               </div>
             </div>
             <h2 className={styles.characterName}>{relationship?.character_b_name || 'Character B'}</h2>
-            <p className={styles.characterRole}>The Counterpart</p>
+            <p className={styles.characterRole}>{t('reports.the_counterpart', 'The Counterpart')}</p>
             
             <div className={styles.sideCardContainer}>
               <InsightCard 
-                label="RELATIONSHIP RISK" 
+                label={t('reports.labels.RELATIONSHIP RISK', 'RELATIONSHIP RISK')} 
                 icon={<HeartCrack size={20} />}
                 className={styles.riskCard}
               >
@@ -258,16 +258,16 @@ const RelationshipReport: React.FC = () => {
       >
         <form onSubmit={handleEditSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <SelectInput
-            label="Relationship Type"
+            label={t('reports.relationship_type', 'Relationship Type')}
             value={editForm.relationship_type}
             onChange={(e) => setEditForm({ ...editForm, relationship_type: e.target.value as T.RelationshipTypeEnum })}
             options={[
-              { label: 'Romance', value: 'ROMANCE' },
-              { label: 'Friendship', value: 'FRIENDSHIP' },
-              { label: 'Family', value: 'FAMILY' },
-              { label: 'Rivalry', value: 'RIVALRY' },
-              { label: 'Mentor', value: 'MENTOR' },
-              { label: 'Other', value: 'OTHER' }
+              { label: t('options.romance', 'Romance'), value: 'ROMANCE' },
+              { label: t('options.friendship', 'Friendship'), value: 'FRIENDSHIP' },
+              { label: t('options.family', 'Family'), value: 'FAMILY' },
+              { label: t('options.rivalry', 'Rivalry'), value: 'RIVALRY' },
+              { label: t('options.mentor', 'Mentor'), value: 'MENTOR' },
+              { label: t('options.other', 'Other'), value: 'OTHER' }
             ]}
           />
           <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '0.5rem', marginTop: '1rem' }}>
@@ -284,14 +284,15 @@ const RelationshipReport: React.FC = () => {
       <Modal
         isOpen={reviseModalState.isOpen}
         onClose={() => setReviseModalState({ isOpen: false, answer: null, question: null })}
-        title={t('buttons.revise_answer', 'Revise Answer')}
+        title={t('buttons.revise_discovery_answer', 'Revise Discovery Answer')}
       >
         <form onSubmit={handleReviseSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          <div style={{ marginBottom: '1rem', fontStyle: 'italic', color: 'var(--text-secondary)' }}>
-            "{reviseModalState.question?.question_text}"
+          <div>
+            <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '0.25rem' }}>{t('reports.question', 'Question')}</div>
+            <div style={{ fontWeight: 500, color: 'var(--text-primary)' }}>{reviseModalState.question?.question_text}</div>
           </div>
           <TextArea
-            label="Your Answer"
+            label={t('reports.your_custom_answer', 'Your Custom Answer')}
             value={reviseForm.custom_answer}
             onChange={(e) => setReviseForm({ ...reviseForm, custom_answer: e.target.value })}
             required
@@ -302,7 +303,7 @@ const RelationshipReport: React.FC = () => {
               {t('buttons.cancel', 'Cancel')}
             </Button>
             <Button type="submit" isLoading={updateAnswerMutation.isPending}>
-              {t('buttons.save_changes', 'Save Changes')}
+              {t('buttons.save_revision', 'Save Revision')}
             </Button>
           </div>
         </form>
