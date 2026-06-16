@@ -227,9 +227,14 @@ const RelationshipReport: React.FC = () => {
                         <div style={{ color: 'var(--text-secondary)' }}>
                           {ans.custom_answer || ans.selected_answer || t('reports.no_answer_provided', 'No answer provided')}
                         </div>
-                        <Button variant="outline" size="sm" onClick={() => openReviseModal(ans, question)} icon={<Edit size={16} />}>
-                          {t('buttons.revise_answer', 'Revise Answer')}
-                        </Button>
+                        <Button 
+                          variant="ghost" 
+                          size="sm" 
+                          onClick={() => openReviseModal(ans, question)} 
+                          icon={<Edit size={16} />} 
+                          title={t('buttons.revise_answer', 'Revise Answer')} 
+                          aria-label={t('buttons.revise_answer', 'Revise Answer')} 
+                        />
                       </div>
                     </InsightCard>
                   );
