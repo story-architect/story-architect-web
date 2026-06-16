@@ -7,6 +7,7 @@ import { Button } from '../components/ui/Button';
 import { Modal } from '../components/ui/Modal';
 import { TextInput, TextArea, SelectInput } from '../components/ui/Input';
 import { ArchitectureChain } from '../components/story/ArchitectureChain';
+import { DramaticArchitectureFlow } from '../components/story/DramaticArchitectureFlow';
 import { DiscoverySidebar } from '../components/story/DiscoverySidebar';
 import { InsightCard } from '../components/story/InsightCard';
 import { ReportService, CharacterService, DiscoveryService } from '../api/services';
@@ -250,6 +251,8 @@ const CharacterReport: React.FC = () => {
 
             <ArchitectureChain nodes={consequenceNodes} />
           </section>
+          
+          <DramaticArchitectureFlow report={report} />
 
           {/* SCREEN 4: Where The Story Begins */}
           <section className={styles.section}>

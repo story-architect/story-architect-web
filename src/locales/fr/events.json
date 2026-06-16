@@ -5,6 +5,8 @@
   "PATTERN_EMERGING": "Modèle: {{pattern_key}}",
   "INSIGHT_UNLOCKED": "Aperçu Déverrouillé: Conflit Central",
   "REPORT_GENERATED": "Rapport {{report_type}} généré",
+  "DRAMATIC_ARCHITECTURE_DISCOVERED": "Architecture Dramatique Découverte",
+  "INTERPRETATION_REVISED": "Interprétation Révisée",
   
   "descriptions": {
     "CHARACTER_CREATED": "Vous avez ajouté {{name}} à l'histoire.",
@@ -12,6 +14,8 @@
     "QUESTION_ANSWERED": "{{question}} - {{answer}}",
     "PATTERN_EMERGING": "{{insight_key}}",
     "INSIGHT_UNLOCKED": "{{insight_key}}",
-    "REPORT_GENERATED": "Rapport d'architecture généré pour {{name}}."
+    "REPORT_GENERATED": "Rapport d'architecture généré pour {{name}}.",
+    "DRAMATIC_ARCHITECTURE_DISCOVERED": "Architecture dramatique générée pour {{name}}.",
+    "INTERPRETATION_REVISED": "Interprétation révisée pour {{name}}."
   }
 }

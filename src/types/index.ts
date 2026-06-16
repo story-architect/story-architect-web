@@ -17,7 +17,9 @@ export type EventTypeEnum =
   | 'PATTERN_EMERGING'
   | 'INSIGHT_UNLOCKED'
   | 'REPORT_GENERATED'
-  | 'DISCOVERY_COMPLETED';
+  | 'DISCOVERY_COMPLETED'
+  | 'DRAMATIC_ARCHITECTURE_DISCOVERED'
+  | 'INTERPRETATION_REVISED';
 
 
 // Story
@@ -174,8 +176,15 @@ export interface CharacterArchitectureReportResponse {
   protective_lie: string;
   behavior: string;
   narrative_consequence: string;
+  narrative_consequence_custom?: string | null;
   conflict_created: string;
+  conflict_created_custom?: string | null;
+  pressure_point: string;
+  pressure_point_custom?: string | null;
   transformation: string;
+  transformation_path: string;
+  transformation_path_custom?: string | null;
+  custom_outdated_fields?: Record<string, boolean>;
   updated_at: string;
   is_stale?: boolean;
   stale_reason?: string | null;
