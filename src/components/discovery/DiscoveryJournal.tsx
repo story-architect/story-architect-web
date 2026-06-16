@@ -46,7 +46,7 @@ export const DiscoveryJournal: React.FC<DiscoveryJournalProps> = ({ storyId, cla
       label,
       entries: items
     }));
-  }, [events, t]);
+  }, [events, t, maxItems]);
 
   return (
     <div className={`${styles.journalContainer} ${className || ''}`}>

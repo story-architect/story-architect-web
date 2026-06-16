@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Modal } from '../ui/Modal';
 import { Button } from '../ui/Button';
@@ -34,14 +34,10 @@ export const ReviseInterpretationModal: React.FC<ReviseInterpretationModalProps>
   const [value, setValue] = useState(customValue || generatedValue);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  useEffect(() => {
-    setValue(customValue || generatedValue);
-  }, [customValue, generatedValue, isOpen]);
-
   const handleSave = async (action: 'keep' | 'replace' | 'save') => {
     setIsSubmitting(true);
     try {
-      const payload: any = {};
+      const payload: Record<string, string | string[] | null> = {};
       
       if (action === 'replace') {
         // Clear the custom value and outdated flag

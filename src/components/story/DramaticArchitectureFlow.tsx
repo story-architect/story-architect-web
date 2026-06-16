@@ -87,7 +87,7 @@ export const DramaticArchitectureFlow: React.FC<DramaticArchitectureFlowProps> =
                     <button 
                       className={styles.editButton}
                       onClick={() => setEditingField({
-                        key: node.customKey as any,
+                        key: node.customKey as 'narrative_consequence_custom' | 'conflict_created_custom' | 'pressure_point_custom' | 'transformation_path_custom',
                         label: node.label,
                         generatedValue: node.generated,
                         customValue: node.custom
@@ -108,7 +108,7 @@ export const DramaticArchitectureFlow: React.FC<DramaticArchitectureFlowProps> =
                     <button 
                       className={styles.resolveButton}
                       onClick={() => setEditingField({
-                        key: node.customKey as any,
+                        key: node.customKey as 'narrative_consequence_custom' | 'conflict_created_custom' | 'pressure_point_custom' | 'transformation_path_custom',
                         label: node.label,
                         generatedValue: node.generated,
                         customValue: node.custom
@@ -132,6 +132,7 @@ export const DramaticArchitectureFlow: React.FC<DramaticArchitectureFlowProps> =
 
       {editingField && (
         <ReviseInterpretationModal
+          key={editingField.key}
           isOpen={true}
           onClose={() => setEditingField(null)}
           reportId={report.id}
