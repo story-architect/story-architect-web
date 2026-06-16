@@ -22,7 +22,9 @@
     "revise_answer": "Réviser la réponse",
     "refresh_architecture": "Rafraîchir l'architecture",
     "save_changes": "Enregistrer les modifications",
-    "cancel": "Annuler"
+    "cancel": "Annuler",
+    "add_character": "Ajouter un personnage",
+    "add_relationship": "Ajouter une relation"
   },
   "banners": {
     "stale_architecture": "Vos révisions récentes peuvent avoir modifié cette architecture."

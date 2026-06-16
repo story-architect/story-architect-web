@@ -22,7 +22,9 @@
     "revise_answer": "Revise Answer",
     "refresh_architecture": "Refresh Architecture",
     "save_changes": "Save Changes",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "add_character": "Add Character",
+    "add_relationship": "Add Relationship"
   },
   "banners": {
     "stale_architecture": "Your recent revisions may have changed this architecture."
