@@ -277,3 +277,59 @@
   justify-content: center;
   width: 100%;
 }
+
+/* Tabs UI */
+.tabContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--spacing-10);
+  overflow-x: auto;
+  padding-bottom: var(--spacing-2);
+  scrollbar-width: none; /* Firefox */
+  position: sticky;
+  top: -16px; /* Sticky below header area */
+  background: var(--color-background-ivory);
+  z-index: 10;
+  padding-top: var(--spacing-4);
+}
+
+.tabContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.tabButton {
+  background: none;
+  border: none;
+  padding: var(--spacing-3) var(--spacing-4);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.2s ease;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.tabButton:hover {
+  color: var(--text-primary);
+}
+
+.tabActive {
+  color: var(--color-accent-gold);
+}
+
+.tabActive::after {
+  content: '';
+  position: absolute;
+  bottom: -9px; /* Align with border-bottom of container */
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-accent-gold);
+  border-radius: 2px 2px 0 0;
+}

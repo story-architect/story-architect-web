@@ -46,6 +46,9 @@ const CharacterReport: React.FC = () => {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [editForm, setEditForm] = useState({ name: '', age: 0, role: 'MAIN_CHARACTER' as T.RoleEnum, archetype: '' });
 
+  type TabType = 'emotional' | 'dramatic' | 'foundation' | 'revisions';
+  const [activeTab, setActiveTab] = useState<TabType>('emotional');
+
   const [reviseModalState, setReviseModalState] = useState<{ isOpen: boolean; answer: T.DiscoveryAnswerResponse | null; question: T.DiscoveryQuestionResponse | null }>({
     isOpen: false,
     answer: null,
@@ -170,8 +173,38 @@ const CharacterReport: React.FC = () => {
             </div>
           )}
           
-          {/* SCREEN 1: Story Engine Emerging */}
-          <section className={styles.section}>
+          {/* Tabs Navigation */}
+          <div className={styles.tabContainer}>
+            <button 
+              className={`${styles.tabButton} ${activeTab === 'emotional' ? styles.tabActive : ''}`}
+              onClick={() => setActiveTab('emotional')}
+            >
+              {t('reports.tabs.emotional', 'Emotional Architecture')}
+            </button>
+            <button 
+              className={`${styles.tabButton} ${activeTab === 'dramatic' ? styles.tabActive : ''}`}
+              onClick={() => setActiveTab('dramatic')}
+            >
+              {t('reports.tabs.dramatic', 'Dramatic Architecture')}
+            </button>
+            <button 
+              className={`${styles.tabButton} ${activeTab === 'foundation' ? styles.tabActive : ''}`}
+              onClick={() => setActiveTab('foundation')}
+            >
+              {t('reports.tabs.foundation', 'Story Foundation')}
+            </button>
+            <button 
+              className={`${styles.tabButton} ${activeTab === 'revisions' ? styles.tabActive : ''}`}
+              onClick={() => setActiveTab('revisions')}
+            >
+              {t('reports.tabs.revisions', 'Discovery Answers')}
+            </button>
+          </div>
+
+          {/* SCREEN 1 & 2: Emotional Architecture */}
+          {activeTab === 'emotional' && (
+            <>
+              <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.pretitle}>{t('reports.discovery_complete', 'DISCOVERY COMPLETE')}</span>
               <h1 className={styles.title}>{t('reports.engine_emerging', 'Your Story Engine Is')} <em>{t('reports.engine_emerging_em', 'Emerging')}</em></h1>
@@ -236,11 +269,15 @@ const CharacterReport: React.FC = () => {
                 <div className={styles.ornamentMicro}>❧</div>
                 <p className={styles.dpFooter}>{t('reports.creates_central_conflict', 'This creates the central emotional conflict of their story.')}</p>
               </div>
-            </InsightCard>
-          </section>
+              </InsightCard>
+            </section>
+            </>
+          )}
 
-          {/* SCREEN 3: Narrative Consequence Revealed */}
-          <section className={styles.section}>
+          {/* SCREEN 3 & Flow: Dramatic Architecture */}
+          {activeTab === 'dramatic' && (
+            <>
+              <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.pretitle}>{t('reports.narrative_consequence_revealed', 'NARRATIVE CONSEQUENCE REVEALED')}</span>
               <h1 className={styles.dynamicSentence}>
@@ -250,12 +287,15 @@ const CharacterReport: React.FC = () => {
             </div>
 
             <ArchitectureChain nodes={consequenceNodes} />
-          </section>
-          
-          <DramaticArchitectureFlow report={report} />
+            </section>
+            
+            <DramaticArchitectureFlow report={report} />
+            </>
+          )}
 
           {/* SCREEN 4: Where The Story Begins */}
-          <section className={styles.section}>
+          {activeTab === 'foundation' && (
+            <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.pretitle}>{t('reports.discovery_complete', 'DISCOVERY COMPLETE')}</span>
               <h1 className={styles.title}>{t('reports.where_story_begins', 'Where The Story Begins')}</h1>
@@ -313,18 +353,20 @@ const CharacterReport: React.FC = () => {
             </InsightCard>
 
             <div className={styles.nextStep}>
-              <Button 
-                size="lg" 
-                onClick={() => navigate(`/stories/${character?.story_id}`)}
-                icon={<ArrowRight size={20} />}
-              >
-                {t('reports.return_to_overview', 'Return to Story Overview')}
-              </Button>
-            </div>
-          </section>
+                <Button 
+                  size="lg" 
+                  onClick={() => navigate(`/stories/${character?.story_id}`)}
+                  icon={<ArrowRight size={20} />}
+                >
+                  {t('reports.return_to_overview', 'Return to Story Overview')}
+                </Button>
+              </div>
+            </section>
+          )}
 
           {/* SCREEN 5: Discovery Answers */}
-          <section className={styles.section} style={{ marginTop: '4rem' }}>
+          {activeTab === 'revisions' && (
+            <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.pretitle}>{t('reports.revision', 'REVISION')}</span>
               <h1 className={styles.title}>{t('reports.discovery_answers', 'Discovery Answers')}</h1>
@@ -345,10 +387,11 @@ const CharacterReport: React.FC = () => {
                       </Button>
                     </div>
                   </InsightCard>
-                );
-              })}
-            </div>
-          </section>
+                  );
+                })}
+              </div>
+            </section>
+          )}
 
         </div>
       </div>
