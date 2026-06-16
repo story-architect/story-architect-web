@@ -142,3 +142,97 @@
   width: 100%;
   justify-content: center;
 }
+
+/* LIST VIEW */
+.listCard {
+  padding: 20px 24px;
+}
+
+.listContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.listInfoSection {
+  flex: 0 0 30%;
+}
+
+.listInfoSection .title {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.listInfoSection .stats {
+  margin-bottom: 0;
+}
+
+.listInsightSection {
+  flex: 1;
+  padding: 0 24px;
+  border-left: 2px solid var(--color-border);
+  border-right: 2px solid var(--color-border);
+}
+
+.listProgressSection {
+  flex: 0 0 auto;
+}
+
+.progressCircleSmall {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3px solid var(--color-accent-gold);
+  border-left-color: var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.progressTextSmall {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.listActionSection {
+  flex: 0 0 auto;
+}
+
+/* COMPACT VIEW */
+.compactCard {
+  padding: 16px 24px;
+}
+
+.compactContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.compactInfoSection {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.compactTitle {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.compactStats {
+  display: flex;
+  gap: 16px;
+}
+
+.compactAction {
+  flex: 0 0 auto;
+}
+

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { Plus } from 'lucide-react';
+import { Plus, LayoutGrid, List, AlignJustify } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '../components/ui/Button';
 import { StoryCard } from '../components/story/StoryCard';
@@ -13,6 +13,7 @@ import styles from './Dashboard.module.css';
 const Dashboard: React.FC = () => {
   const navigate = useNavigate();
   const { t } = useTranslation(['dashboard', 'common']);
+  const [viewMode, setViewMode] = React.useState<'grid' | 'list' | 'compact'>('grid');
   
   const { data: stories, isLoading } = useQuery({
     queryKey: ['stories'],
@@ -56,9 +57,32 @@ const Dashboard: React.FC = () => {
         <div className={styles.sectionDivider}>
           <span className={styles.sectionTitle}>{t('recently_updated')}</span>
           <div className={styles.line}></div>
+          <div className={styles.viewToggles}>
+            <button 
+              className={`${styles.viewToggle} ${viewMode === 'grid' ? styles.active : ''}`} 
+              onClick={() => setViewMode('grid')}
+              title={t('common:view.grid', 'Grid View')}
+            >
+              <LayoutGrid size={18} />
+            </button>
+            <button 
+              className={`${styles.viewToggle} ${viewMode === 'list' ? styles.active : ''}`} 
+              onClick={() => setViewMode('list')}
+              title={t('common:view.list', 'List View')}
+            >
+              <List size={18} />
+            </button>
+            <button 
+              className={`${styles.viewToggle} ${viewMode === 'compact' ? styles.active : ''}`} 
+              onClick={() => setViewMode('compact')}
+              title={t('common:view.compact', 'Compact View')}
+            >
+              <AlignJustify size={18} />
+            </button>
+          </div>
         </div>
 
-        <div className={styles.storyList}>
+        <div className={`${styles.storyList} ${styles[viewMode]}`}>
           {isLoading ? (
             <div className={styles.loading}>{t('loading_stories')}</div>
           ) : sortedStories.length === 0 ? (
@@ -73,6 +97,7 @@ const Dashboard: React.FC = () => {
                 title={story.title}
                 characterCount={story.character_count || 0}
                 relationshipCount={story.relationship_count || 0}
+                viewMode={viewMode}
               />
             ))
           )}

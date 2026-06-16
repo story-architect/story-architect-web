@@ -93,10 +93,55 @@
   background: linear-gradient(90deg, var(--color-border) 0%, transparent 100%);
 }
 
+.viewToggles {
+  display: flex;
+  gap: 8px;
+  background: var(--color-background);
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.viewToggle {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.viewToggle:hover {
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+}
+
+.viewToggle.active {
+  color: var(--color-accent-gold);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
 .storyList {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 24px;
+}
+
+.storyList.grid {
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.storyList.list {
+  grid-template-columns: 1fr;
+}
+
+.storyList.compact {
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 
 .loading, .emptyState {
