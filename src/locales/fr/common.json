@@ -103,7 +103,9 @@
     "isolate_themselves": "et à s'isoler quand il a le plus besoin des autres.",
     "discovery_summary": "RÉSUMÉ DE LA DÉCOUVERTE",
     "revealed": "Révélé",
-    "pending": "En attente"
+    "pending": "En attente",
+    "character_a": "Personnage A",
+    "character_b": "Personnage B"
   },
   "labels": {
     "no_answer_provided": "Aucune réponse fournie",
