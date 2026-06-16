@@ -88,7 +88,8 @@ const RelationshipDiscovery: React.FC = () => {
       t('common:discovery.labels.connection', 'Connection'),
       t('common:discovery.labels.hidden_truth', 'Hidden Truth'),
       t('common:discovery.labels.protective_shield', 'Protective Shield'),
-      t('common:discovery.labels.tension_emerging', 'Tension Emerging')
+      t('common:discovery.labels.tension_emerging', 'Tension Emerging'),
+      t('common:discovery.labels.misunderstanding', 'Misunderstanding')
     ];
     return {
       id: q.id,
