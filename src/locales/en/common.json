@@ -88,7 +88,22 @@
     "key_insight": "KEY INSIGHT",
     "the_inciting_relationship": "THE INCITING RELATIONSHIP",
     "understand_who": "We now understand not only who this character is.",
-    "understand_why": "We understand why their story exists."
+    "understand_why": "We understand why their story exists.",
+    "people_struggle": "People struggle to get close to them.",
+    "opportunities_rejected": "Important opportunities are rejected.",
+    "create_outcome_fear": "They create the very outcome they fear.",
+    "because_fears_wound": "Because {{firstName}} fears their wound, they protect themselves.",
+    "more_cares_push_away": "The more someone cares about them, the more likely they push them away.",
+    "creates_central_conflict": "This creates the central emotional conflict of their story.",
+    "because_believes": "Because {{firstName}} believes \"{{lie}}\",",
+    "push_away_capable": "they push away the people most capable of helping them.",
+    "because_fears_wound_short": "Because {{firstName}} fears their wound,",
+    "protect_through_lie": "they protect themselves through their lie.",
+    "reject_support": "This causes them to reject support, misread affection,",
+    "isolate_themselves": "and isolate themselves when they need people most.",
+    "discovery_summary": "DISCOVERY SUMMARY",
+    "revealed": "Revealed",
+    "pending": "Pending"
   },
   "labels": {
     "no_answer_provided": "No answer provided",

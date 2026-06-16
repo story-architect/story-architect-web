@@ -88,7 +88,22 @@
     "key_insight": "APERÇU CLÉ",
     "the_inciting_relationship": "LA RELATION DÉCLENCHEUSE",
     "understand_who": "Nous comprenons maintenant non seulement qui est ce personnage.",
-    "understand_why": "Nous comprenons pourquoi son histoire existe."
+    "understand_why": "Nous comprenons pourquoi son histoire existe.",
+    "people_struggle": "Les gens ont du mal à s'approcher d'eux.",
+    "opportunities_rejected": "Les opportunités importantes sont rejetées.",
+    "create_outcome_fear": "Ils créent le résultat même qu'ils craignent.",
+    "because_fears_wound": "Parce que {{firstName}} craint sa blessure, il se protège.",
+    "more_cares_push_away": "Plus quelqu'un se soucie de lui, plus il a de chances de le repousser.",
+    "creates_central_conflict": "Cela crée le conflit émotionnel central de son histoire.",
+    "because_believes": "Parce que {{firstName}} croit que \"{{lie}}\",",
+    "push_away_capable": "il repousse les personnes les plus capables de l'aider.",
+    "because_fears_wound_short": "Parce que {{firstName}} craint sa blessure,",
+    "protect_through_lie": "il se protège à travers son mensonge.",
+    "reject_support": "Cela le pousse à rejeter le soutien, à mal interpréter l'affection,",
+    "isolate_themselves": "et à s'isoler quand il a le plus besoin des autres.",
+    "discovery_summary": "RÉSUMÉ DE LA DÉCOUVERTE",
+    "revealed": "Révélé",
+    "pending": "En attente"
   },
   "labels": {
     "no_answer_provided": "Aucune réponse fournie",

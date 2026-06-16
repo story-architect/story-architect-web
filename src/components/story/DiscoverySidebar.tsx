@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import styles from './DiscoverySidebar.module.css';
 
 interface DiscoveryStep {
@@ -21,6 +22,7 @@ export const DiscoverySidebar: React.FC<DiscoverySidebarProps> = ({
   quote,
   steps
 }) => {
+  const { t } = useTranslation(['common']);
   return (
     <div className={styles.sidebar}>
       <div className={styles.portraitContainer}>
@@ -37,7 +39,7 @@ export const DiscoverySidebar: React.FC<DiscoverySidebarProps> = ({
       </div>
 
       <div className={styles.summaryContainer}>
-        <h3 className={styles.summaryTitle}>DISCOVERY SUMMARY</h3>
+        <h3 className={styles.summaryTitle}>{t('reports.discovery_summary', 'DISCOVERY SUMMARY')}</h3>
         <div className={styles.steps}>
           {steps.map((step, index) => (
             <div key={index} className={`${styles.step} ${step.isGlowing ? styles.stepGlowing : ''}`}>
@@ -46,7 +48,7 @@ export const DiscoverySidebar: React.FC<DiscoverySidebarProps> = ({
               </div>
               <div className={styles.stepText}>
                 <span className={styles.stepLabel}>{step.label}</span>
-                <span className={styles.stepStatus}>{step.isComplete ? 'Revealed' : 'Pending'}</span>
+                <span className={styles.stepStatus}>{step.isComplete ? t('reports.revealed', 'Revealed') : t('reports.pending', 'Pending')}</span>
               </div>
             </div>
           ))}

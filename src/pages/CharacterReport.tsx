@@ -208,19 +208,19 @@ const CharacterReport: React.FC = () => {
                   <div className={styles.columnIcon}><Users size={24} /></div>
                   <h4 className={styles.columnTitle}>{t('reports.labels.RELATIONSHIP PATTERN', 'RELATIONSHIPS').replace(' PATTERN', 'S')}</h4>
                   <div className={styles.ornamentMicro}>❧</div>
-                  <p className={styles.columnText}>People struggle to get close to them.</p>
+                  <p className={styles.columnText}>{t('reports.people_struggle', 'People struggle to get close to them.')}</p>
                 </div>
                 <div className={styles.column}>
                   <div className={styles.columnIcon}><Map size={24} /></div>
                   <h4 className={styles.columnTitle}>{t('reports.choices', 'CHOICES')}</h4>
                   <div className={styles.ornamentMicro}>❧</div>
-                  <p className={styles.columnText}>Important opportunities are rejected.</p>
+                  <p className={styles.columnText}>{t('reports.opportunities_rejected', 'Important opportunities are rejected.')}</p>
                 </div>
                 <div className={styles.column}>
                   <div className={styles.columnIcon}><Flame size={24} /></div>
                   <h4 className={styles.columnTitle}>{t('reports.conflict', 'CONFLICT')}</h4>
                   <div className={styles.ornamentMicro}>❧</div>
-                  <p className={styles.columnText}>They create the very outcome they fear.</p>
+                  <p className={styles.columnText}>{t('reports.create_outcome_fear', 'They create the very outcome they fear.')}</p>
                 </div>
               </div>
 
@@ -229,11 +229,11 @@ const CharacterReport: React.FC = () => {
                   <span>✦</span> {t('reports.dramatic_potential', 'DRAMATIC POTENTIAL')} <span>✦</span>
                 </div>
                 <p className={styles.dpText}>
-                  Because {firstName} fears their wound, they protect themselves. <br/>
-                  <em>The more someone cares about them, the more likely they push them away.</em>
+                  {t('reports.because_fears_wound', 'Because {{firstName}} fears their wound, they protect themselves.', { firstName })} <br/>
+                  <em>{t('reports.more_cares_push_away', 'The more someone cares about them, the more likely they push them away.')}</em>
                 </p>
                 <div className={styles.ornamentMicro}>❧</div>
-                <p className={styles.dpFooter}>This creates the central emotional conflict of their story.</p>
+                <p className={styles.dpFooter}>{t('reports.creates_central_conflict', 'This creates the central emotional conflict of their story.')}</p>
               </div>
             </InsightCard>
           </section>
@@ -243,8 +243,8 @@ const CharacterReport: React.FC = () => {
             <div className={styles.sectionHeader}>
               <span className={styles.pretitle}>{t('reports.narrative_consequence_revealed', 'NARRATIVE CONSEQUENCE REVEALED')}</span>
               <h1 className={styles.dynamicSentence}>
-                Because {firstName} believes "{report.protective_lie.replace('.', '')}",<br/>
-                <em>they push away the people most capable of helping them.</em>
+                {t('reports.because_believes', 'Because {{firstName}} believes "{{lie}}",', { firstName, lie: report.protective_lie.replace('.', '') })}<br/>
+                <em>{t('reports.push_away_capable', 'they push away the people most capable of helping them.')}</em>
               </h1>
             </div>
 
@@ -277,13 +277,13 @@ const CharacterReport: React.FC = () => {
               icon={<Sparkles size={24} />}
             >
               <p className={styles.kiText}>
-                Because {firstName} fears their wound,<br/>
-                <em>they protect themselves through their lie.</em>
+                {t('reports.because_fears_wound_short', 'Because {{firstName}} fears their wound,', { firstName })}<br/>
+                <em>{t('reports.protect_through_lie', 'they protect themselves through their lie.')}</em>
               </p>
               <div className={styles.ornamentMicro}>❧</div>
               <p className={styles.kiSubtext}>
-                This causes them to reject support, misread affection,<br/>
-                and isolate themselves when they need people most.
+                {t('reports.reject_support', 'This causes them to reject support, misread affection,')}<br/>
+                {t('reports.isolate_themselves', 'and isolate themselves when they need people most.')}
               </p>
             </InsightCard>
 
