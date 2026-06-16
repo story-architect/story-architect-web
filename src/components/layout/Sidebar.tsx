@@ -29,6 +29,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ storyId }) => {
     enabled: !!storyId,
   });
 
+  const formatName = (name: string | undefined, defaultName: string) => {
+    if (!name) return defaultName;
+    const words = name.trim().split(/\s+/);
+    if (words.length === 1) return words[0];
+    return words.map(w => w[0].toUpperCase()).join('');
+  };
+
   const getNavClass = ({ isActive }: { isActive: boolean }) => 
     `${styles.navItem} ${isActive ? styles.active : ''}`;
 
@@ -101,8 +108,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ storyId }) => {
               </div>
               <div className={styles.list}>
                 {relationships?.map(rel => {
-                  const charA = characters?.find(c => c.id === rel.character_a_id)?.name?.split(' ')[0] || 'Char A';
-                  const charB = characters?.find(c => c.id === rel.character_b_id)?.name?.split(' ')[0] || 'Char B';
+                  const charA = formatName(characters?.find(c => c.id === rel.character_a_id)?.name, 'Char A');
+                  const charB = formatName(characters?.find(c => c.id === rel.character_b_id)?.name, 'Char B');
                   
                   return (
                     <NavLink key={rel.id} to={`/relationships/${rel.id}/discovery`} className={getNavClass}>
