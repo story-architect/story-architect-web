@@ -102,8 +102,8 @@ const RelationshipReport: React.FC = () => {
     return <div className={styles.loading}>Generating Consequence Report...</div>;
   }
 
-  const translateInsight = (val?: string | null) => {
-    if (!val) return null;
+  const translateInsight = (val?: string | null): string => {
+    if (!val) return '';
     if (val.startsWith('insights.')) {
       return t(val.replace('insights.', ''), { ns: 'insights' });
     }

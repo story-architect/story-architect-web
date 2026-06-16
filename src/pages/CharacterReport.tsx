@@ -111,8 +111,8 @@ const CharacterReport: React.FC = () => {
     { label: t('reports.narrative_consequence', 'Narrative Consequence'), isComplete: true, isGlowing: true },
   ];
 
-  const translateInsight = (val?: string | null) => {
-    if (!val) return null;
+  const translateInsight = (val?: string | null): string => {
+    if (!val) return '';
     if (val.startsWith('insights.')) {
       return t(val.replace('insights.', ''), { ns: 'insights' });
     }
@@ -201,7 +201,7 @@ const CharacterReport: React.FC = () => {
               }
             >
               <div className={styles.statementText}>
-                {translateInsight(report.dramatic_potential) || t('common:discovery.labels.sensing', 'Sensing...')}
+                {translateInsight(report.conflict_created) || t('common:discovery.labels.sensing', 'Sensing...')}
               </div>
               <div className={styles.threeColumn}>
                 <div className={styles.column}>

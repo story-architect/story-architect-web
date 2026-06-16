@@ -9,6 +9,7 @@ import { Button } from '../components/ui/Button';
 import { RelationshipService, DiscoveryService } from '../api/services';
 import { InsightUnlocked } from '../components/discovery/InsightUnlocked';
 import { PatternEmergingOverlay } from '../components/discovery/PatternEmergingOverlay';
+import { useTranslation } from 'react-i18next';
 import styles from './CharacterDiscovery.module.css'; // Reusing layout styles
 
 const ICONS = [Heart, Shield, Lock, Sparkles];
@@ -17,6 +18,7 @@ const RelationshipDiscovery: React.FC = () => {
   const { relationshipId } = useParams<{ relationshipId: string }>();
   const navigate = useNavigate();
   const queryClient = useQueryClient();
+  const { t } = useTranslation(['events', 'dashboard', 'common']);
 
   const { data: relationship } = useQuery({
     queryKey: ['relationship', relationshipId],
