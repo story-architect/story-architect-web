@@ -100,16 +100,21 @@ export const Sidebar: React.FC<SidebarProps> = ({ storyId }) => {
                 )}
               </div>
               <div className={styles.list}>
-                {relationships?.map(rel => (
-                  <NavLink key={rel.id} to={`/relationships/${rel.id}/discovery`} className={getNavClass}>
-                    <Link2 size={18} className={styles.listIcon} />
-                    {!collapsed && (
-                      <span className={styles.truncate}>
-                        {rel.character_a_name?.split(' ')[0]} ↔ {rel.character_b_name?.split(' ')[0]}
-                      </span>
-                    )}
-                  </NavLink>
-                ))}
+                {relationships?.map(rel => {
+                  const charA = characters?.find(c => c.id === rel.character_a_id)?.name?.split(' ')[0] || 'Char A';
+                  const charB = characters?.find(c => c.id === rel.character_b_id)?.name?.split(' ')[0] || 'Char B';
+                  
+                  return (
+                    <NavLink key={rel.id} to={`/relationships/${rel.id}/discovery`} className={getNavClass}>
+                      <Link2 size={18} className={styles.listIcon} />
+                      {!collapsed && (
+                        <span className={styles.truncate}>
+                          {charA} ↔ {charB}
+                        </span>
+                      )}
+                    </NavLink>
+                  );
+                })}
                 {(!relationships || relationships.length === 0) && !collapsed && (
                   <div className={styles.emptyState}>{t('nav.no_relationships', 'No relationships yet')}</div>
                 )}
