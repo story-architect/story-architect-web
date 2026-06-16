@@ -38,6 +38,7 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 24px;
+  gap: 16px;
 }
 
 .progressSection {
@@ -65,6 +66,7 @@
 
 .infoSection {
   flex: 1;
+  min-width: 0;
 }
 
 .title {
@@ -76,7 +78,8 @@
 
 .stats {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-bottom: 24px;
 }
 
@@ -87,6 +90,7 @@
   background: var(--color-background);
   padding: 8px 12px;
   border-radius: 12px;
+  flex: 1 1 auto;
 }
 
 .statIcon {
