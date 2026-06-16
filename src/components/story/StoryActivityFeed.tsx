@@ -9,9 +9,10 @@ import styles from './StoryActivityFeed.module.css';
 interface StoryActivityFeedProps {
   storyId: string | null;
   className?: string;
+  maxItems?: number;
 }
 
-export const StoryActivityFeed: React.FC<StoryActivityFeedProps> = ({ storyId, className }) => {
+export const StoryActivityFeed: React.FC<StoryActivityFeedProps> = ({ storyId, className, maxItems }) => {
   const { t } = useTranslation(['events', 'dashboard', 'common', 'insights']);
 
   const { data: activities, isLoading } = useQuery({
@@ -50,12 +51,12 @@ export const StoryActivityFeed: React.FC<StoryActivityFeedProps> = ({ storyId, c
       </h3>
 
       {isLoading ? (
-        <div className={styles.loading}>{t('dashboard:labels.loading_activity', 'Loading activity...')}</div>
+        <div className={styles.loading}>{t('dashboard:loading_stories')}</div>
       ) : !activities || activities.length === 0 ? (
-        <div className={styles.empty}>{t('dashboard:labels.empty_activity', 'No activity yet. Start discovering!')}</div>
+        <div className={styles.empty}>{t('dashboard:labels.empty_journal')}</div>
       ) : (
         <div className={styles.feedList}>
-          {activities.map((activity, idx) => {
+          {(maxItems ? activities.slice(0, maxItems) : activities).map((activity, idx) => {
             const metadata = { ...activity.event_metadata };
             if (metadata.pattern_key) {
               metadata.pattern_key = t((metadata.pattern_key as string).replace('insights.', ''), { ns: 'insights' });

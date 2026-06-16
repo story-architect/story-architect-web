@@ -9,9 +9,10 @@ import styles from './DiscoveryJournal.module.css';
 interface DiscoveryJournalProps {
   storyId: string | null;
   className?: string;
+  maxItems?: number;
 }
 
-export const DiscoveryJournal: React.FC<DiscoveryJournalProps> = ({ storyId, className }) => {
+export const DiscoveryJournal: React.FC<DiscoveryJournalProps> = ({ storyId, className, maxItems }) => {
   const { t } = useTranslation(['dashboard', 'events', 'insights', 'common']);
 
   const { data: events, isLoading } = useQuery({
@@ -29,7 +30,9 @@ export const DiscoveryJournal: React.FC<DiscoveryJournalProps> = ({ storyId, cla
     yesterdayDate.setDate(yesterdayDate.getDate() - 1);
     const yesterdayStr = yesterdayDate.toDateString();
 
-    events.forEach(event => {
+    const eventsToProcess = maxItems ? events.slice(0, maxItems) : events;
+
+    eventsToProcess.forEach(event => {
       const eventDate = new Date(event.created_at);
       let label = eventDate.toLocaleDateString();
       if (eventDate.toDateString() === todayStr) label = t('dashboard:labels.today');

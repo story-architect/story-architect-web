@@ -146,7 +146,7 @@ const StoryDetail: React.FC = () => {
         </div>
 
         <div className={styles.sideColumn}>
-          <StoryActivityFeed storyId={story.id} />
+          <StoryActivityFeed storyId={story.id} maxItems={8} />
         </div>
 
       </div>

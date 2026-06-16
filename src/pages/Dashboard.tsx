@@ -54,7 +54,7 @@ const Dashboard: React.FC = () => {
 
       <div className={styles.discoveryFeed}>
         <LatestDiscoveryCard storyId={mostRecentStoryId} />
-        <DiscoveryJournal storyId={mostRecentStoryId} />
+        <DiscoveryJournal storyId={mostRecentStoryId} maxItems={5} />
       </div>
 
       <div className={styles.storiesSection}>
