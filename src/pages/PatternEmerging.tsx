@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Feather } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { Button } from '../components/ui/Button';
 import styles from './PatternEmerging.module.css';
 
@@ -17,6 +18,18 @@ const PatternEmerging: React.FC = () => {
   const navigate = useNavigate();
   const [data, setData] = useState<PatternEmergingData | null>(null);
   const [loading, setLoading] = useState(true);
+  const { t } = useTranslation(['insights', 'common']);
+
+  const translateKey = (key?: string): string => {
+    if (!key) return '';
+    if (key.startsWith('insights.')) {
+      return t(key.replace('insights.', ''), { ns: 'insights' });
+    }
+    if (key === 'A Pattern Is Emerging') {
+      return t('common:discovery.labels.pattern_emerging', 'Pattern Emerging');
+    }
+    return key;
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,7 +51,7 @@ const PatternEmerging: React.FC = () => {
     return (
       <div className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.loading}>Discovering pattern...</div>
+          <div className={styles.loading}>{t('common:discovery.labels.sensing', 'Sensing...')}</div>
         </div>
       </div>
     );
@@ -52,21 +65,21 @@ const PatternEmerging: React.FC = () => {
             <Feather size={32} />
           </div>
           
-          <h1 className={styles.title}>{data.title}</h1>
-          <div className={styles.patternName}>{data.pattern_name}</div>
+          <h1 className={styles.title}>{translateKey(data.title)}</h1>
+          <div className={styles.patternName}>{translateKey(data.pattern_name)}</div>
           
           <div className={styles.divider}></div>
           
-          <p className={styles.text}>{data.insight}</p>
-          <p className={styles.supportingText}>{data.supporting_text}</p>
-          <p className={styles.nextHint}>{data.next_discovery_hint}</p>
+          <p className={styles.text}>{translateKey(data.insight)}</p>
+          <p className={styles.supportingText}>{translateKey(data.supporting_text)}</p>
+          <p className={styles.nextHint}>{translateKey(data.next_discovery_hint)}</p>
           
           <Button 
             size="lg" 
             onClick={() => navigate(`/characters/${characterId}/report`)}
             className={styles.button}
           >
-            Continue Discovery
+            {t('common:discovery.labels.continue_discovery', 'Continue Discovery')}
           </Button>
         </div>
       </div>
