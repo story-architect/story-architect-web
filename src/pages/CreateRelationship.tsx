@@ -10,7 +10,7 @@ import type { RelationshipCreate, RelationshipTypeEnum } from '../types';
 import { useTranslation } from 'react-i18next';
 import styles from './CreateCharacter.module.css'; // Reusing character styles for layout
 
-const getRelationshipTypes = (t: any) => [
+const getRelationshipTypes = (t: ReturnType<typeof useTranslation>['t']) => [
   { label: t('dashboard:create_relationship_page.dynamic_select', 'Select a dynamic...'), value: '' },
   { label: t('dashboard:create_relationship_page.types.romance', 'Romance'), value: 'ROMANCE' },
   { label: t('dashboard:create_relationship_page.types.friendship', 'Friendship'), value: 'FRIENDSHIP' },

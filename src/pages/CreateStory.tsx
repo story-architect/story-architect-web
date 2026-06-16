@@ -10,7 +10,7 @@ import type { StoryCreate } from '../types';
 import { useTranslation } from 'react-i18next';
 import styles from './CreateStory.module.css';
 
-const getGenreOptions = (t: any) => [
+const getGenreOptions = (t: ReturnType<typeof useTranslation>['t']) => [
   { label: t('dashboard:create_story_page.genre_select', 'Select a genre...'), value: '' },
   { label: t('dashboard:create_story_page.genres.literary_fiction', 'Literary Fiction'), value: 'literary_fiction' },
   { label: t('dashboard:create_story_page.genres.science_fiction', 'Science Fiction'), value: 'science_fiction' },

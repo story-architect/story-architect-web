@@ -10,7 +10,7 @@ import type { CharacterCreate, RoleEnum } from '../types';
 import { useTranslation } from 'react-i18next';
 import styles from './CreateCharacter.module.css';
 
-const getRoleOptions = (t: any) => [
+const getRoleOptions = (t: ReturnType<typeof useTranslation>['t']) => [
   { label: t('dashboard:create_character_page.roles.main', 'Main Character'), value: 'MAIN_CHARACTER' },
   { label: t('dashboard:create_character_page.roles.supporting', 'Supporting Character'), value: 'SUPPORTING_CHARACTER' },
 ];
