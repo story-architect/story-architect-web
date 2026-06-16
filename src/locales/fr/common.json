@@ -98,7 +98,12 @@
       "write_your_own": "Écrivez votre propre réponse...",
       "continue_discovery": "Continuer la Découverte",
       "sensing": "Analyse en cours...",
-      "no_wrong_answers": "Il n'y a pas de mauvaises réponses ici."
+      "no_wrong_answers": "Il n'y a pas de mauvaises réponses ici.",
+      "insight_unlocked": "Aperçu Déverrouillé",
+      "pattern_emerging": "Schéma Émergent",
+      "hidden_tension": "Tension Cachée",
+      "underlying_friction": "Il y a une friction sous-jacente dans cette relation qui découle de valeurs divergentes.",
+      "destructive_pattern": "Un schéma destructeur émerge. Leurs tentatives mutuelles de s'entraider causent en fait plus de tort."
     },
     "questions": {
       "char_wound": "Quelle est la blessure que porte ce personnage ?",

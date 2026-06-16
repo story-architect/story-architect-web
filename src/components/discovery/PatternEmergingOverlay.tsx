@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrainCircuit } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import styles from './PatternEmergingOverlay.module.css';
 
 interface PatternEmergingOverlayProps {
@@ -9,6 +10,7 @@ interface PatternEmergingOverlayProps {
 
 export const PatternEmergingOverlay: React.FC<PatternEmergingOverlayProps> = ({ message, onContinue }) => {
   const [mounted, setMounted] = useState(false);
+  const { t } = useTranslation(['common']);
 
   useEffect(() => {
     requestAnimationFrame(() => setMounted(true));
@@ -22,10 +24,10 @@ export const PatternEmergingOverlay: React.FC<PatternEmergingOverlayProps> = ({ 
         <div className={styles.iconWrapper}>
           <BrainCircuit size={40} />
         </div>
-        <span className={styles.badge}>Pattern Emerging</span>
+        <span className={styles.badge}>{t('common:discovery.labels.pattern_emerging', 'Pattern Emerging')}</span>
         <p className={styles.description}>{message}</p>
         <button className={styles.actionButton} onClick={onContinue}>
-          Continue Discovery
+          {t('common:discovery.labels.continue_discovery', 'Continue Discovery')}
         </button>
       </div>
     </div>

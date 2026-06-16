@@ -98,7 +98,12 @@
       "write_your_own": "Write your own answer...",
       "continue_discovery": "Continue Discovery",
       "sensing": "Sensing...",
-      "no_wrong_answers": "There are no wrong answers here."
+      "no_wrong_answers": "There are no wrong answers here.",
+      "insight_unlocked": "Insight Unlocked",
+      "pattern_emerging": "Pattern Emerging",
+      "hidden_tension": "Hidden Tension",
+      "underlying_friction": "There is an underlying friction in this relationship that stems from misaligned values.",
+      "destructive_pattern": "A destructive pattern is emerging. Their mutual attempts to help are actually causing more harm."
     },
     "questions": {
       "char_wound": "What is the wound this character carries?",

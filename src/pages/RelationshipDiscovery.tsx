@@ -114,15 +114,15 @@ const RelationshipDiscovery: React.FC = () => {
       
       {showInsight && (
         <InsightUnlocked 
-          title="Hidden Tension"
-          description={`There is an underlying friction in this relationship that stems from misaligned values.`}
+          title={t('common:discovery.labels.hidden_tension', 'Hidden Tension')}
+          description={t('common:discovery.labels.underlying_friction', 'There is an underlying friction in this relationship that stems from misaligned values.')}
           onContinue={() => setShowInsight(false)}
         />
       )}
 
       {showPattern && (
         <PatternEmergingOverlay 
-          message={`A destructive pattern is emerging. Their mutual attempts to help are actually causing more harm.`}
+          message={t('common:discovery.labels.destructive_pattern', 'A destructive pattern is emerging. Their mutual attempts to help are actually causing more harm.')}
           onContinue={() => setShowPattern(false)}
         />
       )}
