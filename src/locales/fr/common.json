@@ -24,7 +24,9 @@
     "save_changes": "Enregistrer les modifications",
     "cancel": "Annuler",
     "add_character": "Ajouter un personnage",
-    "add_relationship": "Ajouter une relation"
+    "add_relationship": "Ajouter une relation",
+    "revise_discovery_answer": "Réviser la réponse",
+    "save_revision": "Enregistrer la révision"
   },
   "banners": {
     "stale_architecture": "Vos révisions récentes peuvent avoir modifié cette architecture."

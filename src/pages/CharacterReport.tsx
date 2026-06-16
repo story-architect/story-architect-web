@@ -357,29 +357,29 @@ const CharacterReport: React.FC = () => {
       >
         <form onSubmit={handleEditSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <TextInput
-            label="Name"
+            label={t('dashboard:create_character_page.character_name', 'Name')}
             value={editForm.name}
             onChange={(e) => setEditForm({ ...editForm, name: e.target.value })}
             required
           />
           <TextInput
             type="number"
-            label="Age"
+            label={t('dashboard:create_character_page.age', 'Age')}
             value={editForm.age}
             onChange={(e) => setEditForm({ ...editForm, age: parseInt(e.target.value) || 0 })}
             required
           />
           <SelectInput
-            label="Role"
+            label={t('dashboard:create_character_page.role', 'Role')}
             value={editForm.role}
             onChange={(e) => setEditForm({ ...editForm, role: e.target.value as T.RoleEnum })}
             options={[
-              { label: 'Protagonist', value: 'MAIN_CHARACTER' },
-              { label: 'Supporting Character', value: 'SUPPORTING_CHARACTER' }
+              { label: t('reports.protagonist', 'Protagonist'), value: 'MAIN_CHARACTER' },
+              { label: t('reports.supporting_character', 'Supporting Character'), value: 'SUPPORTING_CHARACTER' }
             ]}
           />
           <TextInput
-            label="Archetype (Optional)"
+            label={t('dashboard:create_character_page.archetype', 'Archetype (Optional)')}
             value={editForm.archetype}
             onChange={(e) => setEditForm({ ...editForm, archetype: e.target.value })}
           />
@@ -397,14 +397,15 @@ const CharacterReport: React.FC = () => {
       <Modal
         isOpen={reviseModalState.isOpen}
         onClose={() => setReviseModalState({ isOpen: false, answer: null, question: null })}
-        title={t('buttons.revise_answer', 'Revise Answer')}
+        title={t('buttons.revise_discovery_answer', 'Revise Discovery Answer')}
       >
         <form onSubmit={handleReviseSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          <div style={{ marginBottom: '1rem', fontStyle: 'italic', color: 'var(--text-secondary)' }}>
-            "{reviseModalState.question?.question_text}"
+          <div>
+            <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '0.25rem' }}>{t('reports.question', 'Question')}</div>
+            <div style={{ fontWeight: 500, color: 'var(--text-primary)' }}>{reviseModalState.question && t(`common:discovery.questions.${reviseModalState.question.question_key}`, reviseModalState.question.question_text)}</div>
           </div>
           <TextArea
-            label="Your Answer"
+            label={t('reports.your_custom_answer', 'Your Custom Answer')}
             value={reviseForm.custom_answer}
             onChange={(e) => setReviseForm({ ...reviseForm, custom_answer: e.target.value })}
             required
@@ -415,7 +416,7 @@ const CharacterReport: React.FC = () => {
               {t('buttons.cancel', 'Cancel')}
             </Button>
             <Button type="submit" isLoading={updateAnswerMutation.isPending}>
-              {t('buttons.save_changes', 'Save Changes')}
+              {t('buttons.save_revision', 'Save Revision')}
             </Button>
           </div>
         </form>

@@ -289,7 +289,7 @@ const RelationshipReport: React.FC = () => {
         <form onSubmit={handleReviseSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <div>
             <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '0.25rem' }}>{t('reports.question', 'Question')}</div>
-            <div style={{ fontWeight: 500, color: 'var(--text-primary)' }}>{reviseModalState.question?.question_text}</div>
+            <div style={{ fontWeight: 500, color: 'var(--text-primary)' }}>{reviseModalState.question && t(`common:discovery.questions.${reviseModalState.question.question_key}`, reviseModalState.question.question_text)}</div>
           </div>
           <TextArea
             label={t('reports.your_custom_answer', 'Your Custom Answer')}

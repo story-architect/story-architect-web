@@ -24,7 +24,9 @@
     "save_changes": "Save Changes",
     "cancel": "Cancel",
     "add_character": "Add Character",
-    "add_relationship": "Add Relationship"
+    "add_relationship": "Add Relationship",
+    "revise_discovery_answer": "Revise Discovery Answer",
+    "save_revision": "Save Revision"
   },
   "banners": {
     "stale_architecture": "Your recent revisions may have changed this architecture."
