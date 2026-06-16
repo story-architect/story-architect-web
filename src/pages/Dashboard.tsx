@@ -14,16 +14,20 @@ const Dashboard: React.FC = () => {
   const navigate = useNavigate();
   const { t } = useTranslation(['dashboard', 'common']);
   const [viewMode, setViewMode] = React.useState<'grid' | 'list' | 'compact'>('grid');
+  const [page, setPage] = React.useState(1);
+  const limit = 6;
   
-  const { data: stories, isLoading } = useQuery({
-    queryKey: ['stories'],
-    queryFn: StoryService.getAll,
+  const { data: storyList, isLoading } = useQuery({
+    queryKey: ['stories', page, limit],
+    queryFn: () => StoryService.getAll((page - 1) * limit, limit),
   });
 
   const sortedStories = React.useMemo(() => {
-    if (!stories) return [];
-    return [...stories].sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
-  }, [stories]);
+    if (!storyList?.items) return [];
+    return [...storyList.items].sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
+  }, [storyList]);
+
+  const totalPages = storyList ? Math.max(1, Math.ceil(storyList.total / limit)) : 1;
 
   // Use the most recently updated story for the dashboard widgets if available
   const mostRecentStoryId = sortedStories.length > 0 ? sortedStories[0].id : null;
@@ -102,6 +106,28 @@ const Dashboard: React.FC = () => {
             ))
           )}
         </div>
+
+        {totalPages > 1 && (
+          <div className={styles.pagination}>
+            <Button 
+              variant="outline" 
+              disabled={page === 1} 
+              onClick={() => setPage(p => p - 1)}
+            >
+              {t('common:pagination.previous', 'Previous')}
+            </Button>
+            <span className={styles.pageInfo}>
+              {t('common:pagination.page_of', 'Page {{page}} of {{totalPages}}', { page, totalPages })}
+            </span>
+            <Button 
+              variant="outline" 
+              disabled={page === totalPages} 
+              onClick={() => setPage(p => p + 1)}
+            >
+              {t('common:pagination.next', 'Next')}
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );

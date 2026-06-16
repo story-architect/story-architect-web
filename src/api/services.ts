@@ -2,8 +2,8 @@ import { apiClient } from './client';
 import * as T from '../types';
 
 export const StoryService = {
-  getAll: async () => {
-    const res = await apiClient.get<T.StoryResponse[]>('/stories');
+  getAll: async (skip: number = 0, limit: number = 100) => {
+    const res = await apiClient.get<T.StoryListResponse>(`/stories?skip=${skip}&limit=${limit}`);
     return res.data;
   },
   getById: async (id: string) => {

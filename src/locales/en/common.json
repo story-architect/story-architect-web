@@ -214,5 +214,10 @@
     "rivalry": "Rivalry",
     "mentor": "Mentor",
     "other": "Other"
+  },
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "page_of": "Page {{page}} of {{totalPages}}"
   }
 }

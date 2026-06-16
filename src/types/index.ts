@@ -33,6 +33,13 @@ export interface StoryUpdate {
   one_sentence_premise?: string;
 }
 
+export interface StoryListResponse {
+  items: StoryResponse[];
+  total: number;
+  skip: number;
+  limit: number;
+}
+
 export interface StoryResponse extends StoryCreate {
   id: string;
   created_at: string;
