@@ -210,7 +210,7 @@ const RelationshipReport: React.FC = () => {
                 {answers?.map(ans => {
                   const question = questions?.find(q => q.id === ans.question_id);
                   return (
-                    <InsightCard key={ans.id} label={question?.question_text || 'Question'}>
+                    <InsightCard key={ans.id} label={question ? t(`common:discovery.questions.${question.question_key}`, question.question_text) : t('reports.question', 'Question')}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '1rem' }}>
                         <div style={{ color: 'var(--text-secondary)' }}>
                           {ans.custom_answer || ans.selected_answer || t('reports.no_answer_provided', 'No answer provided')}
