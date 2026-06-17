@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { Search, ChevronRight, User } from 'lucide-react';
+import { Search, ChevronRight, User, LogOut } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { StoryService, CharacterService, RelationshipService } from '../../api/services';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { useAuth } from '../../contexts/AuthContext';
 import styles from './TopNav.module.css';
 
 interface TopNavProps {
@@ -15,6 +16,7 @@ interface TopNavProps {
 
 export const TopNav: React.FC<TopNavProps> = ({ storyId, charId, relId }) => {
   const { t } = useTranslation();
+  const { user, logout } = useAuth();
   const { data: story } = useQuery({
     queryKey: ['story', storyId],
     queryFn: () => StoryService.getById(storyId!),
@@ -73,7 +75,11 @@ export const TopNav: React.FC<TopNavProps> = ({ storyId, charId, relId }) => {
           <div className={styles.avatar}>
             <User size={16} />
           </div>
-          <span className={styles.userName}>{t('nav.writer')}</span>
+          <span className={styles.userName}>{user?.display_name || t('nav.writer')}</span>
+          <button onClick={logout} className="ml-4 text-gray-500 hover:text-gray-700 flex items-center gap-1 text-sm">
+            <LogOut size={14} />
+            Logout
+          </button>
         </div>
       </div>
     </header>

@@ -115,3 +115,30 @@ export const ReportService = {
     return res.data;
   },
 };
+
+export const AuthService = {
+  login: async (data: URLSearchParams) => {
+    const res = await apiClient.post<{ access_token: string, token_type: string }>('/auth/login', data, {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    });
+    return res.data;
+  },
+  register: async (data: T.UserCreate) => {
+    const res = await apiClient.post<T.UserRead>('/auth/register', data);
+    return res.data;
+  },
+  logout: async () => {
+    const res = await apiClient.post('/auth/logout');
+    return res.data;
+  },
+  refresh: async () => {
+    const res = await apiClient.post<{ access_token: string, token_type: string }>('/auth/refresh');
+    return res.data;
+  },
+  getMe: async () => {
+    const res = await apiClient.get<T.UserRead>('/auth/me');
+    return res.data;
+  },
+};

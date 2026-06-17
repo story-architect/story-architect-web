@@ -11,7 +11,12 @@ export const apiClient = axios.create({
 // Request interceptor
 apiClient.interceptors.request.use(
   (config) => {
-    // We don't have auth yet, but this is where the token would go
+    const token = localStorage.getItem('access_token');
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    // ensure credentials (cookies) are sent if needed for /refresh
+    config.withCredentials = true; 
     return config;
   },
   (error) => {

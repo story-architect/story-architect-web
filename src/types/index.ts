@@ -71,6 +71,22 @@ export interface NextDiscoveryResponse {
   progress: number;
 }
 
+export interface UserBase {
+  email: string;
+  display_name: string;
+}
+
+export interface UserCreate extends UserBase {
+  password: string;
+}
+
+export interface UserRead extends UserBase {
+  id: string;
+  is_active: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
 
 // Character
 export interface CharacterCreate {

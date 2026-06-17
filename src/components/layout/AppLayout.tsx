@@ -16,8 +16,8 @@ export const AppLayout: React.FC = () => {
   const relMatch = path.match(/\/relationships\/([^/]+)/);
 
   const urlStoryId = storyMatch && storyMatch[1] !== 'new' ? storyMatch[1] : null;
-  const urlCharId = charMatch ? charMatch[1] : null;
-  const urlRelId = relMatch ? relMatch[1] : null;
+  const urlCharId = charMatch && charMatch[1] !== 'new' ? charMatch[1] : null;
+  const urlRelId = relMatch && relMatch[1] !== 'new' ? relMatch[1] : null;
 
   const { data: charData } = useQuery({
     queryKey: ['character', urlCharId],

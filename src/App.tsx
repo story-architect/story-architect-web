@@ -25,25 +25,39 @@ const queryClient = new QueryClient({
   },
 });
 
+import { AuthProvider } from './contexts/AuthContext';
+import { ProtectedRoute } from './components/layout/ProtectedRoute';
+import Login from './pages/Login';
+import Register from './pages/Register';
+
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<AppLayout />}>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/stories/new" element={<CreateStory />} />
-            <Route path="/stories/:storyId" element={<StoryDetail />} />
-            <Route path="/stories/:storyId/characters/new" element={<CreateCharacter />} />
-            <Route path="/stories/:storyId/relationships/new" element={<CreateRelationship />} />
-            <Route path="/characters/:characterId/discovery" element={<CharacterDiscovery />} />
-            <Route path="/characters/:characterId/pattern-emerging" element={<PatternEmerging />} />
-            <Route path="/characters/:characterId/report" element={<CharacterReport />} />
-            <Route path="/relationships/:relationshipId/discovery" element={<RelationshipDiscovery />} />
-            <Route path="/relationships/:relationshipId/report" element={<RelationshipReport />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            {/* Public routes */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            
+            {/* Protected routes */}
+            <Route element={<ProtectedRoute />}>
+              <Route element={<AppLayout />}>
+                <Route path="/" element={<Dashboard />} />
+                <Route path="/stories/new" element={<CreateStory />} />
+                <Route path="/stories/:storyId" element={<StoryDetail />} />
+                <Route path="/stories/:storyId/characters/new" element={<CreateCharacter />} />
+                <Route path="/stories/:storyId/relationships/new" element={<CreateRelationship />} />
+                <Route path="/characters/:characterId/discovery" element={<CharacterDiscovery />} />
+                <Route path="/characters/:characterId/pattern-emerging" element={<PatternEmerging />} />
+                <Route path="/characters/:characterId/report" element={<CharacterReport />} />
+                <Route path="/relationships/:relationshipId/discovery" element={<RelationshipDiscovery />} />
+                <Route path="/relationships/:relationshipId/report" element={<RelationshipReport />} />
+              </Route>
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
     </QueryClientProvider>
   );
 }
