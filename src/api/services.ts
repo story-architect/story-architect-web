@@ -42,6 +42,10 @@ export const StoryService = {
     const res = await apiClient.get<T.NextDiscoveryResponse>(`/stories/${storyId}/next-discovery`);
     return res.data;
   },
+  delete: async (id: string) => {
+    const res = await apiClient.delete<T.StoryResponse>(`/stories/${id}`);
+    return res.data;
+  },
 };
 
 export const CharacterService = {

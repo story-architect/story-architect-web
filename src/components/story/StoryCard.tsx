@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Users, Link2, ArrowRight } from 'lucide-react';
+import { Users, Link2, ArrowRight, Edit2, Trash2, Calendar } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 import { Card } from '../ui/Card';
@@ -13,7 +13,10 @@ interface StoryCardProps {
   title: string;
   characterCount: number;
   relationshipCount: number;
+  updatedAt: string;
   viewMode?: 'grid' | 'list' | 'compact';
+  onEdit?: (id: string) => void;
+  onDelete?: (id: string) => void;
 }
 
 export const StoryCard: React.FC<StoryCardProps> = ({
@@ -21,7 +24,10 @@ export const StoryCard: React.FC<StoryCardProps> = ({
   title,
   characterCount,
   relationshipCount,
-  viewMode = 'grid'
+  updatedAt,
+  viewMode = 'grid',
+  onEdit,
+  onDelete
 }) => {
   const navigate = useNavigate();
   const { t } = useTranslation(['dashboard', 'common']);
@@ -44,6 +50,12 @@ export const StoryCard: React.FC<StoryCardProps> = ({
 
   const nextInsight = translateInsight(nextDiscovery?.next_discovery);
 
+  const formattedDate = new Date(updatedAt).toLocaleDateString(undefined, {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  });
+
   if (viewMode === 'compact') {
     return (
       <Card className={`${styles.card} ${styles.compactCard}`}>
@@ -62,6 +74,23 @@ export const StoryCard: React.FC<StoryCardProps> = ({
             </div>
           </div>
           <div className={styles.compactAction}>
+            {onEdit && (
+              <Button 
+                variant="ghost" 
+                onClick={(e) => { e.stopPropagation(); onEdit(id); }}
+                icon={<Edit2 size={16} />}
+                title={t('common:actions.edit', 'Edit')}
+              />
+            )}
+            {onDelete && (
+              <Button 
+                variant="ghost" 
+                onClick={(e) => { e.stopPropagation(); onDelete(id); }}
+                icon={<Trash2 size={16} />}
+                title={t('common:actions.delete', 'Delete')}
+                className={styles.deleteButton}
+              />
+            )}
             <Button 
               variant="ghost" 
               onClick={() => navigate(`/stories/${id}`)}
@@ -92,6 +121,10 @@ export const StoryCard: React.FC<StoryCardProps> = ({
                 <span className={styles.statLabel}>{t('labels.relationships')}</span>
               </div>
             </div>
+            <div className={styles.dateInfo}>
+              <Calendar size={14} className={styles.statIcon} />
+              <span className={styles.dateText}>{formattedDate}</span>
+            </div>
           </div>
           
           {nextInsight && (
@@ -108,6 +141,23 @@ export const StoryCard: React.FC<StoryCardProps> = ({
           </div>
 
           <div className={styles.listActionSection}>
+            {onEdit && (
+              <Button 
+                variant="ghost" 
+                onClick={(e) => { e.stopPropagation(); onEdit(id); }}
+                icon={<Edit2 size={16} />}
+                title={t('common:actions.edit', 'Edit')}
+              />
+            )}
+            {onDelete && (
+              <Button 
+                variant="ghost" 
+                onClick={(e) => { e.stopPropagation(); onDelete(id); }}
+                icon={<Trash2 size={16} />}
+                title={t('common:actions.delete', 'Delete')}
+                className={styles.deleteButton}
+              />
+            )}
             <Button 
               variant="outline" 
               onClick={() => navigate(`/stories/${id}`)}
@@ -137,6 +187,10 @@ export const StoryCard: React.FC<StoryCardProps> = ({
               <span className={styles.statLabel}>{t('labels.relationships')}</span>
             </div>
           </div>
+          <div className={styles.dateInfoGrid}>
+            <Calendar size={14} className={styles.statIcon} />
+            <span className={styles.dateText}>{formattedDate}</span>
+          </div>
         </div>
         <div className={styles.progressSection}>
           <div className={styles.progressCircle}>
@@ -156,6 +210,25 @@ export const StoryCard: React.FC<StoryCardProps> = ({
       </div>
 
       <div className={styles.actionSection}>
+        <div className={styles.actionGroup}>
+          {onEdit && (
+            <Button 
+              variant="ghost" 
+              onClick={(e) => { e.stopPropagation(); onEdit(id); }}
+              icon={<Edit2 size={16} />}
+              title={t('common:actions.edit', 'Edit')}
+            />
+          )}
+          {onDelete && (
+            <Button 
+              variant="ghost" 
+              onClick={(e) => { e.stopPropagation(); onDelete(id); }}
+              icon={<Trash2 size={16} />}
+              title={t('common:actions.delete', 'Delete')}
+              className={styles.deleteButton}
+            />
+          )}
+        </div>
         <Button 
           variant="outline" 
           onClick={() => navigate(`/stories/${id}`)}

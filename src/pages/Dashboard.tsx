@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Plus, LayoutGrid, List, AlignJustify } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '../components/ui/Button';
@@ -17,10 +17,30 @@ const Dashboard: React.FC = () => {
   const [page, setPage] = React.useState(1);
   const limit = 6;
   
+  const queryClient = useQueryClient();
+
   const { data: storyList, isLoading } = useQuery({
     queryKey: ['stories', page, limit],
     queryFn: () => StoryService.getAll((page - 1) * limit, limit),
   });
+
+  const deleteStoryMutation = useMutation({
+    mutationFn: (id: string) => StoryService.delete(id),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['stories'] });
+    },
+  });
+
+  const handleDeleteStory = (id: string) => {
+    if (window.confirm(t('common:actions.confirm_delete', 'Are you sure you want to delete this story?'))) {
+      deleteStoryMutation.mutate(id);
+    }
+  };
+
+  const handleEditStory = (id: string) => {
+    // Navigate to story detail or an edit form (currently story detail acts as the main view)
+    navigate(`/stories/${id}`);
+  };
 
   const sortedStories = React.useMemo(() => {
     if (!storyList?.items) return [];
@@ -101,7 +121,10 @@ const Dashboard: React.FC = () => {
                 title={story.title}
                 characterCount={story.character_count || 0}
                 relationshipCount={story.relationship_count || 0}
+                updatedAt={story.updated_at}
                 viewMode={viewMode}
+                onEdit={handleEditStory}
+                onDelete={handleDeleteStory}
               />
             ))
           )}

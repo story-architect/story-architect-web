@@ -56,7 +56,8 @@ export const StoryActivityFeed: React.FC<StoryActivityFeedProps> = ({ storyId, c
         <div className={styles.empty}>{t('dashboard:labels.empty_journal')}</div>
       ) : (
         <div className={styles.feedList}>
-          {(maxItems ? activities.slice(0, maxItems) : activities).map((activity, idx) => {
+          {(maxItems ? activities.filter(a => Date.now() - new Date(a.timestamp).getTime() < 7 * 24 * 60 * 60 * 1000).slice(0, maxItems) : activities.filter(a => Date.now() - new Date(a.timestamp).getTime() < 7 * 24 * 60 * 60 * 1000))
+            .map((activity, idx) => {
             const metadata = { ...activity.event_metadata };
             if (metadata.pattern_key) {
               metadata.pattern_key = t((metadata.pattern_key as string).replace('insights.', ''), { ns: 'insights' });

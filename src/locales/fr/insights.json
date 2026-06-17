@@ -42,11 +42,650 @@
       "conflict_created": "Leur mécanisme de défense nuit activement à leurs relations les plus proches.",
       "pressure_point": "Une crise les oblige à choisir entre leur protection et la personne qu'ils aiment.",
       "transformation_path": "Ils doivent apprendre à faire tomber leur façade et accepter la vulnérabilité.",
-      "dramatic_potential": "Parce que ce personnage craint le chaos, il se protège par le contrôle. Plus ils essaient de contrôler leur environnement, plus leurs relations deviennent chaotiques. Cela crée le conflit émotionnel central de l'histoire."
+      "dramatic_potential": "Parce que ce personnage craint le chaos, il se protège par le contrôle. Plus ils essaient de contrôler leur environnement, plus leurs relations deviennent chaotiques. Cela crée le conflit émotionnel central de l'histoire.",
+      "hypervigilance": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "power_as_safety": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "rigidity_as_protection": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "abandonment_through_control": {
+        "composed_insight": "[FR] [Composed Insight: character.control.abandonment_through_control]"
+      },
+      "control_avoids_exposure": {
+        "composed_insight": "[FR] [Composed Insight: character.control.control_avoids_exposure]"
+      }
     },
     "summary": {
       "story_engine": "Ce n'est pas un trait de caractère. C'est une histoire qui attend de se produire.",
       "story_beginning": "Parce que ce personnage craint sa blessure la plus profonde, il se protège par son mensonge."
+    },
+    "abandonment": {
+      "abandonment_as_certainty": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "clinging_as_survival": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "fear_of_abandonment": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "preemptive_withdrawal": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "testing_loyalty": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      }
+    },
+    "attachment": {
+      "anxious_attachment": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "attachment_through_crisis": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "avoidant_attachment": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      }
+    },
+    "trust": {
+      "conditional_trust": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "trust_destroyed": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "trust_destroyed_by_love": {
+        "composed_insight": "[FR] [Composed Insight: character.trust.trust_destroyed_by_love]"
+      }
+    },
+    "worth": {
+      "conditional_worth": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "invisible_unless_useful": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "love_through_performance": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "worth_through_usefulness": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "needed_not_known": {
+        "composed_insight": "[FR] [Composed Insight: character.worth.needed_not_known]"
+      },
+      "performance_as_survival": {
+        "composed_insight": "[FR] [Composed Insight: character.worth.performance_as_survival]"
+      }
+    },
+    "sacrifice": {
+      "duty_over_desire": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "martyrdom": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "rescuer_identity": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "sacrifice_as_proof_of_love": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "self_worth_through_suffering": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "love_through_self_denial": {
+        "composed_insight": "[FR] [Composed Insight: character.sacrifice.love_through_self_denial]"
+      },
+      "sacrifice_as_invisibility": {
+        "composed_insight": "[FR] [Composed Insight: character.sacrifice.sacrifice_as_invisibility]"
+      }
+    },
+    "vulnerability": {
+      "emotional_numbness": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "openness_as_danger": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "strength_as_armor": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "vulnerability_as_chaos": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      }
+    },
+    "love": {
+      "fear_of_burdening": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "idealized_love": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "love_as_dangerous_power": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "love_as_loss_of_self": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "love_as_transaction": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "love_as_burden": {
+        "composed_insight": "[FR] [Composed Insight: character.love.love_as_burden]"
+      },
+      "love_destroys_self": {
+        "composed_insight": "[FR] [Composed Insight: character.love.love_destroys_self]"
+      }
+    },
+    "grief": {
+      "frozen_in_time": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "grief_as_identity": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "grief_denied": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "frozen_grief_closes_future": {
+        "composed_insight": "[FR] [Composed Insight: character.grief.frozen_grief_closes_future]"
+      },
+      "grief_prevents_intimacy": {
+        "composed_insight": "[FR] [Composed Insight: character.grief.grief_prevents_intimacy]"
+      },
+      "structure_prevents_loss": {
+        "composed_insight": "[FR] [Composed Insight: character.grief.structure_prevents_loss]"
+      }
+    },
+    "belonging": {
+      "belonging_through_caretaking": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "belonging_through_conformity": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "exile_self_imposed": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "outsider_as_shield": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "belonging_through_suffering": {
+        "composed_insight": "[FR] [Composed Insight: character.belonging.belonging_through_suffering]"
+      },
+      "independence_as_exile": {
+        "composed_insight": "[FR] [Composed Insight: character.belonging.independence_as_exile]"
+      }
+    },
+    "guilt": {
+      "deserved_suffering": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "endless_apology": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "fear_of_becoming_the_harm": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "guilt_as_identity": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "self_preservation_as_betrayal": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "guilt_drives_distance": {
+        "composed_insight": "[FR] [Composed Insight: character.guilt.guilt_drives_distance]"
+      },
+      "protection_equals_harm": {
+        "composed_insight": "[FR] [Composed Insight: character.guilt.protection_equals_harm]"
+      }
+    },
+    "identity": {
+      "false_self": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "identity_defined_by_role": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "identity_through_opposition": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "lost_self": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      }
+    },
+    "shame": {
+      "internalized_unworthiness": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "shame_as_secret": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "shame_driven_achievement": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "shame_masked_as_pride": {
+        "narrative_consequence": "[FR] [Narrative Consequence]",
+        "conflict_created": "[FR] [Conflict Created]",
+        "pressure_point": "[FR] [Pressure Point]",
+        "transformation_path": "[FR] [Transformation Path]",
+        "consequence": "[FR] [Consequence]",
+        "relationship_pattern": "[FR] [Relationship Pattern]",
+        "inciting_relationship": "[FR] [Inciting Relationship]",
+        "central_conflict": "[FR] [Central Conflict]",
+        "dramatic_potential": "[FR] [Dramatic Potential]"
+      },
+      "achievement_hides_shame": {
+        "composed_insight": "[FR] [Composed Insight: character.shame.achievement_hides_shame]"
+      },
+      "shame_drives_role": {
+        "composed_insight": "[FR] [Composed Insight: character.shame.shame_drives_role]"
+      }
     }
   },
   "relationship": {
@@ -63,12 +702,275 @@
     "distance": {
       "consequence": "Leurs tentatives de se donner de l'espace ont créé un gouffre infranchissable.",
       "risk": "Ils peuvent s'éloigner au point que la connexion soit complètement rompue.",
-      "pattern": "L'intimité est remplacée par une distance polie."
+      "pattern": "L'intimité est remplacée par une distance polie.",
+      "distance_as_love": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "functional_distance": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "protective_distance": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      }
     },
     "fixing": {
       "consequence": "Leur besoin de se réparer l'un l'autre les empêche de s'accepter mutuellement.",
       "risk": "Ils peuvent détruire la relation en essayant de la rendre parfaite.",
       "pattern": "Le soutien est devenu une forme de contrôle."
+    },
+    "avoidance": {
+      "avoidance_as_care": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "comfortable_silence": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "conflict_avoidance": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "mutual_avoidance": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "topic_avoidance": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      }
+    },
+    "debt": {
+      "emotional_debt": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      }
+    },
+    "trust": {
+      "honesty_mistaken_for_cruelty": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "selective_vulnerability": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "trust_without_honesty": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      }
+    },
+    "loyalty": {
+      "loyalty_against_self_interest": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "obligation_mistaken_for_love": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "shared_history_as_trap": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      }
+    },
+    "vulnerability": {
+      "unequal_vulnerability": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "vulnerability_as_weapon": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      }
+    },
+    "rescue": {
+      "rescue_dynamic": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "symmetry_collapse": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "helplessness_as_power": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "power_through_protection": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      }
+    },
+    "asymmetric_sacrifice": {
+      "composed_insight": "[FR] [Composed Insight: relationship.asymmetric_sacrifice]"
+    },
+    "care_through_silence": {
+      "composed_insight": "[FR] [Composed Insight: relationship.care_through_silence]"
+    },
+    "control_as_love": {
+      "composed_insight": "[FR] [Composed Insight: relationship.control_as_love]"
+    },
+    "enmeshment_without_honesty": {
+      "composed_insight": "[FR] [Composed Insight: relationship.enmeshment_without_honesty]"
+    },
+    "obligated_presence": {
+      "composed_insight": "[FR] [Composed Insight: relationship.obligated_presence]"
+    },
+    "past_projected_onto_present": {
+      "composed_insight": "[FR] [Composed Insight: relationship.past_projected_onto_present]"
+    },
+    "protecting_with_silence": {
+      "composed_insight": "[FR] [Composed Insight: relationship.protecting_with_silence]"
+    },
+    "reliance_without_vulnerability": {
+      "composed_insight": "[FR] [Composed Insight: relationship.reliance_without_vulnerability]"
+    },
+    "rescue_creates_distance": {
+      "composed_insight": "[FR] [Composed Insight: relationship.rescue_creates_distance]"
+    },
+    "service_replaces_expression": {
+      "composed_insight": "[FR] [Composed Insight: relationship.service_replaces_expression]"
+    },
+    "shared_pretending": {
+      "composed_insight": "[FR] [Composed Insight: relationship.shared_pretending]"
+    },
+    "substitution_through_loyalty": {
+      "composed_insight": "[FR] [Composed Insight: relationship.substitution_through_loyalty]"
+    },
+    "asymmetry": {
+      "asymmetrical_investment": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "different_relationship": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      }
+    },
+    "growth": {
+      "asymmetric_growth": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "growth_through_conflict": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      }
+    },
+    "attachment": {
+      "attachment_through_responsibility": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      }
+    },
+    "dependency": {
+      "dependency_without_intimacy": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "enmeshment": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      }
+    },
+    "intimacy": {
+      "emotional_intimacy_without_commitment": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "forced_intimacy": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "intimacy_through_conflict": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "proximity_without_presence": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      }
+    },
+    "substitution": {
+      "emotional_substitution": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      }
+    },
+    "service": {
+      "fear_of_burdening": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "love_through_service": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      }
+    },
+    "projection": {
+      "mirroring": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      },
+      "projecting_past_onto_present": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      }
+    },
+    "delusion": {
+      "shared_delusion": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      }
+    },
+    "sacrifice": {
+      "silent_sacrifice": {
+        "consequence": "[FR] [Consequence]",
+        "risk": "[FR] [Risk]",
+        "pattern": "[FR] [Pattern]"
+      }
     }
   },
   "patterns": {
@@ -113,6 +1015,544 @@
       "insight": "Vos réponses suggèrent que la blessure de ce personnage commence à façonner la façon dont il se protège.",
       "supporting_text": "Examinez le lien entre leur peur et la façon dont ils choisissent de survivre.",
       "next_discovery_hint": "Ensuite, découvrez ce que cette protection leur coûte."
+    },
+    "abandonment": {
+      "abandonment_as_certainty": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "clinging_as_survival": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "fear_of_abandonment": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "preemptive_withdrawal": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "testing_loyalty": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      }
+    },
+    "attachment": {
+      "anxious_attachment": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "attachment_through_crisis": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "avoidant_attachment": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      }
+    },
+    "trust": {
+      "conditional_trust": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "trust_destroyed": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      }
+    },
+    "worth": {
+      "conditional_worth": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "invisible_unless_useful": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "love_through_performance": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "worth_through_usefulness": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      }
+    },
+    "sacrifice": {
+      "duty_over_desire": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "martyrdom": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "rescuer_identity": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "sacrifice_as_proof_of_love": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "self_worth_through_suffering": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      }
+    },
+    "vulnerability": {
+      "emotional_numbness": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "openness_as_danger": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "strength_as_armor": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "vulnerability_as_chaos": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      }
+    },
+    "love": {
+      "fear_of_burdening": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "idealized_love": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "love_as_dangerous_power": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "love_as_loss_of_self": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "love_as_transaction": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      }
+    },
+    "grief": {
+      "frozen_in_time": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "grief_as_identity": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "grief_denied": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      }
+    },
+    "control": {
+      "hypervigilance": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "power_as_safety": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "rigidity_as_protection": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      }
+    },
+    "belonging": {
+      "belonging_through_caretaking": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "belonging_through_conformity": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "exile_self_imposed": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "outsider_as_shield": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      }
+    },
+    "guilt": {
+      "deserved_suffering": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "endless_apology": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "fear_of_becoming_the_harm": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "guilt_as_identity": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "self_preservation_as_betrayal": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      }
+    },
+    "identity": {
+      "false_self": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "identity_defined_by_role": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "identity_through_opposition": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "lost_self": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      }
+    },
+    "shame": {
+      "internalized_unworthiness": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "shame_as_secret": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "shame_driven_achievement": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      },
+      "shame_masked_as_pride": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "supporting_text": "[FR] [Pattern Supporting Text]",
+        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+      }
+    },
+    "relationship": {
+      "avoidance": {
+        "avoidance_as_care": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "comfortable_silence": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "conflict_avoidance": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "mutual_avoidance": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "topic_avoidance": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        }
+      },
+      "debt": {
+        "emotional_debt": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        }
+      },
+      "trust": {
+        "honesty_mistaken_for_cruelty": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "selective_vulnerability": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "trust_without_honesty": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        }
+      },
+      "loyalty": {
+        "loyalty_against_self_interest": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "obligation_mistaken_for_love": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "shared_history_as_trap": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        }
+      },
+      "vulnerability": {
+        "unequal_vulnerability": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "vulnerability_as_weapon": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        }
+      },
+      "rescue": {
+        "rescue_dynamic": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "symmetry_collapse": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "helplessness_as_power": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "power_through_protection": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        }
+      },
+      "asymmetry": {
+        "asymmetrical_investment": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "different_relationship": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        }
+      },
+      "growth": {
+        "asymmetric_growth": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "growth_through_conflict": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        }
+      },
+      "attachment": {
+        "attachment_through_responsibility": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        }
+      },
+      "default": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]"
+      },
+      "dependency": {
+        "dependency_without_intimacy": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "enmeshment": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        }
+      },
+      "distance": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]",
+        "distance_as_love": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "functional_distance": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "protective_distance": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        }
+      },
+      "intimacy": {
+        "emotional_intimacy_without_commitment": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "forced_intimacy": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "intimacy_through_conflict": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "proximity_without_presence": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        }
+      },
+      "substitution": {
+        "emotional_substitution": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        }
+      },
+      "service": {
+        "fear_of_burdening": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "love_through_service": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        }
+      },
+      "fixing": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]"
+      },
+      "hiding": {
+        "name": "[FR] [Pattern Name]",
+        "insight": "[FR] [Pattern Insight]"
+      },
+      "projection": {
+        "mirroring": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        },
+        "projecting_past_onto_present": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        }
+      },
+      "delusion": {
+        "shared_delusion": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        }
+      },
+      "sacrifice": {
+        "silent_sacrifice": {
+          "name": "[FR] [Pattern Name]",
+          "insight": "[FR] [Pattern Insight]"
+        }
+      }
     }
   }
 }
