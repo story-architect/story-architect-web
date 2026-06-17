@@ -12,9 +12,8 @@ interface StoryActivityFeedProps {
   maxItems?: number;
 }
 
-export const StoryActivityFeed: React.FC<StoryActivityFeedProps> = ({ storyId, className, maxItems }) => {
-  const { t } = useTranslation(['events', 'dashboard', 'common', 'insights']);
-
+const RelativeTime: React.FC<{ timestamp: string }> = ({ timestamp }) => {
+  const { t } = useTranslation(['dashboard']);
   const [now, setNow] = useState(() => Date.now());
 
   useEffect(() => {
@@ -22,9 +21,21 @@ export const StoryActivityFeed: React.FC<StoryActivityFeedProps> = ({ storyId, c
     return () => clearInterval(timer);
   }, []);
 
+  const diff = now - new Date(timestamp).getTime();
+  const minutes = Math.floor(diff / 60000);
+  if (minutes < 60) return <>{minutes === 0 ? t('dashboard:labels.mins_ago', { count: 0 }) : t('dashboard:labels.mins_ago', { count: minutes })}</>;
+  const hours = Math.floor(minutes / 60);
+  if (hours < 24) return <>{t('dashboard:labels.hours_ago', { count: hours })}</>;
+  return <>{t('dashboard:labels.days_ago', { count: Math.floor(hours / 24) })}</>;
+};
+
+export const StoryActivityFeed: React.FC<StoryActivityFeedProps> = ({ storyId, className, maxItems }) => {
+  const { t } = useTranslation(['events', 'dashboard', 'common', 'insights']);
+
   const { data: activities, isLoading } = useQuery({
     queryKey: ['activity-feed', storyId],
     queryFn: () => StoryService.getActivityFeed(storyId!),
+    select: (data) => data.filter(a => Date.now() - new Date(a.timestamp).getTime() < 7 * 24 * 60 * 60 * 1000),
     enabled: !!storyId,
   });
 
@@ -40,15 +51,6 @@ export const StoryActivityFeed: React.FC<StoryActivityFeedProps> = ({ storyId, c
     }
   };
 
-  const getRelativeTime = (isoString: string) => {
-    const diff = now - new Date(isoString).getTime();
-    const minutes = Math.floor(diff / 60000);
-    if (minutes < 60) return minutes === 0 ? t('dashboard:labels.mins_ago', { count: 0 }) : t('dashboard:labels.mins_ago', { count: minutes });
-    const hours = Math.floor(minutes / 60);
-    if (hours < 24) return t('dashboard:labels.hours_ago', { count: hours });
-    return t('dashboard:labels.days_ago', { count: Math.floor(hours / 24) });
-  };
-
   return (
     <div className={`${styles.feedContainer} ${className || ''}`}>
       <h3 className={styles.feedTitle}>
@@ -62,7 +64,7 @@ export const StoryActivityFeed: React.FC<StoryActivityFeedProps> = ({ storyId, c
         <div className={styles.empty}>{t('dashboard:labels.empty_journal')}</div>
       ) : (
         <div className={styles.feedList}>
-          {(maxItems ? activities.filter(a => now - new Date(a.timestamp).getTime() < 7 * 24 * 60 * 60 * 1000).slice(0, maxItems) : activities.filter(a => now - new Date(a.timestamp).getTime() < 7 * 24 * 60 * 60 * 1000))
+          {(maxItems ? activities.slice(0, maxItems) : activities)
             .map((activity, idx) => {
             const metadata = { ...activity.event_metadata };
             if (metadata.pattern_key) {
@@ -86,7 +88,7 @@ export const StoryActivityFeed: React.FC<StoryActivityFeedProps> = ({ storyId, c
                 <div className={styles.content}>
                   <div className={styles.itemHeader}>
                     <h4 className={styles.itemTitle}>{translatedTitle as string}</h4>
-                    <span className={styles.itemTime}>{getRelativeTime(activity.timestamp)}</span>
+                    <span className={styles.itemTime}><RelativeTime timestamp={activity.timestamp} /></span>
                   </div>
                   <p className={styles.itemDesc}>{translatedDesc as string}</p>
                 </div>
