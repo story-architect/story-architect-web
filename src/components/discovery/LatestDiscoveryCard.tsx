@@ -3,6 +3,7 @@ import { Sparkles, Clock } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 import { StoryService } from '../../api/services';
+import { RelativeTime } from '../ui/RelativeTime';
 import styles from './LatestDiscoveryCard.module.css';
 
 interface LatestDiscoveryCardProps {
@@ -50,16 +51,7 @@ export const LatestDiscoveryCard: React.FC<LatestDiscoveryCardProps> = ({ storyI
   const translatedTitle = t(`events:${discovery.event_type}`, metadata);
   const translatedSummary = t(`events:descriptions.${discovery.event_type}`, metadata);
 
-  // Format relative time (e.g., "15 mins ago")
-  const getRelativeTime = (isoString: string) => {
-    // eslint-disable-next-line react-hooks/purity
-    const diff = Date.now() - new Date(isoString).getTime();
-    const minutes = Math.floor(diff / 60000);
-    if (minutes < 60) return t('dashboard:labels.mins_ago', { count: Math.max(1, minutes) });
-    const hours = Math.floor(minutes / 60);
-    if (hours < 24) return t('dashboard:labels.hours_ago', { count: hours });
-    return t('dashboard:labels.days_ago', { count: Math.floor(hours / 24) });
-  };
+
 
   return (
     <div className={`${styles.cardContainer} ${className || ''}`}>
@@ -81,7 +73,7 @@ export const LatestDiscoveryCard: React.FC<LatestDiscoveryCardProps> = ({ storyI
         </div>
         <div className={styles.timestamp}>
           <Clock size={12} />
-          {getRelativeTime(discovery.created_at)}
+          <RelativeTime timestamp={discovery.created_at} />
         </div>
       </div>
     </div>

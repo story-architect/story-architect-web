@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
 import { CharacterService, RelationshipService } from '../../api/services';
 import { Sidebar } from './Sidebar';
 import { TopNav } from './TopNav';
@@ -7,7 +8,6 @@ import styles from './AppLayout.module.css';
 
 export const AppLayout: React.FC = () => {
   const location = useLocation();
-  const [resolvedStoryId, setResolvedStoryId] = useState<string | null>(null);
 
   // Extract IDs from URL manually since useParams in a wrapper might not reliably catch deep nested params without nested routes
   const path = location.pathname;
@@ -19,19 +19,19 @@ export const AppLayout: React.FC = () => {
   const urlCharId = charMatch ? charMatch[1] : null;
   const urlRelId = relMatch ? relMatch[1] : null;
 
-  // We need to resolve the story ID if we are on a character or relationship page
-  useEffect(() => {
-    if (urlStoryId) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setResolvedStoryId(urlStoryId);
-    } else if (urlCharId) {
-      CharacterService.getById(urlCharId).then(c => setResolvedStoryId(c.story_id)).catch(() => {});
-    } else if (urlRelId) {
-      RelationshipService.getById(urlRelId).then(r => setResolvedStoryId(r.story_id)).catch(() => {});
-    } else {
-      setResolvedStoryId(null);
-    }
-  }, [urlStoryId, urlCharId, urlRelId]);
+  const { data: charData } = useQuery({
+    queryKey: ['character', urlCharId],
+    queryFn: () => CharacterService.getById(urlCharId!),
+    enabled: !!urlCharId && !urlStoryId,
+  });
+
+  const { data: relData } = useQuery({
+    queryKey: ['relationship', urlRelId],
+    queryFn: () => RelationshipService.getById(urlRelId!),
+    enabled: !!urlRelId && !urlStoryId && !urlCharId,
+  });
+
+  const resolvedStoryId = urlStoryId || charData?.story_id || relData?.story_id || null;
 
   return (
     <div className={styles.layout}>
