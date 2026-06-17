@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Clock, UserPlus, Link2, Sparkles, BrainCircuit, FileText, CheckCircle } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
@@ -14,6 +14,13 @@ interface StoryActivityFeedProps {
 
 export const StoryActivityFeed: React.FC<StoryActivityFeedProps> = ({ storyId, className, maxItems }) => {
   const { t } = useTranslation(['events', 'dashboard', 'common', 'insights']);
+
+  const [now, setNow] = useState(() => Date.now());
+
+  useEffect(() => {
+    const timer = setInterval(() => setNow(Date.now()), 60000);
+    return () => clearInterval(timer);
+  }, []);
 
   const { data: activities, isLoading } = useQuery({
     queryKey: ['activity-feed', storyId],
@@ -34,8 +41,7 @@ export const StoryActivityFeed: React.FC<StoryActivityFeedProps> = ({ storyId, c
   };
 
   const getRelativeTime = (isoString: string) => {
-    // eslint-disable-next-line react-hooks/purity
-    const diff = Date.now() - new Date(isoString).getTime();
+    const diff = now - new Date(isoString).getTime();
     const minutes = Math.floor(diff / 60000);
     if (minutes < 60) return minutes === 0 ? t('dashboard:labels.mins_ago', { count: 0 }) : t('dashboard:labels.mins_ago', { count: minutes });
     const hours = Math.floor(minutes / 60);
@@ -56,8 +62,7 @@ export const StoryActivityFeed: React.FC<StoryActivityFeedProps> = ({ storyId, c
         <div className={styles.empty}>{t('dashboard:labels.empty_journal')}</div>
       ) : (
         <div className={styles.feedList}>
-          {/* eslint-disable-next-line react-hooks/purity */}
-          {(maxItems ? activities.filter(a => Date.now() - new Date(a.timestamp).getTime() < 7 * 24 * 60 * 60 * 1000).slice(0, maxItems) : activities.filter(a => Date.now() - new Date(a.timestamp).getTime() < 7 * 24 * 60 * 60 * 1000))
+          {(maxItems ? activities.filter(a => now - new Date(a.timestamp).getTime() < 7 * 24 * 60 * 60 * 1000).slice(0, maxItems) : activities.filter(a => now - new Date(a.timestamp).getTime() < 7 * 24 * 60 * 60 * 1000))
             .map((activity, idx) => {
             const metadata = { ...activity.event_metadata };
             if (metadata.pattern_key) {
