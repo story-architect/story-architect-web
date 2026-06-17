@@ -6,12 +6,14 @@ Instead of feeling like a questionnaire, the application provides a **Living Dis
 
 ## Features
 
-- **Dynamic Command Center:** The Dashboard and Story Overview act as living workspaces, highlighting recent activity, your discovery journal, and what you should discover next.
+- **Dynamic Command Center:** A completely overhauled Dashboard offering Grid, List, and Compact views, inline story actions, chronological sorting, and a filtered recent Activity Feed.
+- **Data-Driven Pattern Engine:** A highly scalable insight generator evaluating over 100+ emotional patterns (Guilt, Shame, Avoidance, Intimacy) and composition rules in real time.
 - **Guided Character Discovery:** Answer intuitive questions to build your character.
 - **Real-time Insights:** The "Character Pulse" tracks the character's emerging personality as you answer questions.
 - **Transition Overlays:** As you answer questions, the system proactively detects patterns and unlocks insights, notifying you immediately with beautiful transition overlays.
 - **Comprehensive Reports:** Generate in-depth Story Engine, Narrative Consequence, and Relationship Architecture reports entirely generated from deterministic analysis of your inputs.
 - **Persistent Navigation:** Easily navigate between characters, relationships, and reports using the dynamic sidebar.
+- **Dynamic Localization (i18n):** Automated key generation ensures newly authored patterns immediately support English and French locales.
 
 ## Tech Stack
 
