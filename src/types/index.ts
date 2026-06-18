@@ -119,6 +119,14 @@ export interface CharacterPulseResponse {
   latest_discovery: string;
 }
 
+export interface PatternEmergingResponse {
+  title: string;
+  pattern_name: string;
+  insight: string;
+  supporting_text: string;
+  next_discovery_hint: string;
+}
+
 
 // Relationship
 export interface RelationshipCreate {

@@ -65,6 +65,10 @@ export const CharacterService = {
     const res = await apiClient.get<T.CharacterPulseResponse>(`/characters/${id}/pulse`);
     return res.data;
   },
+  getPatternEmerging: async (id: string) => {
+    const res = await apiClient.get<T.PatternEmergingResponse>(`/characters/${id}/pattern-emerging`);
+    return res.data;
+  },
 };
 
 export const RelationshipService = {

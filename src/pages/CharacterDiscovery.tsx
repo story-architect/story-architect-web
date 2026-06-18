@@ -12,6 +12,7 @@ import { CharacterPulse } from '../components/character/CharacterPulse';
 import { InsightUnlocked } from '../components/discovery/InsightUnlocked';
 import { PatternEmergingScreen } from '../components/discovery/PatternEmergingScreen';
 import type { DiscoveryEventResponse } from '../types';
+import { buildDiscoveryEventCopy } from '../utils/insightText';
 import styles from './CharacterDiscovery.module.css';
 
 const ICONS = [Heart, Shield, Lock, Sparkles];
@@ -123,21 +124,25 @@ const CharacterDiscovery: React.FC = () => {
     });
   };
 
+  const getInsightEventCopy = (event: DiscoveryEventResponse) => {
+    return buildDiscoveryEventCopy(t, event.event_type, event.event_metadata);
+  };
+
   return (
     <div className={styles.pageLayout}>
       
       {showInsight && unlockedEvent && (
         <InsightUnlocked 
-          title={t(`events:${unlockedEvent.event_type}`, { ...unlockedEvent.event_metadata, insight_key: t((unlockedEvent.event_metadata.insight_key as string)?.replace('insights.', '') || '', { ns: 'insights' }) }) as string}
-          description={t(`events:descriptions.${unlockedEvent.event_type}`, { ...unlockedEvent.event_metadata, insight_key: t((unlockedEvent.event_metadata.insight_key as string)?.replace('insights.', '') || '', { ns: 'insights' }) }) as string}
+          title={getInsightEventCopy(unlockedEvent).title}
+          description={getInsightEventCopy(unlockedEvent).description}
           onContinue={() => setShowInsight(false)}
         />
       )}
 
       {showPattern && unlockedEvent && (
         <PatternEmergingScreen 
-          title={t(`events:${unlockedEvent.event_type}`, { ...unlockedEvent.event_metadata, pattern_key: t((unlockedEvent.event_metadata.pattern_key as string)?.replace('insights.', '') || '', { ns: 'insights' }) }) as string}
-          description={t(`events:descriptions.${unlockedEvent.event_type}`, { ...unlockedEvent.event_metadata, insight_key: t((unlockedEvent.event_metadata.insight_key as string)?.replace('insights.', '') || '', { ns: 'insights' }) }) as string}
+          title={buildDiscoveryEventCopy(t, unlockedEvent.event_type, unlockedEvent.event_metadata).title}
+          description={buildDiscoveryEventCopy(t, unlockedEvent.event_type, unlockedEvent.event_metadata).description}
           onContinue={() => setShowPattern(false)}
         />
       )}

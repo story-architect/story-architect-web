@@ -3,6 +3,7 @@ import { Activity, ShieldAlert, HeartCrack, Flame } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useQuery } from '@tanstack/react-query';
 import { CharacterService } from '../../api/services';
+import { translateInsightText } from '../../utils/insightText';
 import styles from './CharacterPulse.module.css';
 
 interface CharacterPulseProps {
@@ -28,6 +29,26 @@ export const CharacterPulse: React.FC<CharacterPulseProps> = ({ characterId, cha
 
   if (!pulse) return null;
 
+  const latestDiscoveryText = (() => {
+    switch (pulse.latest_discovery) {
+      case 'INSIGHT_UNLOCKED':
+        return t('common:discovery.labels.insight_unlocked', 'Insight Unlocked');
+      case 'PATTERN_EMERGING':
+        return t('common:discovery.labels.pattern_emerging', 'Pattern Emerging');
+      case 'QUESTION_ANSWERED':
+        return t('events:QUESTION_ANSWERED', 'Discovery Answered');
+      case 'CHARACTER_CREATED':
+        return t('events:CHARACTER_CREATED', 'Character Discovered');
+      case 'REPORT_GENERATED':
+        return t('events:REPORT_GENERATED', {
+          defaultValue: 'Character Report Generated',
+          report_type: t('common:nav.characters', 'Character'),
+        });
+      default:
+        return pulse.latest_discovery;
+    }
+  })();
+
   return (
     <div className={`${styles.pulseContainer} ${className || ''}`}>
       <div className={styles.header}>
@@ -50,16 +71,7 @@ export const CharacterPulse: React.FC<CharacterPulseProps> = ({ characterId, cha
 
       <div className={styles.latestDiscovery}>
         <span className={styles.latestLabel}>{t('common:labels.latest', 'LATEST')}</span>
-        <p className={styles.latestText}>
-          {pulse.latest_discovery && pulse.latest_discovery.toUpperCase() === pulse.latest_discovery 
-            ? t(`events:${pulse.latest_discovery}`, { 
-                defaultValue: pulse.latest_discovery,
-                report_type: t('common:nav.characters', 'Character'),
-                pattern_key: '',
-                insight_key: ''
-              }) 
-            : pulse.latest_discovery}
-        </p>
+        <p className={styles.latestText}>{latestDiscoveryText}</p>
       </div>
 
       <div className={styles.understandingSection}>
@@ -95,7 +107,7 @@ export const CharacterPulse: React.FC<CharacterPulseProps> = ({ characterId, cha
             <span className={styles.traitLabel}>{t('common:labels.most_likely_conflict', 'Most Likely Conflict')}</span>
             <span className={styles.traitValue}>
               {pulse.most_likely_conflict?.startsWith('insights.') 
-                ? t(pulse.most_likely_conflict.replace('insights.', ''), { ns: 'insights' }) 
+                ? translateInsightText(t, pulse.most_likely_conflict)
                 : pulse.most_likely_conflict}
             </span>
           </div>

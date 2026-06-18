@@ -13,6 +13,9 @@ interface InsightUnlockedProps {
 export const InsightUnlocked: React.FC<InsightUnlockedProps> = ({ title, description, onContinue }) => {
   const [mounted, setMounted] = useState(false);
   const { t } = useTranslation(['common']);
+  const displayTitle = title
+    .replace(/^Insight Unlocked:\s*/, '')
+    .replace(/^Aper\u00e7u D\u00e9verrouill\u00e9\s*:\s*/, '');
 
   useEffect(() => {
     requestAnimationFrame(() => setMounted(true));
@@ -24,12 +27,12 @@ export const InsightUnlocked: React.FC<InsightUnlockedProps> = ({ title, descrip
         <div className={styles.iconWrapper}>
           <Sparkles className={styles.icon} size={48} />
         </div>
-        
+
         <div className={styles.header}>{t('common:discovery.labels.insight_unlocked', 'Insight Unlocked')}</div>
-        
-        <h2 className={styles.title}>{title.replace('Insight Unlocked: ', '').replace('Aperçu Déverrouillé: ', '')}</h2>
+
+        <h2 className={styles.title}>{displayTitle}</h2>
         <p className={styles.description}>{description}</p>
-        
+
         <div className={styles.actionWrapper}>
           <Button size="lg" onClick={onContinue}>
             {t('common:discovery.labels.continue_discovery', 'Continue Discovery')}

@@ -137,10 +137,23 @@
       "sensing": "Analyse en cours...",
       "no_wrong_answers": "Il n'y a pas de mauvaises réponses ici.",
       "insight_unlocked": "Aperçu Déverrouillé",
+      "pattern": "Schéma",
       "pattern_emerging": "Schéma Émergent",
       "hidden_tension": "Tension Cachée",
       "underlying_friction": "Il y a une friction sous-jacente dans cette relation qui découle de valeurs divergentes.",
       "destructive_pattern": "Un schéma destructeur émerge. Leurs tentatives mutuelles de s'entraider causent en fait plus de tort."
+    },
+    "insight_labels": {
+      "central_conflict": "Conflit central"
+    },
+    "insight_fallbacks": {
+      "central_conflict": "Un conflit central émerge entre ce qui protège ce personnage et ce que l'histoire lui demande d'affronter."
+    },
+    "pattern_fallbacks": {
+      "name": "Schéma émergent",
+      "insight": "Un schéma significatif commence à émerger de ces réponses.",
+      "supporting_text": "Observez les choix que ce personnage répète lorsqu'il essaie de se protéger.",
+      "next_hint": "Ensuite, découvrez ce que ce schéma lui coûte."
     },
     "questions": {
       "char_wound": "Quelle est la blessure que porte ce personnage ?",

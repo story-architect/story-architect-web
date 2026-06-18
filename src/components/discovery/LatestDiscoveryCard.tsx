@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 import { StoryService } from '../../api/services';
 import { RelativeTime } from '../ui/RelativeTime';
+import { buildDiscoveryEventCopy, buildEventMetadata } from '../../utils/insightText';
 import styles from './LatestDiscoveryCard.module.css';
 
 interface LatestDiscoveryCardProps {
@@ -32,15 +33,7 @@ export const LatestDiscoveryCard: React.FC<LatestDiscoveryCardProps> = ({ storyI
     return null; // Don't show the card if there's no discovery yet
   }
 
-  const metadata = { ...discovery.event_metadata };
-  
-  if (metadata.pattern_key) {
-    metadata.pattern_key = t((metadata.pattern_key as string).replace('insights.', ''), { ns: 'insights' });
-  }
-
-  if (metadata.insight_key) {
-    metadata.insight_key = t((metadata.insight_key as string).replace('insights.', ''), { ns: 'insights' });
-  }
+  const metadata = buildEventMetadata(t, discovery.event_metadata);
 
   if (metadata.report_type) {
     // Basic translation for 'Character' or 'Relationship'
@@ -50,6 +43,7 @@ export const LatestDiscoveryCard: React.FC<LatestDiscoveryCardProps> = ({ storyI
 
   const translatedTitle = t(`events:${discovery.event_type}`, metadata);
   const translatedSummary = t(`events:descriptions.${discovery.event_type}`, metadata);
+  const eventCopy = buildDiscoveryEventCopy(t, discovery.event_type, discovery.event_metadata);
 
 
 
@@ -64,12 +58,12 @@ export const LatestDiscoveryCard: React.FC<LatestDiscoveryCardProps> = ({ storyI
       
       <div className={styles.quoteContainer}>
         <span className={styles.quoteMark}>"</span>
-        <p className={styles.quoteText}>{translatedSummary as string}</p>
+        <p className={styles.quoteText}>{eventCopy.description || translatedSummary as string}</p>
       </div>
       
       <div className={styles.footer}>
         <div className={styles.source}>
-          {t('dashboard:labels.source')}: <span>{translatedTitle as string}</span>
+          {t('dashboard:labels.source')}: <span>{eventCopy.title || translatedTitle as string}</span>
         </div>
         <div className={styles.timestamp}>
           <Clock size={12} />

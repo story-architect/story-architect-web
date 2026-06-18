@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 import { StoryService } from '../../api/services';
 import type { DiscoveryEventResponse } from '../../types';
+import { buildDiscoveryEventCopy, buildEventMetadata } from '../../utils/insightText';
 import styles from './DiscoveryJournal.module.css';
 
 interface DiscoveryJournalProps {
@@ -66,14 +67,7 @@ export const DiscoveryJournal: React.FC<DiscoveryJournalProps> = ({ storyId, cla
               <span className={styles.dayLabel}>{day.label}</span>
               <div className={styles.entriesList}>
                 {day.entries.map((entry) => {
-                  const metadata = { ...entry.event_metadata };
-                  
-                  if (metadata.pattern_key) {
-                    metadata.pattern_key = t((metadata.pattern_key as string).replace('insights.', ''), { ns: 'insights' });
-                  }
-                  if (metadata.insight_key) {
-                    metadata.insight_key = t((metadata.insight_key as string).replace('insights.', ''), { ns: 'insights' });
-                  }
+                  const metadata = buildEventMetadata(t, entry.event_metadata);
                 
                   if (metadata.report_type) {
                     const key = (metadata.report_type as string).toLowerCase();
@@ -82,11 +76,12 @@ export const DiscoveryJournal: React.FC<DiscoveryJournalProps> = ({ storyId, cla
                 
                   const translatedTitle = t(`events:${entry.event_type}`, metadata);
                   const translatedDesc = t(`events:descriptions.${entry.event_type}`, metadata);
+                  const eventCopy = buildDiscoveryEventCopy(t, entry.event_type, entry.event_metadata);
 
                   return (
                     <div key={entry.id} className={styles.entryItem}>
                       <Check size={16} className={styles.checkIcon} />
-                      <p className={styles.entryText}>{translatedTitle as string}: {translatedDesc as string}</p>
+                      <p className={styles.entryText}>{eventCopy.title || translatedTitle as string}: {eventCopy.description || translatedDesc as string}</p>
                     </div>
                   );
                 })}

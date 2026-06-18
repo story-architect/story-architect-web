@@ -135,10 +135,23 @@
       "sensing": "Sensing...",
       "no_wrong_answers": "There are no wrong answers here.",
       "insight_unlocked": "Insight Unlocked",
+      "pattern": "Pattern",
       "pattern_emerging": "Pattern Emerging",
       "hidden_tension": "Hidden Tension",
       "underlying_friction": "There is an underlying friction in this relationship that stems from misaligned values.",
       "destructive_pattern": "A destructive pattern is emerging. Their mutual attempts to help are actually causing more harm."
+    },
+    "insight_labels": {
+      "central_conflict": "Central Conflict"
+    },
+    "insight_fallbacks": {
+      "central_conflict": "A central conflict is emerging between what protects this character and what the story is asking them to face."
+    },
+    "pattern_fallbacks": {
+      "name": "Pattern Emerging",
+      "insight": "A meaningful pattern is beginning to emerge from these answers.",
+      "supporting_text": "Look for the choices this character repeats when they are trying to protect themselves.",
+      "next_hint": "Next, discover what this pattern costs them."
     },
     "questions": {
       "char_wound": "What is the wound this character carries?",
