@@ -95,4 +95,6 @@
   font-size: 0.9rem;
   text-align: center;
   padding: 20px;
+  line-height: 1.7;
+  white-space: pre-line;
 }

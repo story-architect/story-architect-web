@@ -1,6 +1,7 @@
 {
   "nav": {
     "dashboard": "Tableau de bord",
+    "story_architect": "Story Architect",
     "characters": "Personnages",
     "relationships": "Relations",
     "reports": "Rapports",

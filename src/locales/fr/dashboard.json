@@ -5,7 +5,14 @@
   "create_story": "Créer une histoire",
   "recently_updated": "Histoires récemment mises à jour",
   "loading_stories": "Chargement de vos histoires...",
-  "no_stories": "Vous n'avez pas encore commencé d'histoires.",
+  "no_stories": "Commencez par une histoire.\n\nCréez une histoire, ajoutez un personnage, et laissez la première découverte révéler ce qui se cache dessous.",
+  "create_first_story": "Créer votre première histoire",
+  "first_story": {
+    "kicker": "Story Architect",
+    "title": "Que cache votre histoire ?",
+    "intro": "Chaque histoire commence par quelque chose de caché.\n\nUne contradiction.\nUne relation.\nUne peur.\nUne question.\n\nStory Architect aide à révéler ce qui était déjà là.",
+    "future_discoveries": "Vos découvertes apparaîtront ici lorsque votre histoire commencera à prendre forme."
+  },
   "titles": {
     "dashboard": "Tableau de bord",
     "latest_discovery": "Dernière découverte",
@@ -23,7 +30,7 @@
     "hours_ago": "Il y a {{count}} heures",
     "days_ago": "Il y a {{count}} jours",
     "loading_journal": "Chargement du journal...",
-    "empty_journal": "Votre voyage de découverte vous attend.",
+    "empty_journal": "Chaque réponse révèle quelque chose.\n\nDes personnages.\nDes relations.\nDes contradictions.\nDes transformations.\n\nVos découvertes apparaîtront ici, à mesure que votre histoire prendra forme.",
     "loading_activity": "Chargement de l'activité...",
     "empty_activity": "Aucune activité pour le moment. Commencez à découvrir !",
     "loading_story": "Chargement du centre de commande de l'histoire...",

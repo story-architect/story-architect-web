@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { CharacterService, RelationshipService } from '../../api/services';
+import { CharacterService, RelationshipService, StoryService } from '../../api/services';
 import { Sidebar } from './Sidebar';
 import { TopNav } from './TopNav';
 import styles from './AppLayout.module.css';
@@ -31,13 +31,20 @@ export const AppLayout: React.FC = () => {
     enabled: !!urlRelId && !urlStoryId && !urlCharId,
   });
 
+  const { data: firstPageStories } = useQuery({
+    queryKey: ['stories', 'first-story-shell'],
+    queryFn: () => StoryService.getAll(0, 1),
+    enabled: path === '/',
+  });
+
   const resolvedStoryId = urlStoryId || charData?.story_id || relData?.story_id || null;
+  const isFirstStoryExperience = path === '/' && firstPageStories?.total === 0;
 
   return (
     <div className={styles.layout}>
-      <Sidebar storyId={resolvedStoryId} />
+      <Sidebar storyId={resolvedStoryId} isFirstStoryExperience={isFirstStoryExperience} />
       <div className={styles.mainContent}>
-        <TopNav storyId={resolvedStoryId} charId={urlCharId} relId={urlRelId} />
+        {!isFirstStoryExperience && <TopNav storyId={resolvedStoryId} charId={urlCharId} relId={urlRelId} />}
         <main className={styles.pageArea}>
           <Outlet />
         </main>

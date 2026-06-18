@@ -76,7 +76,7 @@ export const TopNav: React.FC<TopNavProps> = ({ storyId, charId, relId }) => {
             <User size={16} />
           </div>
           <span className={styles.userName}>{user?.display_name || t('nav.writer')}</span>
-          <button onClick={logout} className="ml-4 text-gray-500 hover:text-gray-700 flex items-center gap-1 text-sm">
+          <button type="button" onClick={logout} className={styles.logoutButton}>
             <LogOut size={14} />
             Logout
           </button>

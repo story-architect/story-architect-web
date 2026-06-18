@@ -5,7 +5,14 @@
   "create_story": "Create Story",
   "recently_updated": "Recently Updated Stories",
   "loading_stories": "Loading your stories...",
-  "no_stories": "You haven't started any stories yet.",
+  "no_stories": "Begin with one story.\n\nCreate a story, add a character, and let the first discovery reveal what lies underneath.",
+  "create_first_story": "Create your first story",
+  "first_story": {
+    "kicker": "Story Architect",
+    "title": "What lies beneath your story?",
+    "intro": "Every story begins with something hidden.\n\nA contradiction.\nA relationship.\nA fear.\nA question.\n\nStory Architect helps uncover what is already there.",
+    "future_discoveries": "Your discoveries will appear here once your story begins to take shape."
+  },
   "titles": {
     "dashboard": "Dashboard",
     "latest_discovery": "Latest Discovery",
@@ -23,7 +30,7 @@
     "hours_ago": "{{count}} hours ago",
     "days_ago": "{{count}} days ago",
     "loading_journal": "Loading journal...",
-    "empty_journal": "Your discovery journey awaits.",
+    "empty_journal": "Every answer reveals something.\n\nCharacters.\nRelationships.\nContradictions.\nTransformations.\n\nYour discoveries will appear here as your story begins to take shape.",
     "loading_activity": "Loading activity...",
     "empty_activity": "No activity yet. Start discovering!",
     "loading_story": "Loading story command center...",

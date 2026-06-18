@@ -8,9 +8,10 @@ import styles from './Sidebar.module.css';
 
 interface SidebarProps {
   storyId: string | null;
+  isFirstStoryExperience?: boolean;
 }
 
-export const Sidebar: React.FC<SidebarProps> = ({ storyId }) => {
+export const Sidebar: React.FC<SidebarProps> = ({ storyId, isFirstStoryExperience = false }) => {
   const [collapsed, setCollapsed] = useState(false);
   const navigate = useNavigate();
   const { t } = useTranslation('common');
@@ -59,7 +60,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ storyId }) => {
         <div className={styles.section}>
           <NavLink to="/" className={getNavClass} end>
             <Home size={18} />
-            {!collapsed && <span>{t('nav.dashboard', 'Dashboard')}</span>}
+            {!collapsed && (
+              <span>
+                {isFirstStoryExperience
+                  ? t('nav.story_architect', 'Story Architect')
+                  : t('nav.dashboard', 'Dashboard')}
+              </span>
+            )}
           </NavLink>
         </div>
 

@@ -51,6 +51,31 @@ const Dashboard: React.FC = () => {
 
   // Use the most recently updated story for the dashboard widgets if available
   const mostRecentStoryId = sortedStories.length > 0 ? sortedStories[0].id : null;
+  const hasNoStories = !isLoading && storyList?.total === 0;
+
+  if (hasNoStories) {
+    return (
+      <main className={styles.firstStoryContainer}>
+        <section className={styles.firstStoryHero} aria-labelledby="first-story-title">
+          <span className={styles.firstStoryKicker}>{t('first_story.kicker')}</span>
+          <h1 id="first-story-title" className={styles.firstStoryTitle}>
+            {t('first_story.title')}
+          </h1>
+          <p className={styles.firstStoryIntro}>{t('first_story.intro')}</p>
+          <Button
+            size="lg"
+            onClick={() => navigate('/stories/new')}
+            icon={<Plus size={20} />}
+            className={styles.firstStoryCta}
+          >
+            {t('create_story')}
+          </Button>
+        </section>
+
+        <p className={styles.futureDiscoveries}>{t('first_story.future_discoveries')}</p>
+      </main>
+    );
+  }
 
   return (
     <div className={styles.container}>
@@ -112,6 +137,15 @@ const Dashboard: React.FC = () => {
           ) : sortedStories.length === 0 ? (
             <div className={styles.emptyState}>
               <p>{t('no_stories')}</p>
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                className={styles.emptyStateCta}
+                onClick={() => navigate('/stories/new')}
+              >
+                {t('create_first_story')}
+              </Button>
             </div>
           ) : (
             sortedStories.map((story) => (
