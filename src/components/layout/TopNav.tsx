@@ -5,7 +5,7 @@ import { Search, ChevronRight, User, LogOut } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { StoryService, CharacterService, RelationshipService } from '../../api/services';
 import { LanguageSwitcher } from './LanguageSwitcher';
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../../contexts/auth';
 import styles from './TopNav.module.css';
 
 interface TopNavProps {

@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate, Link, useLocation } from 'react-router-dom';
+import { AxiosError } from 'axios';
 import { Feather } from 'lucide-react';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../contexts/auth';
 import { AuthService } from '../api/services';
 import styles from './Auth.module.css';
+
+type ApiErrorResponse = {
+  detail?: string;
+};
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -24,10 +29,11 @@ export default function Login() {
       const res = await AuthService.login(params);
       await login(res.access_token);
       
-      const from = (location.state as any)?.from?.pathname || '/';
+      const from = (location.state as { from?: { pathname?: string } } | null)?.from?.pathname || '/';
       navigate(from, { replace: true });
-    } catch (err: any) {
-      setError(err.response?.data?.detail || 'Failed to login');
+    } catch (err: unknown) {
+      const error = err as AxiosError<ApiErrorResponse>;
+      setError(error.response?.data?.detail || 'Failed to login');
     }
   };
 

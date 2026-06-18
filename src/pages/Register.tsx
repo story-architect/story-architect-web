@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { AxiosError } from 'axios';
 import { Feather } from 'lucide-react';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../contexts/auth';
 import { AuthService } from '../api/services';
 import styles from './Auth.module.css';
+
+type ApiErrorResponse = {
+  detail?: string;
+};
 
 export default function Register() {
   const [email, setEmail] = useState('');
@@ -27,8 +32,9 @@ export default function Register() {
       await login(res.access_token);
       
       navigate('/');
-    } catch (err: any) {
-      setError(err.response?.data?.detail || 'Failed to register');
+    } catch (err: unknown) {
+      const error = err as AxiosError<ApiErrorResponse>;
+      setError(error.response?.data?.detail || 'Failed to register');
     }
   };
 

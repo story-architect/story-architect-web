@@ -1,17 +1,8 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import type { ReactNode } from 'react';
 import { AuthService } from '../api/services';
 import type { UserRead } from '../types';
-
-interface AuthContextType {
-  user: UserRead | null;
-  isAuthenticated: boolean;
-  isLoading: boolean;
-  login: (access_token: string) => Promise<void>;
-  logout: () => Promise<void>;
-}
-
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
+import { AuthContext } from './auth';
 
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<UserRead | null>(null);
@@ -27,7 +18,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       }
       const userRes = await AuthService.getMe();
       setUser(userRes);
-    } catch (err) {
+    } catch {
       localStorage.removeItem('access_token');
       setUser(null);
     } finally {
@@ -36,7 +27,11 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   };
 
   useEffect(() => {
-    checkAuth();
+    const timeoutId = window.setTimeout(() => {
+      void checkAuth();
+    }, 0);
+
+    return () => window.clearTimeout(timeoutId);
   }, []);
 
   const login = async (access_token: string) => {
@@ -65,12 +60,4 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       {children}
     </AuthContext.Provider>
   );
-};
-
-export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
-  }
-  return context;
 };
