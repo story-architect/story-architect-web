@@ -60,9 +60,20 @@ const PatternEmerging: React.FC = () => {
           
           <div className={styles.divider}></div>
           
-          <p className={styles.text}>{translatePatternText(t, data.insight)}</p>
-          <p className={styles.supportingText}>{translatePatternSupportingText(t, data.supporting_text)}</p>
-          <p className={styles.nextHint}>{translatePatternNextHint(t, data.next_discovery_hint)}</p>
+          <section className={styles.insightSection}>
+            <div className={styles.sectionLabel}>{t('common:discovery.labels.pattern_hypothesis', 'Pattern Hypothesis')}</div>
+            <p className={styles.text}>{translatePatternText(t, data.insight)}</p>
+          </section>
+
+          <section className={styles.insightSection}>
+            <div className={styles.sectionLabel}>{t('common:discovery.labels.evidence_from_answers', 'Evidence From Answers')}</div>
+            <p className={styles.supportingText}>{translatePatternSupportingText(t, data.supporting_text)}</p>
+          </section>
+
+          <section className={styles.insightSection}>
+            <div className={styles.sectionLabel}>{t('common:discovery.labels.possible_cost', 'Possible Cost')}</div>
+            <p className={styles.nextHint}>{translatePatternNextHint(t, data.next_discovery_hint)}</p>
+          </section>
           
           <Button 
             size="lg" 

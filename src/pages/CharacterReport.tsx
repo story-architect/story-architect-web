@@ -118,7 +118,25 @@ const CharacterReport: React.FC = () => {
   const translateInsight = (val?: string | null): string => {
     if (!val) return '';
     if (val.startsWith('insights.')) {
-      return t(val.replace('insights.', ''), { ns: 'insights' });
+      const translated = t(val.replace('insights.', ''), { ns: 'insights' });
+      if (typeof translated === 'string' && !/^\s*(?:\[[A-Z]{2}\]\s*)?\[[^\]]+\]\s*$/.test(translated)) {
+        return translated;
+      }
+
+      const field = val.split('.').pop();
+      const fallbacks: Record<string, string> = {
+        narrative_consequence: 'This behavior begins shaping what the story makes possible, and what it puts at risk.',
+        conflict_created: 'The character is pushed toward a choice between the behavior that protects them and the truth the story asks them to face.',
+        pressure_point: 'A relationship, loss, or crisis puts pressure on the pattern they have relied on.',
+        transformation_path: 'They must change the behavior that once kept them safe but now keeps them stuck.',
+        consequence: 'The pattern that protects them also creates a cost they can no longer avoid.',
+        relationship_pattern: 'Their relationships begin organizing around what they hide, avoid, or repeat.',
+        inciting_relationship: 'Someone enters the story who challenges the pattern directly.',
+        central_conflict: 'They must choose between familiar protection and a more honest way forward.',
+        dramatic_potential: 'Their repeated behavior becomes the engine of the story: what protects them also creates the conflict they must transform.',
+      };
+
+      return field ? fallbacks[field] || field.replaceAll('_', ' ') : '';
     }
     return val;
   };
@@ -141,7 +159,10 @@ const CharacterReport: React.FC = () => {
 
   // Dynamic sentence generation
   const name = character?.name || 'The character';
-  const firstName = name.split(' ')[0];
+  const firstName = name.startsWith('The ') ? name : name.split(' ')[0];
+  const cleanProtectiveLie = report.protective_lie
+    .replace(/\.$/, '')
+    .replace(/^["']+|["']+$/g, '');
     
   return (
     <div className={styles.pageLayout}>
@@ -281,7 +302,7 @@ const CharacterReport: React.FC = () => {
             <div className={styles.sectionHeader}>
               <span className={styles.pretitle}>{t('reports.narrative_consequence_revealed', 'NARRATIVE CONSEQUENCE REVEALED')}</span>
               <h1 className={styles.dynamicSentence}>
-                {t('reports.because_believes', 'Because {{firstName}} believes "{{lie}}",', { firstName, lie: report.protective_lie.replace('.', '') })}<br/>
+                {t('reports.because_believes', 'Because {{firstName}} believes "{{lie}}",', { firstName, lie: cleanProtectiveLie })}<br/>
                 <em>{t('reports.push_away_capable', 'they push away the people most capable of helping them.')}</em>
               </h1>
             </div>

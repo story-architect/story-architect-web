@@ -591,15 +591,15 @@
     },
     "identity": {
       "false_self": {
-        "narrative_consequence": "[Narrative Consequence]",
-        "conflict_created": "[Conflict Created]",
-        "pressure_point": "[Pressure Point]",
-        "transformation_path": "[Transformation Path]",
-        "consequence": "[Consequence]",
-        "relationship_pattern": "[Relationship Pattern]",
-        "inciting_relationship": "[Inciting Relationship]",
-        "central_conflict": "[Central Conflict]",
-        "dramatic_potential": "[Dramatic Potential]"
+        "narrative_consequence": "They keep the mask intact even when honesty would create the connection they need.",
+        "conflict_created": "The story conflict emerges when the false self that protects them begins costing them the chance to be truly known.",
+        "pressure_point": "A relationship or crisis forces them to choose between maintaining the performance and revealing what is underneath.",
+        "transformation_path": "They must risk being seen without the role, charm, or performance that has kept them safe.",
+        "consequence": "The more convincing the mask becomes, the less anyone can reach the person behind it.",
+        "relationship_pattern": "Performs closeness while hiding the truth.",
+        "inciting_relationship": "Someone begins responding to the real self behind the mask.",
+        "central_conflict": "They must choose between being accepted as a performance and being known as themselves.",
+        "dramatic_potential": "Because this character survives by masking their true self, every intimate moment becomes a test of performance. The more someone gets close, the harder it becomes to keep the false self intact. This creates a story about whether being loved is worth the risk of being seen."
       },
       "identity_defined_by_role": {
         "narrative_consequence": "[Narrative Consequence]",
@@ -976,376 +976,376 @@
   "patterns": {
     "protective_independence": {
       "name": "Protective Independence",
-      "insight": "Your answers suggest this character protects themselves by refusing to need anyone.",
-      "supporting_text": "Their independence may look like strength, but it also keeps others at a distance.",
-      "next_discovery_hint": "Next, discover what this protection costs them."
+      "insight": "A possible pattern is that they refuse help before anyone can decide they are too much to carry.",
+      "supporting_text": "Your answers point toward distance, self-reliance, and the habit of handling danger alone.",
+      "next_discovery_hint": "Possible cost: the more they protect their independence, the harder it becomes for anyone to reach them."
     },
     "conditional_worth": {
       "name": "Conditional Worth",
-      "insight": "Your answers suggest this character believes they must be perfect to be safe or accepted.",
-      "supporting_text": "Their need to perform strength may hide a deeper fear of rejection.",
-      "next_discovery_hint": "Next, discover what pressure this creates."
+      "insight": "A possible pattern is that they perform, prove, and perfect themselves when they are afraid love will be withdrawn.",
+      "supporting_text": "Your answers point toward worth being earned through achievement, usefulness, or flawlessness.",
+      "next_discovery_hint": "Possible cost: they may become admired for the mask while feeling unseen underneath it."
     },
     "protective_control": {
       "name": "Protective Control",
-      "insight": "Your answers suggest this character feels safest when they can control what happens.",
-      "supporting_text": "Control may protect them from chaos, but it can also prevent trust.",
-      "next_discovery_hint": "Next, discover what this control damages."
+      "insight": "A possible pattern is that they control the room before the room can surprise or expose them.",
+      "supporting_text": "Your answers point toward planning, certainty, and a fear of what happens when someone else has power.",
+      "next_discovery_hint": "Possible cost: the tighter they hold the story, the less room remains for trust."
     },
     "protective_invisibility": {
       "name": "Protective Invisibility",
-      "insight": "Your answers suggest this character believes staying unseen keeps them safe.",
-      "supporting_text": "They may avoid attention, intimacy, or risk because being noticed feels dangerous.",
-      "next_discovery_hint": "Next, discover what they lose by hiding."
+      "insight": "A possible pattern is that they hide in plain sight, staying useful or quiet so no one looks too closely.",
+      "supporting_text": "Your answers point toward avoidance of attention, emotional cover, and the safety of not being noticed.",
+      "next_discovery_hint": "Possible cost: they may avoid danger by also avoiding being truly known."
     },
     "fear_abandonment": {
       "name": "Fear of Abandonment",
-      "insight": "Your answers suggest this character is shaped by the fear of being left alone.",
-      "supporting_text": "They may push people away before anyone has the chance to leave.",
-      "next_discovery_hint": "Next, discover how this fear creates conflict."
+      "insight": "A possible pattern is that they leave first, test loyalty, or pull away because waiting to be left feels worse.",
+      "supporting_text": "Your answers point toward separation, uncertainty, and connection that feels temporary even when it is offered.",
+      "next_discovery_hint": "Possible cost: they may create the distance they were trying to survive."
     },
     "fear_being_known": {
       "name": "Fear of Being Known",
-      "insight": "Your answers suggest this character fears closeness because being known feels unsafe.",
-      "supporting_text": "They may want connection while resisting the vulnerability connection requires.",
-      "next_discovery_hint": "Next, discover what kind of relationship challenges this creates."
+      "insight": "A possible pattern is that they change the subject, withhold the truth, or stay charming when closeness asks for honesty.",
+      "supporting_text": "Your answers point toward wanting connection while resisting the exposure connection requires.",
+      "next_discovery_hint": "Possible cost: people may love the version they show while never meeting the part that needs love most."
     },
     "emotional_defense": {
-      "name": "Emotional Defense Emerging",
-      "insight": "Your answers suggest this character's wound is beginning to shape how they protect themselves.",
-      "supporting_text": "Look at the connection between their fear and the way they choose to survive.",
-      "next_discovery_hint": "Next, discover what this protection costs them."
+      "name": "Emerging Behavior",
+      "insight": "Your answers seem to point toward a repeated protective behavior, not just a private wound.",
+      "supporting_text": "Look for what this character does when they feel misunderstood, unwanted, exposed, or unsafe.",
+      "next_discovery_hint": "Possible cost: the behavior that helps them survive may also block the relationship or choice their story needs."
     },
     "abandonment": {
       "abandonment_as_certainty": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Abandonment as Certainty",
+        "insight": "A possible pattern is that they expect people to leave, so they stop trusting permanence before it can disappoint them.",
+        "supporting_text": "Your answers point toward being left, bracing for loss, and treating attachment as temporary.",
+        "next_discovery_hint": "Possible cost: they may reject real devotion because it arrives too late to feel believable."
       },
       "clinging_as_survival": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Clinging as Survival",
+        "insight": "A possible pattern is that they hold on tighter when connection feels uncertain.",
+        "supporting_text": "Your answers point toward searching, pursuing, checking, and needing proof that someone will stay.",
+        "next_discovery_hint": "Possible cost: the more they pursue reassurance, the more fragile the relationship can become."
       },
       "fear_of_abandonment": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Fear of Abandonment",
+        "insight": "A possible pattern is that they read distance as a warning and react before the loss actually happens.",
+        "supporting_text": "Your answers point toward waiting for departure, testing closeness, or protecting against being left.",
+        "next_discovery_hint": "Possible cost: they may turn ordinary uncertainty into the very separation they fear."
       },
       "preemptive_withdrawal": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Preemptive Withdrawal",
+        "insight": "A possible pattern is that they withdraw first so no one else gets the final word.",
+        "supporting_text": "Your answers point toward silence, distance, and choosing absence before rejection can arrive.",
+        "next_discovery_hint": "Possible cost: they may call it safety while the story reads it as loneliness."
       },
       "testing_loyalty": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Testing Loyalty",
+        "insight": "A possible pattern is that they test people instead of asking directly whether they are loved.",
+        "supporting_text": "Your answers point toward watching, waiting, provoking, or setting hidden trials for connection.",
+        "next_discovery_hint": "Possible cost: the people who care may begin to feel judged instead of trusted."
       }
     },
     "attachment": {
       "anxious_attachment": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Anxious Attachment",
+        "insight": "A possible pattern is that they search for proof of closeness whenever silence leaves room for doubt.",
+        "supporting_text": "Your answers point toward pursuing, checking, and reading small distances as emotional danger.",
+        "next_discovery_hint": "Possible cost: reassurance may never last long enough to let them rest."
       },
       "attachment_through_crisis": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Attachment Through Crisis",
+        "insight": "A possible pattern is that they feel closest to others when something is going wrong.",
+        "supporting_text": "Your answers point toward rescue, urgency, and connection that becomes clearest under pressure.",
+        "next_discovery_hint": "Possible cost: peace may feel less intimate than crisis."
       },
       "avoidant_attachment": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Avoidant Attachment",
+        "insight": "A possible pattern is that they step back when closeness starts asking for vulnerability.",
+        "supporting_text": "Your answers point toward independence, silence, and distance as a way to stay in control.",
+        "next_discovery_hint": "Possible cost: people may mistake their fear for indifference."
       }
     },
     "trust": {
       "conditional_trust": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Conditional Trust",
+        "insight": "A possible pattern is that they trust only while the other person keeps passing invisible tests.",
+        "supporting_text": "Your answers point toward guarded permission, watchfulness, and affection that must keep proving itself.",
+        "next_discovery_hint": "Possible cost: trust may become a contract no one knows how to fulfill."
       },
       "trust_destroyed": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Trust Destroyed",
+        "insight": "A possible pattern is that they treat new tenderness as if it already contains the old betrayal.",
+        "supporting_text": "Your answers point toward broken faith, suspicion, and closeness filtered through past harm.",
+        "next_discovery_hint": "Possible cost: they may punish the present for what the past did."
       }
     },
     "worth": {
       "conditional_worth": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Conditional Worth",
+        "insight": "A possible pattern is that they perform value before anyone can decide they are not enough.",
+        "supporting_text": "Your answers point toward earning love, proving usefulness, and hiding need behind achievement.",
+        "next_discovery_hint": "Possible cost: they may become needed without ever feeling chosen."
       },
       "invisible_unless_useful": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Invisible Unless Useful",
+        "insight": "A possible pattern is that they become useful whenever they fear they are otherwise easy to overlook.",
+        "supporting_text": "Your answers point toward service, competence, and the belief that presence must be justified.",
+        "next_discovery_hint": "Possible cost: they may confuse being relied on with being loved."
       },
       "love_through_performance": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Love Through Performance",
+        "insight": "A possible pattern is that they keep performing the self others praise, even when it costs them honesty.",
+        "supporting_text": "Your answers point toward applause, achievement, and a fear that affection depends on output.",
+        "next_discovery_hint": "Possible cost: success may become another way to stay unknown."
       },
       "worth_through_usefulness": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Worth Through Usefulness",
+        "insight": "A possible pattern is that they offer solutions before anyone can notice their need.",
+        "supporting_text": "Your answers point toward helping, fixing, and becoming indispensable as emotional cover.",
+        "next_discovery_hint": "Possible cost: the more useful they become, the less permission they feel to be vulnerable."
       }
     },
     "sacrifice": {
       "duty_over_desire": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Duty Over Desire",
+        "insight": "A possible pattern is that they choose duty before desire has a chance to speak.",
+        "supporting_text": "Your answers point toward obligation, restraint, and refusing what they want because wanting feels dangerous.",
+        "next_discovery_hint": "Possible cost: the story may force them to admit what obedience has been burying."
       },
       "martyrdom": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Martyrdom",
+        "insight": "A possible pattern is that they suffer visibly or silently because sacrifice has become their proof of love.",
+        "supporting_text": "Your answers point toward endurance, self-denial, and measuring devotion by how much it costs.",
+        "next_discovery_hint": "Possible cost: they may resent the very people they are trying to protect."
       },
       "rescuer_identity": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Rescuer Identity",
+        "insight": "A possible pattern is that they rescue others before anyone can ask what they need.",
+        "supporting_text": "Your answers point toward saving, fixing, and becoming necessary in moments of pain.",
+        "next_discovery_hint": "Possible cost: they may be valued for rescue while remaining emotionally unseen."
       },
       "sacrifice_as_proof_of_love": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Sacrifice as Proof of Love",
+        "insight": "A possible pattern is that they give up pieces of themselves to prove the relationship matters.",
+        "supporting_text": "Your answers point toward surrender, loyalty, and love measured through loss.",
+        "next_discovery_hint": "Possible cost: love may start requiring disappearance."
       },
       "self_worth_through_suffering": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Self-Worth Through Suffering",
+        "insight": "A possible pattern is that they endure pain because ease feels undeserved.",
+        "supporting_text": "Your answers point toward guilt, punishment, and mistaking suffering for moral proof.",
+        "next_discovery_hint": "Possible cost: they may resist happiness even when the story offers it."
       }
     },
     "vulnerability": {
       "emotional_numbness": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Emotional Numbness",
+        "insight": "A possible pattern is that they go quiet inside when feeling too much would demand a response.",
+        "supporting_text": "Your answers point toward shutting down, staying composed, and surviving by feeling less.",
+        "next_discovery_hint": "Possible cost: numbness may protect them from pain while also muting love."
       },
       "openness_as_danger": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Openness as Danger",
+        "insight": "A possible pattern is that they treat honesty like an unlocked door someone could use against them.",
+        "supporting_text": "Your answers point toward secrecy, caution, and fear around being emotionally exposed.",
+        "next_discovery_hint": "Possible cost: no one can protect the truth they are never allowed to see."
       },
       "strength_as_armor": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Strength as Armor",
+        "insight": "A possible pattern is that they stay strong so no one can see where they are breakable.",
+        "supporting_text": "Your answers point toward endurance, refusal of help, and pride used as cover.",
+        "next_discovery_hint": "Possible cost: they may be admired for strength while left alone with pain."
       },
       "vulnerability_as_chaos": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Vulnerability as Chaos",
+        "insight": "A possible pattern is that they avoid emotional openness because one honest feeling might undo the order they rely on.",
+        "supporting_text": "Your answers point toward control, restraint, and fear of what happens when emotion spills over.",
+        "next_discovery_hint": "Possible cost: they may keep life orderly by keeping intimacy shallow."
       }
     },
     "love": {
       "fear_of_burdening": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Fear of Burdening",
+        "insight": "A possible pattern is that they hide their needs so love never has to carry them.",
+        "supporting_text": "Your answers point toward silence, apology, and shrinking their pain before anyone can call it too much.",
+        "next_discovery_hint": "Possible cost: the people who love them may never know where help is needed."
       },
       "idealized_love": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Idealized Love",
+        "insight": "A possible pattern is that they chase the idea of love when the real person becomes complicated.",
+        "supporting_text": "Your answers point toward longing, projection, and preferring the imagined bond to the difficult one.",
+        "next_discovery_hint": "Possible cost: reality may feel like betrayal whenever it stops matching the dream."
       },
       "love_as_dangerous_power": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Love as Dangerous Power",
+        "insight": "A possible pattern is that they pull away when love starts having the power to change them.",
+        "supporting_text": "Your answers point toward attraction, fear, and treating intimacy as something that can take control.",
+        "next_discovery_hint": "Possible cost: they may resist the relationship that could transform the story."
       },
       "love_as_loss_of_self": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Love as Loss of Self",
+        "insight": "A possible pattern is that they fear closeness will ask them to disappear.",
+        "supporting_text": "Your answers point toward merging, surrender, and defending identity against intimacy.",
+        "next_discovery_hint": "Possible cost: they may choose isolation to stay intact."
       },
       "love_as_transaction": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Love as Transaction",
+        "insight": "A possible pattern is that they give, bargain, or perform because love feels safer when it has terms.",
+        "supporting_text": "Your answers point toward exchange, debt, and affection that must be earned or repaid.",
+        "next_discovery_hint": "Possible cost: tenderness may become negotiation instead of trust."
       }
     },
     "grief": {
       "frozen_in_time": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Frozen in Time",
+        "insight": "A possible pattern is that they keep returning to the moment of loss instead of stepping into what comes after.",
+        "supporting_text": "Your answers point toward memory, refusal of change, and a life organized around what cannot return.",
+        "next_discovery_hint": "Possible cost: the future may feel like betrayal."
       },
       "grief_as_identity": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Grief as Identity",
+        "insight": "A possible pattern is that they hold onto grief because letting it soften would change who they believe they are.",
+        "supporting_text": "Your answers point toward loyalty to loss, self-definition through pain, and fear of moving on.",
+        "next_discovery_hint": "Possible cost: healing may feel like abandoning what mattered."
       },
       "grief_denied": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Grief Denied",
+        "insight": "A possible pattern is that they stay busy, useful, or composed so sorrow never gets a clear voice.",
+        "supporting_text": "Your answers point toward avoidance, performance, and grief displaced into action.",
+        "next_discovery_hint": "Possible cost: what they refuse to mourn may begin shaping every choice."
       }
     },
     "control": {
       "hypervigilance": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Hypervigilance",
+        "insight": "A possible pattern is that they scan for danger before anyone else has noticed the room has changed.",
+        "supporting_text": "Your answers point toward watching, anticipating, and seeking certainty before trust can form.",
+        "next_discovery_hint": "Possible cost: they may mistake calm for the moment before harm."
       },
       "power_as_safety": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Power as Safety",
+        "insight": "A possible pattern is that they take control before anyone can make them powerless again.",
+        "supporting_text": "Your answers point toward dominance, command, and safety built through leverage.",
+        "next_discovery_hint": "Possible cost: the people closest to them may experience protection as pressure."
       },
       "rigidity_as_protection": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Rigidity as Protection",
+        "insight": "A possible pattern is that they cling to rules when uncertainty starts feeling dangerous.",
+        "supporting_text": "Your answers point toward structure, refusal, and controlling change before it can hurt them.",
+        "next_discovery_hint": "Possible cost: the rule that protects them may become the wall they cannot cross."
       }
     },
     "belonging": {
       "belonging_through_caretaking": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Belonging Through Caretaking",
+        "insight": "A possible pattern is that they care for others before asking whether they are allowed to belong.",
+        "supporting_text": "Your answers point toward helping, watching needs, and earning a place through service.",
+        "next_discovery_hint": "Possible cost: they may be welcomed for what they give, not for who they are."
       },
       "belonging_through_conformity": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Belonging Through Conformity",
+        "insight": "A possible pattern is that they change shape to fit the room before anyone can reject the real version.",
+        "supporting_text": "Your answers point toward masking, agreement, and hiding difference to stay included.",
+        "next_discovery_hint": "Possible cost: belonging may require the loss of self."
       },
       "exile_self_imposed": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Self-Imposed Exile",
+        "insight": "A possible pattern is that they stand outside the circle before anyone can push them there.",
+        "supporting_text": "Your answers point toward distance, outsider identity, and choosing isolation as protection.",
+        "next_discovery_hint": "Possible cost: exile may become familiar enough to feel like home."
       },
       "outsider_as_shield": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Outsider as Shield",
+        "insight": "A possible pattern is that they turn being different into armor before anyone can use it as a wound.",
+        "supporting_text": "Your answers point toward defiance, distance, and expecting misunderstanding before it happens.",
+        "next_discovery_hint": "Possible cost: the shield that protects their difference may also block recognition."
       }
     },
     "guilt": {
       "deserved_suffering": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Deserved Suffering",
+        "insight": "A possible pattern is that they accept pain because part of them believes relief would be unearned.",
+        "supporting_text": "Your answers point toward guilt, punishment, and refusing comfort when it appears.",
+        "next_discovery_hint": "Possible cost: they may mistake suffering for accountability."
       },
       "endless_apology": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Endless Apology",
+        "insight": "A possible pattern is that they apologize before anyone has accused them.",
+        "supporting_text": "Your answers point toward self-blame, repair attempts, and shrinking to keep peace.",
+        "next_discovery_hint": "Possible cost: apology may replace honest self-forgiveness."
       },
       "fear_of_becoming_the_harm": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Fear of Becoming the Harm",
+        "insight": "A possible pattern is that they hold themselves back because they fear becoming what hurt them.",
+        "supporting_text": "Your answers point toward restraint, avoidance, and suspicion of their own power.",
+        "next_discovery_hint": "Possible cost: they may refuse necessary action because action feels dangerous."
       },
       "guilt_as_identity": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Guilt as Identity",
+        "insight": "A possible pattern is that they keep guilt close because it tells them who they are allowed to be.",
+        "supporting_text": "Your answers point toward memory, self-judgment, and identity organized around a wrong.",
+        "next_discovery_hint": "Possible cost: they may resist change because innocence feels impossible."
       },
       "self_preservation_as_betrayal": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Self-Preservation as Betrayal",
+        "insight": "A possible pattern is that they refuse to save themselves when survival feels like abandoning someone else.",
+        "supporting_text": "Your answers point toward loyalty, guilt, and treating personal need as a betrayal.",
+        "next_discovery_hint": "Possible cost: love may become a reason not to live fully."
       }
     },
     "identity": {
       "false_self": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "False Self",
+        "insight": "A possible pattern is that they present the version that keeps them safe and hide the version that feels too costly to show.",
+        "supporting_text": "Your answers point toward performance, concealment, and identity shaped around acceptance.",
+        "next_discovery_hint": "Possible cost: the safer self may become a prison."
       },
       "identity_defined_by_role": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Identity Defined by Role",
+        "insight": "A possible pattern is that they become the role so completely that wanting something else feels like betrayal.",
+        "supporting_text": "Your answers point toward duty, usefulness, and selfhood narrowed into a function.",
+        "next_discovery_hint": "Possible cost: losing the role may feel like losing the self."
       },
       "identity_through_opposition": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Identity Through Opposition",
+        "insight": "A possible pattern is that they define themselves by resisting what hurt or controlled them.",
+        "supporting_text": "Your answers point toward defiance, refusal, and a self built against something.",
+        "next_discovery_hint": "Possible cost: opposition may keep the old wound in charge."
       },
       "lost_self": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Lost Self",
+        "insight": "A possible pattern is that they search for direction because their own wanting has gone quiet.",
+        "supporting_text": "Your answers point toward uncertainty, dependence, and difficulty naming what belongs to them.",
+        "next_discovery_hint": "Possible cost: other people may keep writing their story for them."
       }
     },
     "shame": {
       "internalized_unworthiness": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Internalized Unworthiness",
+        "insight": "A possible pattern is that they reject care before anyone can confirm the shame they already believe.",
+        "supporting_text": "Your answers point toward hiding, self-denial, and expecting rejection from the inside out.",
+        "next_discovery_hint": "Possible cost: love may feel suspicious simply because it contradicts their self-image."
       },
       "shame_as_secret": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Shame as Secret",
+        "insight": "A possible pattern is that they protect the secret so carefully that the secrecy begins making their choices.",
+        "supporting_text": "Your answers point toward concealment, silence, and fear of being known through one hidden truth.",
+        "next_discovery_hint": "Possible cost: the secret may gain more power than the truth itself."
       },
       "shame_driven_achievement": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Shame-Driven Achievement",
+        "insight": "A possible pattern is that they keep achieving so no one has time to notice where they feel unworthy.",
+        "supporting_text": "Your answers point toward performance, pressure, and success used as cover.",
+        "next_discovery_hint": "Possible cost: achievement may postpone shame without healing it."
       },
       "shame_masked_as_pride": {
-        "name": "[Pattern Name]",
-        "insight": "[Pattern Insight]",
-        "supporting_text": "[Pattern Supporting Text]",
-        "next_discovery_hint": "[Pattern Next Hint]"
+        "name": "Shame Masked as Pride",
+        "insight": "A possible pattern is that they act untouchable where they actually feel most exposed.",
+        "supporting_text": "Your answers point toward pride, deflection, and confidence used to protect a hidden bruise.",
+        "next_discovery_hint": "Possible cost: people may challenge the pride without ever seeing the pain beneath it."
       }
     },
     "relationship": {

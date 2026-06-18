@@ -59,16 +59,16 @@ const CharacterDiscovery: React.FC = () => {
       
       const events = data.unlocked_events || [];
       if (events.length > 0) {
-        // Find the most significant event to show (Insight first, then Pattern)
-        const insightEvent = events.find(e => e.event_type === 'INSIGHT_UNLOCKED');
+        // Pattern synthesis should land as the earned milestone once enough answers exist.
         const patternEvent = events.find(e => e.event_type === 'PATTERN_EMERGING');
+        const insightEvent = events.find(e => e.event_type === 'INSIGHT_UNLOCKED');
         
-        if (insightEvent) {
-          setUnlockedEvent(insightEvent);
-          setShowInsight(true);
-        } else if (patternEvent) {
+        if (patternEvent) {
           setUnlockedEvent(patternEvent);
           setShowPattern(true);
+        } else if (insightEvent) {
+          setUnlockedEvent(insightEvent);
+          setShowInsight(true);
         }
       }
     },

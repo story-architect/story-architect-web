@@ -591,15 +591,15 @@
     },
     "identity": {
       "false_self": {
-        "narrative_consequence": "[FR] [Narrative Consequence]",
-        "conflict_created": "[FR] [Conflict Created]",
-        "pressure_point": "[FR] [Pressure Point]",
-        "transformation_path": "[FR] [Transformation Path]",
-        "consequence": "[FR] [Consequence]",
-        "relationship_pattern": "[FR] [Relationship Pattern]",
-        "inciting_relationship": "[FR] [Inciting Relationship]",
-        "central_conflict": "[FR] [Central Conflict]",
-        "dramatic_potential": "[FR] [Dramatic Potential]"
+        "narrative_consequence": "Il garde le masque intact, meme lorsque l honnetete pourrait creer le lien dont il a besoin.",
+        "conflict_created": "Le conflit nait lorsque le faux soi qui le protege commence a lui couter la possibilite d etre vraiment connu.",
+        "pressure_point": "Une relation ou une crise l oblige a choisir entre maintenir la performance et reveler ce qui se trouve dessous.",
+        "transformation_path": "Il doit risquer d etre vu sans le role, le charme ou la performance qui l ont garde en securite.",
+        "consequence": "Plus le masque devient convaincant, moins les autres peuvent atteindre la personne cachee derriere.",
+        "relationship_pattern": "Joue la proximite tout en cachant la verite.",
+        "inciting_relationship": "Quelqu un commence a repondre au vrai soi derriere le masque.",
+        "central_conflict": "Il doit choisir entre etre accepte comme performance et etre connu comme lui-meme.",
+        "dramatic_potential": "Parce que ce personnage survit en masquant son vrai soi, chaque moment intime devient une epreuve de performance. Plus quelqu un s approche, plus il devient difficile de garder le faux soi intact. Cela cree une histoire sur le risque d etre vu pour etre aime."
       },
       "identity_defined_by_role": {
         "narrative_consequence": "[FR] [Narrative Consequence]",
@@ -975,377 +975,377 @@
   },
   "patterns": {
     "protective_independence": {
-      "name": "Indépendance Protectrice",
-      "insight": "Vos réponses suggèrent que ce personnage se protège en refusant d'avoir besoin de qui que ce soit.",
-      "supporting_text": "Leur indépendance peut ressembler à de la force, mais elle maintient également les autres à distance.",
-      "next_discovery_hint": "Ensuite, découvrez ce que cette protection leur coûte."
+      "name": "Independance protectrice",
+      "insight": "Une piste possible : ce personnage refuse l aide avant que quelqu un puisse decider qu il est trop lourd a porter.",
+      "supporting_text": "Vos reponses pointent vers la distance, l autonomie et l habitude d affronter le danger seul.",
+      "next_discovery_hint": "Cout possible : plus il protege son independance, plus il devient difficile de l atteindre."
     },
     "conditional_worth": {
-      "name": "Valeur Conditionnelle",
-      "insight": "Vos réponses suggèrent que ce personnage croit devoir être parfait pour être en sécurité ou accepté.",
-      "supporting_text": "Leur besoin d'afficher de la force peut cacher une peur plus profonde du rejet.",
-      "next_discovery_hint": "Ensuite, découvrez la pression que cela crée."
+      "name": "Valeur conditionnelle",
+      "insight": "Une piste possible : ce personnage performe, prouve et se perfectionne lorsqu il craint que l amour lui soit retire.",
+      "supporting_text": "Vos reponses pointent vers une valeur qu il faut gagner par la reussite, l utilite ou l absence de faille.",
+      "next_discovery_hint": "Cout possible : il peut etre admire pour le masque tout en se sentant invisible dessous."
     },
     "protective_control": {
-      "name": "Contrôle Protecteur",
-      "insight": "Vos réponses suggèrent que ce personnage se sent le plus en sécurité lorsqu'il peut contrôler ce qui se passe.",
-      "supporting_text": "Le contrôle peut les protéger du chaos, mais il peut aussi empêcher la confiance.",
-      "next_discovery_hint": "Ensuite, découvrez ce que ce contrôle endommage."
+      "name": "Controle protecteur",
+      "insight": "Une piste possible : ce personnage controle la piece avant que la piece puisse le surprendre ou l exposer.",
+      "supporting_text": "Vos reponses pointent vers la planification, la certitude et la peur de ce qui arrive quand quelqu un d autre a du pouvoir.",
+      "next_discovery_hint": "Cout possible : plus il tient l histoire fermement, moins il reste de place pour la confiance."
     },
     "protective_invisibility": {
-      "name": "Invisibilité Protectrice",
-      "insight": "Vos réponses suggèrent que ce personnage croit que rester invisible le garde en sécurité.",
-      "supporting_text": "Ils peuvent éviter l'attention, l'intimité ou les risques car être remarqué semble dangereux.",
-      "next_discovery_hint": "Ensuite, découvrez ce qu'ils perdent en se cachant."
+      "name": "Invisibilite protectrice",
+      "insight": "Une piste possible : ce personnage se cache en pleine vue, en restant utile ou silencieux pour qu on ne le regarde pas de trop pres.",
+      "supporting_text": "Vos reponses pointent vers l evitement de l attention, la couverture emotionnelle et la securite de ne pas etre remarque.",
+      "next_discovery_hint": "Cout possible : il peut eviter le danger en evitant aussi d etre vraiment connu."
     },
     "fear_abandonment": {
-      "name": "Peur de l'Abandon",
-      "insight": "Vos réponses suggèrent que ce personnage est façonné par la peur d'être laissé seul.",
-      "supporting_text": "Ils peuvent repousser les gens avant que quiconque ait la chance de partir.",
-      "next_discovery_hint": "Ensuite, découvrez comment cette peur crée des conflits."
+      "name": "Peur de l abandon",
+      "insight": "Une piste possible : ce personnage part le premier, teste la loyaute ou se retire parce qu attendre d etre quitte semble pire.",
+      "supporting_text": "Vos reponses pointent vers la separation, l incertitude et une connexion qui parait temporaire meme quand elle est offerte.",
+      "next_discovery_hint": "Cout possible : il peut creer la distance qu il tentait de survivre."
     },
     "fear_being_known": {
-      "name": "Peur d'Être Connu",
-      "insight": "Vos réponses suggèrent que ce personnage craint la proximité car être connu ne semble pas sûr.",
-      "supporting_text": "Ils peuvent vouloir une connexion tout en résistant à la vulnérabilité que la connexion exige.",
-      "next_discovery_hint": "Ensuite, découvrez quels types de défis relationnels cela crée."
+      "name": "Peur d etre connu",
+      "insight": "Une piste possible : ce personnage change de sujet, retient la verite ou reste charmant lorsque la proximite exige de l honnetete.",
+      "supporting_text": "Vos reponses pointent vers le desir de lien et la resistance a l exposition que ce lien demande.",
+      "next_discovery_hint": "Cout possible : les autres peuvent aimer la version qu il montre sans jamais rencontrer la part qui a le plus besoin d amour."
     },
     "emotional_defense": {
-      "name": "Défense Émotionnelle Émergente",
-      "insight": "Vos réponses suggèrent que la blessure de ce personnage commence à façonner la façon dont il se protège.",
-      "supporting_text": "Examinez le lien entre leur peur et la façon dont ils choisissent de survivre.",
-      "next_discovery_hint": "Ensuite, découvrez ce que cette protection leur coûte."
+      "name": "Comportement emergent",
+      "insight": "Vos reponses semblent pointer vers un comportement protecteur repete, pas seulement vers une blessure intime.",
+      "supporting_text": "Observez ce que ce personnage fait lorsqu il se sent incompris, indesirable, expose ou en danger.",
+      "next_discovery_hint": "Cout possible : le comportement qui l aide a survivre peut aussi bloquer la relation ou le choix dont son histoire a besoin."
     },
     "abandonment": {
       "abandonment_as_certainty": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Abandon comme certitude",
+        "insight": "Une piste possible : ce personnage s attend a etre quitte, alors il cesse de croire a ce qui dure avant que cela puisse le decevoir.",
+        "supporting_text": "Vos reponses pointent vers le fait d etre laisse, l anticipation de la perte et l attachement vecu comme temporaire.",
+        "next_discovery_hint": "Cout possible : il peut rejeter une devotion reelle parce qu elle arrive trop tard pour sembler credible."
       },
       "clinging_as_survival": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "S accrocher pour survivre",
+        "insight": "Une piste possible : ce personnage tient plus fort lorsque la connexion devient incertaine.",
+        "supporting_text": "Vos reponses pointent vers la recherche, la poursuite, la verification et le besoin de preuve que l autre restera.",
+        "next_discovery_hint": "Cout possible : plus il cherche a etre rassure, plus la relation devient fragile."
       },
       "fear_of_abandonment": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Peur de l abandon",
+        "insight": "Une piste possible : ce personnage lit la distance comme un avertissement et reagit avant que la perte arrive vraiment.",
+        "supporting_text": "Vos reponses pointent vers l attente du depart, l epreuve de la proximite ou la protection contre l abandon.",
+        "next_discovery_hint": "Cout possible : il peut transformer l incertitude ordinaire en separation reelle."
       },
       "preemptive_withdrawal": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Retrait preventif",
+        "insight": "Une piste possible : ce personnage se retire le premier pour que personne d autre n ait le dernier mot.",
+        "supporting_text": "Vos reponses pointent vers le silence, la distance et le choix de l absence avant que le rejet arrive.",
+        "next_discovery_hint": "Cout possible : il peut appeler cela de la securite tandis que l histoire y voit de la solitude."
       },
       "testing_loyalty": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Loyaute mise a l epreuve",
+        "insight": "Une piste possible : ce personnage teste les autres au lieu de demander directement s il est aime.",
+        "supporting_text": "Vos reponses pointent vers l observation, l attente, la provocation ou des epreuves cachees imposees au lien.",
+        "next_discovery_hint": "Cout possible : ceux qui l aiment peuvent se sentir juges plutot que crus."
       }
     },
     "attachment": {
       "anxious_attachment": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Attachement anxieux",
+        "insight": "Une piste possible : ce personnage cherche une preuve de proximite chaque fois que le silence laisse place au doute.",
+        "supporting_text": "Vos reponses pointent vers la poursuite, la verification et les petites distances lues comme un danger affectif.",
+        "next_discovery_hint": "Cout possible : la reassurance peut ne jamais durer assez longtemps pour le laisser respirer."
       },
       "attachment_through_crisis": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Attachement par la crise",
+        "insight": "Une piste possible : ce personnage se sent le plus proche des autres lorsque quelque chose va mal.",
+        "supporting_text": "Vos reponses pointent vers le secours, l urgence et un lien qui devient plus clair sous pression.",
+        "next_discovery_hint": "Cout possible : la paix peut sembler moins intime que la crise."
       },
       "avoidant_attachment": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Attachement evitant",
+        "insight": "Une piste possible : ce personnage recule lorsque la proximite commence a demander de la vulnerabilite.",
+        "supporting_text": "Vos reponses pointent vers l independance, le silence et la distance comme moyen de garder le controle.",
+        "next_discovery_hint": "Cout possible : les autres peuvent prendre sa peur pour de l indifference."
       }
     },
     "trust": {
       "conditional_trust": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Confiance conditionnelle",
+        "insight": "Une piste possible : ce personnage ne fait confiance que tant que l autre reussit des tests invisibles.",
+        "supporting_text": "Vos reponses pointent vers une permission prudente, la vigilance et une affection qui doit toujours se prouver.",
+        "next_discovery_hint": "Cout possible : la confiance peut devenir un contrat que personne ne sait remplir."
       },
       "trust_destroyed": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Confiance detruite",
+        "insight": "Une piste possible : ce personnage traite une nouvelle tendresse comme si elle contenait deja l ancienne trahison.",
+        "supporting_text": "Vos reponses pointent vers une foi brisee, la suspicion et la proximite filtree par un tort passe.",
+        "next_discovery_hint": "Cout possible : il peut punir le present pour ce que le passe a fait."
       }
     },
     "worth": {
       "conditional_worth": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Valeur conditionnelle",
+        "insight": "Une piste possible : ce personnage prouve sa valeur avant que quelqu un puisse decider qu il ne suffit pas.",
+        "supporting_text": "Vos reponses pointent vers l amour a meriter, l utilite a prouver et le besoin cache derriere la reussite.",
+        "next_discovery_hint": "Cout possible : il peut devenir necessaire sans jamais se sentir choisi."
       },
       "invisible_unless_useful": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Invisible sauf utile",
+        "insight": "Une piste possible : ce personnage devient utile chaque fois qu il craint d etre facile a oublier.",
+        "supporting_text": "Vos reponses pointent vers le service, la competence et l idee que sa presence doit se justifier.",
+        "next_discovery_hint": "Cout possible : il peut confondre etre indispensable et etre aime."
       },
       "love_through_performance": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Amour par la performance",
+        "insight": "Une piste possible : ce personnage continue de jouer le role que les autres applaudissent, meme quand cela lui coute son honnetete.",
+        "supporting_text": "Vos reponses pointent vers les eloges, la reussite et la peur que l affection depende du resultat.",
+        "next_discovery_hint": "Cout possible : la reussite peut devenir une autre facon de rester inconnu."
       },
       "worth_through_usefulness": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Valeur par l utilite",
+        "insight": "Une piste possible : ce personnage propose des solutions avant que quelqu un puisse voir son besoin.",
+        "supporting_text": "Vos reponses pointent vers aider, reparer et devenir indispensable comme couverture emotionnelle.",
+        "next_discovery_hint": "Cout possible : plus il devient utile, moins il s autorise a etre vulnerable."
       }
     },
     "sacrifice": {
       "duty_over_desire": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Devoir avant desir",
+        "insight": "Une piste possible : ce personnage choisit le devoir avant que le desir ait le temps de parler.",
+        "supporting_text": "Vos reponses pointent vers l obligation, la retenue et le refus de ce qu il veut parce que vouloir semble dangereux.",
+        "next_discovery_hint": "Cout possible : l histoire peut le forcer a avouer ce que l obeissance enterrait."
       },
       "martyrdom": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Martyre",
+        "insight": "Une piste possible : ce personnage souffre, visiblement ou en silence, parce que le sacrifice est devenu sa preuve d amour.",
+        "supporting_text": "Vos reponses pointent vers l endurance, l effacement de soi et une devotion mesuree a son cout.",
+        "next_discovery_hint": "Cout possible : il peut finir par en vouloir aux personnes qu il tente de proteger."
       },
       "rescuer_identity": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Identite de sauveur",
+        "insight": "Une piste possible : ce personnage sauve les autres avant que quelqu un puisse demander ce dont lui a besoin.",
+        "supporting_text": "Vos reponses pointent vers sauver, reparer et devenir necessaire dans la douleur.",
+        "next_discovery_hint": "Cout possible : il peut etre aime pour le secours tout en restant invisible affectivement."
       },
       "sacrifice_as_proof_of_love": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Sacrifice comme preuve d amour",
+        "insight": "Une piste possible : ce personnage abandonne des parts de lui-meme pour prouver que le lien compte.",
+        "supporting_text": "Vos reponses pointent vers l abandon, la loyaute et un amour mesure par la perte.",
+        "next_discovery_hint": "Cout possible : l amour peut commencer a exiger sa disparition."
       },
       "self_worth_through_suffering": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Valeur par la souffrance",
+        "insight": "Une piste possible : ce personnage endure la douleur parce que le calme semble immerite.",
+        "supporting_text": "Vos reponses pointent vers la culpabilite, la punition et la confusion entre souffrance et preuve morale.",
+        "next_discovery_hint": "Cout possible : il peut resister au bonheur meme lorsque l histoire le lui offre."
       }
     },
     "vulnerability": {
       "emotional_numbness": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Engourdissement emotionnel",
+        "insight": "Une piste possible : ce personnage s eteint interieurement lorsque ressentir trop fort demanderait une reponse.",
+        "supporting_text": "Vos reponses pointent vers le retrait, la maitrise et une survie fondee sur le fait de moins sentir.",
+        "next_discovery_hint": "Cout possible : l engourdissement peut le proteger de la douleur tout en etouffant l amour."
       },
       "openness_as_danger": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Ouverture comme danger",
+        "insight": "Une piste possible : ce personnage traite l honnetete comme une porte deverrouillee que quelqu un pourrait utiliser contre lui.",
+        "supporting_text": "Vos reponses pointent vers le secret, la prudence et la peur d etre expose affectivement.",
+        "next_discovery_hint": "Cout possible : personne ne peut proteger une verite qu il n a jamais le droit de voir."
       },
       "strength_as_armor": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Force comme armure",
+        "insight": "Une piste possible : ce personnage reste fort pour que personne ne voie ou il peut se briser.",
+        "supporting_text": "Vos reponses pointent vers l endurance, le refus d aide et la fierte utilisee comme couverture.",
+        "next_discovery_hint": "Cout possible : il peut etre admire pour sa force tout en restant seul avec sa douleur."
       },
       "vulnerability_as_chaos": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Vulnerabilite comme chaos",
+        "insight": "Une piste possible : ce personnage evite l ouverture affective parce qu un sentiment honnete pourrait defaire l ordre dont il depend.",
+        "supporting_text": "Vos reponses pointent vers le controle, la retenue et la peur de ce qui arrive quand l emotion deborde.",
+        "next_discovery_hint": "Cout possible : il peut garder sa vie ordonnee en gardant l intimite superficielle."
       }
     },
     "love": {
       "fear_of_burdening": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Peur d etre un fardeau",
+        "insight": "Une piste possible : ce personnage cache ses besoins pour que l amour n ait jamais a les porter.",
+        "supporting_text": "Vos reponses pointent vers le silence, l excuse et la reduction de sa douleur avant qu on la juge trop lourde.",
+        "next_discovery_hint": "Cout possible : ceux qui l aiment peuvent ne jamais savoir ou l aide est necessaire."
       },
       "idealized_love": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Amour idealise",
+        "insight": "Une piste possible : ce personnage poursuit l idee de l amour lorsque la personne reelle devient compliquee.",
+        "supporting_text": "Vos reponses pointent vers le desir, la projection et la preference pour le lien imagine plutot que le lien difficile.",
+        "next_discovery_hint": "Cout possible : la realite peut sembler une trahison des qu elle cesse de correspondre au reve."
       },
       "love_as_dangerous_power": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Amour comme pouvoir dangereux",
+        "insight": "Une piste possible : ce personnage se retire lorsque l amour commence a avoir le pouvoir de le changer.",
+        "supporting_text": "Vos reponses pointent vers l attirance, la peur et l intimite vecue comme quelque chose qui peut prendre le controle.",
+        "next_discovery_hint": "Cout possible : il peut resister a la relation qui pourrait transformer l histoire."
       },
       "love_as_loss_of_self": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Amour comme perte de soi",
+        "insight": "Une piste possible : ce personnage craint que la proximite lui demande de disparaitre.",
+        "supporting_text": "Vos reponses pointent vers la fusion, l abandon et la defense de l identite contre l intimite.",
+        "next_discovery_hint": "Cout possible : il peut choisir l isolement pour rester entier."
       },
       "love_as_transaction": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Amour comme transaction",
+        "insight": "Une piste possible : ce personnage donne, negocie ou performe parce que l amour semble plus sur lorsqu il a des conditions.",
+        "supporting_text": "Vos reponses pointent vers l echange, la dette et une affection qu il faut gagner ou rembourser.",
+        "next_discovery_hint": "Cout possible : la tendresse peut devenir une negociation au lieu d une confiance."
       }
     },
     "grief": {
       "frozen_in_time": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Fige dans le temps",
+        "insight": "Une piste possible : ce personnage revient sans cesse au moment de la perte au lieu d entrer dans ce qui vient apres.",
+        "supporting_text": "Vos reponses pointent vers la memoire, le refus du changement et une vie organisee autour de ce qui ne peut pas revenir.",
+        "next_discovery_hint": "Cout possible : l avenir peut ressembler a une trahison."
       },
       "grief_as_identity": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Deuil comme identite",
+        "insight": "Une piste possible : ce personnage garde son deuil parce que le laisser s adoucir changerait celui qu il croit etre.",
+        "supporting_text": "Vos reponses pointent vers la fidelite a la perte, une identite fondee sur la douleur et la peur de continuer.",
+        "next_discovery_hint": "Cout possible : guerir peut ressembler a abandonner ce qui comptait."
       },
       "grief_denied": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Deuil refuse",
+        "insight": "Une piste possible : ce personnage reste occupe, utile ou compose pour que le chagrin n ait jamais une voix claire.",
+        "supporting_text": "Vos reponses pointent vers l evitement, la performance et le deuil deplace dans l action.",
+        "next_discovery_hint": "Cout possible : ce qu il refuse de pleurer peut commencer a guider chacun de ses choix."
       }
     },
     "control": {
       "hypervigilance": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Hypervigilance",
+        "insight": "Une piste possible : ce personnage cherche le danger avant meme que les autres aient remarque que la piece a change.",
+        "supporting_text": "Vos reponses pointent vers l observation, l anticipation et la recherche de certitude avant que la confiance se forme.",
+        "next_discovery_hint": "Cout possible : il peut confondre le calme avec l instant qui precede le mal."
       },
       "power_as_safety": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Pouvoir comme securite",
+        "insight": "Une piste possible : ce personnage prend le controle avant que quelqu un puisse le rendre impuissant de nouveau.",
+        "supporting_text": "Vos reponses pointent vers la domination, le commandement et une securite construite par le levier.",
+        "next_discovery_hint": "Cout possible : les personnes proches peuvent vivre sa protection comme une pression."
       },
       "rigidity_as_protection": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Rigidite comme protection",
+        "insight": "Une piste possible : ce personnage s accroche aux regles lorsque l incertitude commence a sembler dangereuse.",
+        "supporting_text": "Vos reponses pointent vers la structure, le refus et le controle du changement avant qu il puisse blesser.",
+        "next_discovery_hint": "Cout possible : la regle qui le protege peut devenir le mur qu il ne sait plus traverser."
       }
     },
     "belonging": {
       "belonging_through_caretaking": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Appartenance par le soin",
+        "insight": "Une piste possible : ce personnage prend soin des autres avant de demander s il a le droit d appartenir.",
+        "supporting_text": "Vos reponses pointent vers l aide, l attention aux besoins et une place gagnee par le service.",
+        "next_discovery_hint": "Cout possible : il peut etre accueilli pour ce qu il donne, pas pour ce qu il est."
       },
       "belonging_through_conformity": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Appartenance par conformite",
+        "insight": "Une piste possible : ce personnage change de forme pour convenir au groupe avant que sa vraie version puisse etre rejetee.",
+        "supporting_text": "Vos reponses pointent vers le masque, l accord et la difference cachee pour rester inclus.",
+        "next_discovery_hint": "Cout possible : appartenir peut exiger la perte de soi."
       },
       "exile_self_imposed": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Exil choisi",
+        "insight": "Une piste possible : ce personnage reste hors du cercle avant que quelqu un puisse l en chasser.",
+        "supporting_text": "Vos reponses pointent vers la distance, l identite d outsider et l isolement choisi comme protection.",
+        "next_discovery_hint": "Cout possible : l exil peut devenir assez familier pour ressembler a une maison."
       },
       "outsider_as_shield": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Outsider comme bouclier",
+        "insight": "Une piste possible : ce personnage transforme sa difference en armure avant qu on puisse en faire une blessure.",
+        "supporting_text": "Vos reponses pointent vers le defi, la distance et l attente d etre mal compris.",
+        "next_discovery_hint": "Cout possible : le bouclier qui protege sa difference peut aussi bloquer la reconnaissance."
       }
     },
     "guilt": {
       "deserved_suffering": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Souffrance meritee",
+        "insight": "Une piste possible : ce personnage accepte la douleur parce qu une part de lui croit que le repos n est pas merite.",
+        "supporting_text": "Vos reponses pointent vers la culpabilite, la punition et le refus du reconfort lorsqu il apparait.",
+        "next_discovery_hint": "Cout possible : il peut confondre souffrir et reparer."
       },
       "endless_apology": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Excuse sans fin",
+        "insight": "Une piste possible : ce personnage s excuse avant meme d etre accuse.",
+        "supporting_text": "Vos reponses pointent vers l auto-accusation, la reparation et le fait de se faire petit pour garder la paix.",
+        "next_discovery_hint": "Cout possible : l excuse peut remplacer le vrai pardon de soi."
       },
       "fear_of_becoming_the_harm": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Peur de devenir le mal",
+        "insight": "Une piste possible : ce personnage se retient parce qu il craint de devenir ce qui l a blesse.",
+        "supporting_text": "Vos reponses pointent vers la retenue, l evitement et la mefiance envers son propre pouvoir.",
+        "next_discovery_hint": "Cout possible : il peut refuser une action necessaire parce qu agir semble dangereux."
       },
       "guilt_as_identity": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Culpabilite comme identite",
+        "insight": "Une piste possible : ce personnage garde la culpabilite pres de lui parce qu elle lui dit qui il a le droit d etre.",
+        "supporting_text": "Vos reponses pointent vers la memoire, le jugement de soi et une identite organisee autour d une faute.",
+        "next_discovery_hint": "Cout possible : il peut resister au changement parce que l innocence semble impossible."
       },
       "self_preservation_as_betrayal": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Se sauver comme trahison",
+        "insight": "Une piste possible : ce personnage refuse de se sauver lorsque survivre ressemble a abandonner quelqu un.",
+        "supporting_text": "Vos reponses pointent vers la loyaute, la culpabilite et le besoin personnel vecu comme une trahison.",
+        "next_discovery_hint": "Cout possible : l amour peut devenir une raison de ne pas vivre pleinement."
       }
     },
     "identity": {
       "false_self": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Faux soi",
+        "insight": "Une piste possible : ce personnage presente la version qui le garde en securite et cache celle qui semble trop couteuse a montrer.",
+        "supporting_text": "Vos reponses pointent vers la performance, le secret et une identite faconnee autour de l acceptation.",
+        "next_discovery_hint": "Cout possible : le soi le plus sur peut devenir une prison."
       },
       "identity_defined_by_role": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Identite definie par le role",
+        "insight": "Une piste possible : ce personnage devient son role si completement que vouloir autre chose ressemble a une trahison.",
+        "supporting_text": "Vos reponses pointent vers le devoir, l utilite et un soi reduit a une fonction.",
+        "next_discovery_hint": "Cout possible : perdre le role peut ressembler a se perdre soi-meme."
       },
       "identity_through_opposition": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Identite par opposition",
+        "insight": "Une piste possible : ce personnage se definit en resistant a ce qui l a blesse ou controle.",
+        "supporting_text": "Vos reponses pointent vers le defi, le refus et un soi construit contre quelque chose.",
+        "next_discovery_hint": "Cout possible : l opposition peut laisser l ancienne blessure diriger encore."
       },
       "lost_self": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Soi perdu",
+        "insight": "Une piste possible : ce personnage cherche une direction parce que son propre desir est devenu silencieux.",
+        "supporting_text": "Vos reponses pointent vers l incertitude, la dependance et la difficulte a nommer ce qui lui appartient.",
+        "next_discovery_hint": "Cout possible : d autres personnes peuvent continuer a ecrire son histoire a sa place."
       }
     },
     "shame": {
       "internalized_unworthiness": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Indignite interiorisee",
+        "insight": "Une piste possible : ce personnage rejette le soin avant que quelqu un puisse confirmer la honte qu il croit deja.",
+        "supporting_text": "Vos reponses pointent vers le secret, l effacement de soi et l attente du rejet depuis l interieur.",
+        "next_discovery_hint": "Cout possible : l amour peut sembler suspect simplement parce qu il contredit son image de soi."
       },
       "shame_as_secret": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Honte comme secret",
+        "insight": "Une piste possible : ce personnage protege le secret si soigneusement que le secret commence a guider ses choix.",
+        "supporting_text": "Vos reponses pointent vers la dissimulation, le silence et la peur d etre connu par une seule verite cachee.",
+        "next_discovery_hint": "Cout possible : le secret peut prendre plus de pouvoir que la verite elle-meme."
       },
       "shame_driven_achievement": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Reussite poussee par la honte",
+        "insight": "Une piste possible : ce personnage continue de reussir pour que personne n ait le temps de voir ou il se sent indigne.",
+        "supporting_text": "Vos reponses pointent vers la performance, la pression et le succes utilise comme couverture.",
+        "next_discovery_hint": "Cout possible : la reussite peut repousser la honte sans la guerir."
       },
       "shame_masked_as_pride": {
-        "name": "[FR] [Pattern Name]",
-        "insight": "[FR] [Pattern Insight]",
-        "supporting_text": "[FR] [Pattern Supporting Text]",
-        "next_discovery_hint": "[FR] [Pattern Next Hint]"
+        "name": "Honte masquee par la fierte",
+        "insight": "Une piste possible : ce personnage agit comme s il etait intouchable exactement la ou il se sent le plus expose.",
+        "supporting_text": "Vos reponses pointent vers la fierte, la diversion et la confiance utilisee pour proteger une blessure cachee.",
+        "next_discovery_hint": "Cout possible : les autres peuvent affronter la fierte sans jamais voir la douleur dessous."
       }
     },
     "relationship": {

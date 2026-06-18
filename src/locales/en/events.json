@@ -2,7 +2,7 @@
   "CHARACTER_CREATED": "Character Discovered",
   "RELATIONSHIP_CREATED": "Relationship Formed",
   "QUESTION_ANSWERED": "Discovery Answered",
-  "PATTERN_EMERGING": "Pattern: {{pattern_label}}",
+  "PATTERN_EMERGING": "Emerging Understanding: {{pattern_label}}",
   "INSIGHT_UNLOCKED": "Insight Unlocked: {{insight_label}}",
   "REPORT_GENERATED": "{{report_type}} Report Generated",
   "DRAMATIC_ARCHITECTURE_DISCOVERED": "Dramatic Architecture Discovered",

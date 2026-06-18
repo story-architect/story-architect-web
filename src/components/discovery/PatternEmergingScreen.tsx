@@ -15,6 +15,8 @@ export const PatternEmergingScreen: React.FC<PatternEmergingScreenProps> = ({ ti
   const { t } = useTranslation(['common']);
   const displayTitle = title
     .replace(/^Pattern:\s*/, '')
+    .replace(/^Emerging Understanding:\s*/, '')
+    .replace(/^Compréhension émergente\s*:\s*/, '')
     .replace(/^Mod\u00e8le\s*:\s*/, '')
     .replace(/^Sch\u00e9ma\s*:\s*/, '');
 

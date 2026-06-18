@@ -2,7 +2,7 @@
   "CHARACTER_CREATED": "Personnage Découvert",
   "RELATIONSHIP_CREATED": "Relation Formée",
   "QUESTION_ANSWERED": "Découverte Répondue",
-  "PATTERN_EMERGING": "Modèle : {{pattern_label}}",
+  "PATTERN_EMERGING": "Compréhension émergente : {{pattern_label}}",
   "INSIGHT_UNLOCKED": "Aperçu Déverrouillé : {{insight_label}}",
   "REPORT_GENERATED": "Rapport {{report_type}} généré",
   "DRAMATIC_ARCHITECTURE_DISCOVERED": "Architecture Dramatique Découverte",

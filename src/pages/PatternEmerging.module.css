@@ -38,7 +38,7 @@
   font-style: italic;
   color: var(--color-text-secondary);
   line-height: 1.6;
-  margin-bottom: var(--spacing-12);
+  margin-bottom: 0;
 }
 
 .button {
@@ -58,16 +58,27 @@
   font-size: 1.125rem;
   color: var(--color-text-secondary);
   line-height: 1.6;
-  margin-bottom: var(--spacing-8);
+  margin-bottom: 0;
 }
 
 .nextHint {
   font-size: 1rem;
   color: var(--color-text-tertiary);
-  margin-bottom: var(--spacing-8);
+  margin-bottom: 0;
   font-weight: 500;
+}
+
+.insightSection {
+  margin-bottom: var(--spacing-8);
+}
+
+.sectionLabel {
+  font-size: 0.75rem;
+  color: var(--color-text-tertiary);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--spacing-2);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 .loading {
